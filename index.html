@@ -88,6 +88,8 @@ function OpenPopup(i)
 //   {
          //alert("Going in "+i); 
          //popped = window.open(textlocs[i]);
+         navigator.notification.vibrate(2000);
+         navigator.notification.beep(1);
          document.getElementById('stuff').src = textlocs[i];
          //$('#stuff').attr('src', textlocs[i]);
 //    }
@@ -111,6 +113,7 @@ function usePosition(position)
         isOpen = "false";
         //alert("Going out");
         //popped.close();
+         navigator.notification.beep(1);
         document.getElementById('stuff').src="null.html";
         //$('#stuff').attr('src', "null.html");
     }
