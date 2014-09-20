@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--<p id="demo">Click the button to get your coordinates:</p>
+<button onclick="getLocation()">Try It</button>-->
+<!--<h2>Waiting to get to a prayer place...</h2>-->
+<iframe id="stuff" src="null.html" width="100%" height="1024"><p>Sorry your browser does not support iframe</p></iframe>
+<script>
+function MakeArray(n)
+{
+   this.length = n;
+   for (var i = 1; i <= n; i++) { 
+     this[i] = 0 }
+   return this
+}
+var nPlaces = 12;
+lats = new MakeArray(nPlaces);
+longs = new MakeArray(nPlaces);
+//texts = new MakeArray(3);
+textlocs = new MakeArray(nPlaces);
+lats[1] = 53.648666;
+longs[1] = -1.799677;
+//texts[1] = "A place within the park, but looking beyond the park, to the street, houses and the hills.\n\nGod we thank you\nfor little spaces of time\ncarved out from busy days;\nspaces of quiet and of remembering.\nWe pray for travellers on the road,\nfor their safety,\nand for good in their encounters today.\nWe pray your peace\non every household here.\nWe thank you for the hills and sky,\nand ask your help to keep them safe.";
+textlocs[1] = "text01.html";
+lats[2] = 53.648168;
+longs[2] = -1.796082;
+//texts[2] = "Thank you God\nfor water,\nwater that gushes abundantly,\nwater for life,\nwater for power,\nwater to make the thirsty land bloom.\nGod save those who are\nat the mercy of the sea,\nin danger from floods.\nWe thank you for Jesus,\nwho gives life and meaning\nwelling up for all.";
+textlocs[2] = "text02.html";
+lats[3] = 53.648592;
+longs[3] = -1.801921;
+textlocs[3] = "text03.html";
+lats[4] = 53.464813;
+longs[4] = -1.959253;
+textlocs[4] = "text04.html";
+lats[5] = 53.469769;
+longs[5] = -1.95181;
+textlocs[5] = "text05.html";
+lats[6] = 53.460988;
+longs[6] = -1.965567;
+textlocs[6] = "text06.html";
+lats[7] = 53.461547;
+longs[7] = -1.965921;
+textlocs[7] = "text07.html";
+lats[8] = 53.472824;
+longs[8] = -1.946014;
+textlocs[8] = "text08.html";
+lats[9] = 53.479138;
+longs[9] = -1.914879;
+textlocs[9] = "text09.html";
+lats[10] = 53.473671;
+longs[10] = -1.941867;
+textlocs[10] = "text10.html";
+lats[11] = 53.477097;
+longs[11] = -1.934559;
+textlocs[11] = "text11.html";
+lats[12] = 53.479719;
+longs[12] = -1.920731;
+textlocs[12] = "text12.html";
+
+//var x=document.getElementById("demo");
+var tolerance = 20;
+var interval01 = window.setInterval(getLocation(), 3000);
+var dx = 0;
+var dy = 0;
+var d = 0;
+var isOpen = "false";
+var anyOpen = "false";
+var indexOfWanted = 3;
+var geo_options = {
+  enableHighAccuracy: true/*, 
+  maximumAge        : 30000, 
+  timeout           : 27000*/
+};
+function geo_error() {
+  alert("Sorry, no position available.");
+}
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    watching = navigator.geolocation.watchPosition(usePosition, geo_error, geo_options);
+    }
+  //else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+function OpenPopup(i)
+  {
+//   if(isOpen == "false")
+//   {
+         //alert("Going in "+i); 
+         //popped = window.open(textlocs[i]);
+         document.getElementById('stuff').src = textlocs[i];
+         //$('#stuff').attr('src', textlocs[i]);
+//    }
+  } 
+function usePosition(position)
+  {
+    //navigator.geolocation.clearWatch(watching);
+    var myLatitude = position.coords.latitude;
+    var myLongitude = position.coords.longitude;
+    anyOpen = "false";
+    for (i = 0; i < nPlaces; i++) { 
+      dy = (myLatitude - lats[i+1])*111300;
+      dx = (myLongitude - longs[i+1])*111300*Math.cos(myLatitude*Math.PI/180);
+      d = Math.sqrt(dx*dx+dy*dy);
+      if (d < tolerance){
+        anyOpen = "true";
+        indexOfWanted = i+1;
+      }
+    }
+    if (anyOpen == "false" && isOpen == "true"){
+        isOpen = "false";
+        //alert("Going out");
+        //popped.close();
+        document.getElementById('stuff').src="null.html";
+        //$('#stuff').attr('src', "null.html");
+    }
+    if (anyOpen == "false" && isOpen == "false"){
+        // no action
+    }
+    if (anyOpen == "true" && isOpen == "false"){
+        isOpen = "true";
+        OpenPopup(indexOfWanted);
+    }
+    if (anyOpen == "true" && isOpen == "true"){
+        /*TODO allow for (currently impossible) case where go from
+        one point to another without passing through empty space
+        currently no action in this case*/
+    }
+
+
+	
+  }
+</script>
+</body>
+</html>
