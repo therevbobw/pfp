@@ -1,0 +1,14 @@
+To Do, not necessarily in this order...
+
+Get focus, or issue notification, on transition.
+New index file with menu of walks - different versions of old index file (renamed) for each walk.
+Start to build up a library of real walks.
+?When user gets back focus, let him/her know of any missed transitions?
+More than one prayer for each spot, randomly chosen, maybe weighted according to history.
+   (requires history be stored somehow).
+Include walk instructions, based on geolocation data.
+If user chooses *and* mobile data connection is present, include multimedia, e.g....
+   sounds like geese
+   sounds like prayers being spoken
+   images like same place at a different time of year (get t-o-y from date).
+   
