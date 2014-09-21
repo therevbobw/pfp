@@ -11,4 +11,10 @@ If user chooses *and* mobile data connection is present, include multimedia, e.g
    sounds like geese
    sounds like prayers being spoken
    images like same place at a different time of year (get t-o-y from date).
-   
+Appearance
+   CSS
+   Check with different devices
+Overall stuff
+   Icon
+   Title
+   ?Window title?
