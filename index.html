@@ -59,7 +59,6 @@ textlocs[12] = "text12.html";
 
 //var x=document.getElementById("demo");
 var tolerance = 20;
-var interval01 = window.setInterval(getLocation(), 3000);
 var dx = 0;
 var dy = 0;
 var d = 0;
@@ -71,6 +70,7 @@ var geo_options = {
   maximumAge        : 2000, 
   timeout           : 30000
 };
+var interval01 = window.setInterval(getLocation(), 3000);
 function geo_error() {
   alert("Sorry, no position available.\n"+error.message);
 }
