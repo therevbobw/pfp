@@ -77,13 +77,15 @@ var timegap = 0;
 var geo_options = {
   enableHighAccuracy: true, 
   maximumAge        : 2000, 
-  timeout           : 2500
+  timeout           : 2500,
+  frequency	    : 3000
 };
 var form0 = document.forms[0];
 form0['lat'].value = "lat";
 form0['lon'].value = "lon";
 form0['mark'].value = "neither";
-var interval01 = window.setInterval(getLocation, 3000);
+//var interval01 = window.setInterval(getLocation, 3000);
+getLocation();
 //var interval01 = setInterval(getLocation, 3000);
 function geo_error() {
   alert("Sorry, no position available.\n"+error.message);
