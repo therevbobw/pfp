@@ -99,7 +99,7 @@ function getLocation()
     //form0['mark'].value = "in";
     if (navigator.geolocation)
     {
-      navigator.geolocation.getCurrentPosition(usePosition, geo_error, geo_options);
+      navigator.geolocation.watchPosition(usePosition, geo_error, geo_options);
     }
   //else{x.innerHTML="Geolocation is not supported by this browser.";}
     //form0['mark'].value = "out";
