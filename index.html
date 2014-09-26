@@ -77,7 +77,7 @@ var geo_options = {
 var form0 = document.forms[0];
 form0['lat'].value = "lat";
 form0['lon'].value = "lon";
-var interval01 = window.setInterval(getLocation(), 3000);
+var interval01 = window.setInterval(getLocation, 3000);
 function geo_error() {
   alert("Sorry, no position available.\n"+error.message);
 }
