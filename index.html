@@ -5,6 +5,9 @@
 <!--<p id="demo">Click the button to get your coordinates:</p>
 <button onclick="getLocation()">Try It</button>-->
 <!--<h2>Waiting to get to a prayer place...</h2>-->
+<form>
+  Latitude: <input type="text" name="lat"> Longitude: <input type="text" name="lon">
+</form>
 <iframe id="stuff" src="null.html" width="100%" height="1024"><p>Sorry your browser does not support iframe</p></iframe>
 <script>
 function MakeArray(n)
@@ -69,7 +72,7 @@ var indexOfWanted = 3;
 var geo_options = {
   enableHighAccuracy: true, 
   maximumAge        : 2000, 
-  timeout           : 30000
+  timeout           : 2500
 };
 var interval01 = window.setInterval(getLocation(), 3000);
 function geo_error() {
@@ -105,6 +108,8 @@ function usePosition(position)
     //navigator.geolocation.clearWatch(watching);
     var myLatitude = position.coords.latitude;
     var myLongitude = position.coords.longitude;
+    document.form['lat'].value = myLatitude;
+    document.form['lon'].value = myLongitude;
     anyOpen = "false";
     for (i = 0; i < nPlaces; i++) { 
       dy = (myLatitude - lats[i+1])*111300;
