@@ -108,7 +108,7 @@ function doLittle()
   }
 function usePosition(position)
   {
-    //navigator.geolocation.clearWatch(watching);
+    navigator.geolocation.clearWatch(watching);
     var myLatitude = position.coords.latitude;
     var myLongitude = position.coords.longitude;
     form0['lat'].value = myLatitude;
