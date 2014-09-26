@@ -6,7 +6,9 @@
 <button onclick="getLocation()">Try It</button>-->
 <!--<h2>Waiting to get to a prayer place...</h2>-->
 <form>
-  Latitude: <input type="text" name="lat"><br>Longitude: <input type="text" name="lon"><br><input type="text" name="mark">
+  Latitude: <input type="text" name="lat"><br>
+  Longitude: <input type="text" name="lon"><br>
+  <input type="text" name="mark">
 </form>
 <iframe id="stuff" src="null.html" width="100%" height="1024"><p>Sorry your browser does not support iframe</p></iframe>
 <script>
@@ -83,11 +85,11 @@ function geo_error() {
   alert("Sorry, no position available.\n"+error.message);
 }
 function getLocation()
-  form0['mark'].value = "in";
   {
-  if (navigator.geolocation)
+    form0['mark'].value = "in";
+    if (navigator.geolocation)
     {
-    navigator.geolocation.getCurrentPosition(usePosition, geo_error, geo_options);
+      navigator.geolocation.getCurrentPosition(usePosition, geo_error, geo_options);
     }
   //else{x.innerHTML="Geolocation is not supported by this browser.";}
     form0['mark'].value = "out";
