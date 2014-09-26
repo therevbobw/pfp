@@ -74,6 +74,7 @@ var geo_options = {
   maximumAge        : 2000, 
   timeout           : 2500
 };
+var form0 = document.forms[0];
 var interval01 = window.setInterval(getLocation(), 3000);
 function geo_error() {
   alert("Sorry, no position available.\n"+error.message);
@@ -108,8 +109,8 @@ function usePosition(position)
     //navigator.geolocation.clearWatch(watching);
     var myLatitude = position.coords.latitude;
     var myLongitude = position.coords.longitude;
-    document.form['lat'].value = myLatitude;
-    document.form['lon'].value = myLongitude;
+    form0['lat'].value = myLatitude;
+    form0['lon'].value = myLongitude;
     anyOpen = "false";
     for (i = 0; i < nPlaces; i++) { 
       dy = (myLatitude - lats[i+1])*111300;
