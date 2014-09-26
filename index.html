@@ -6,7 +6,7 @@
 <button onclick="getLocation()">Try It</button>-->
 <!--<h2>Waiting to get to a prayer place...</h2>-->
 <form>
-  Latitude: <input type="text" name="lat"> Longitude: <input type="text" name="lon">
+  Latitude: <input type="text" name="lat"><br>Longitude: <input type="text" name="lon">
 </form>
 <iframe id="stuff" src="null.html" width="100%" height="1024"><p>Sorry your browser does not support iframe</p></iframe>
 <script>
@@ -85,7 +85,7 @@ function getLocation()
   {
   if (navigator.geolocation)
     {
-    watching = navigator.geolocation.watchPosition(usePosition, geo_error, geo_options);
+    navigator.geolocation.getCurrentPosition(usePosition, geo_error, geo_options);
     }
   //else{x.innerHTML="Geolocation is not supported by this browser.";}
   }
@@ -108,7 +108,7 @@ function doLittle()
   }
 function usePosition(position)
   {
-    navigator.geolocation.clearWatch(watching);
+    //navigator.geolocation.clearWatch(watching);
     var myLatitude = position.coords.latitude;
     var myLongitude = position.coords.longitude;
     form0['lat'].value = myLatitude;
