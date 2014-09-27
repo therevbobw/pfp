@@ -64,7 +64,10 @@ longs[12] = -1.920731;
 textlocs[12] = "text12.html";
 
 //var x=document.getElementById("demo");
-var tolerance = 20;
+var tolerance = 20; //metres radius
+var interval = 3000; //milliseconds
+var lastUpdateTime = 0;
+var thisTime = 0;
 var dx = 0;
 var dy = 0;
 var d = 0;
@@ -124,41 +127,45 @@ function doLittle()
 function usePosition(position)
   {
     //navigator.geolocation.clearWatch(watching);
-    var myLatitude = position.coords.latitude;
-    var myLongitude = position.coords.longitude;
-    form0['lat'].value = myLatitude;
-    form0['lon'].value = myLongitude;
-    anyOpen = "false";
-    for (i = 0; i < nPlaces; i++) { 
-      dy = (myLatitude - lats[i+1])*111300;
-      dx = (myLongitude - longs[i+1])*111300*Math.cos(myLatitude*Math.PI/180);
-      d = Math.sqrt(dx*dx+dy*dy);
-      if (d < tolerance){
-        anyOpen = "true";
-        indexOfWanted = i+1;
-      }
+    thisTime = performance.now();
+    if ((thisTime - lastUpdateTime) > interval)
+    {
+    	lastUpdateTime = thisTime;
+	var myLatitude = position.coords.latitude;
+	var myLongitude = position.coords.longitude;
+	form0['lat'].value = myLatitude;
+    	form0['lon'].value = myLongitude;
+    	anyOpen = "false";
+    	for (i = 0; i < nPlaces; i++) { 
+      		dy = (myLatitude - lats[i+1])*111300;
+      		dx = (myLongitude - longs[i+1])*111300*Math.cos(myLatitude*Math.PI/180);
+      		d = Math.sqrt(dx*dx+dy*dy);
+      		if (d < tolerance){
+        		anyOpen = "true";
+        		indexOfWanted = i+1;
+      		}
+    	}
+    	if (anyOpen == "false" && isOpen == "true"){
+        	isOpen = "false";
+        	//alert("Going out");
+        	//popped.close();
+        	navigator.notification.beep(1);
+        	document.getElementById('stuff').src="null.html";
+        	//$('#stuff').attr('src', "null.html");
+    	}
+    	if (anyOpen == "false" && isOpen == "false"){
+        	// no action
+    	}
+    	if (anyOpen == "true" && isOpen == "false"){
+        	isOpen = "true";
+        	OpenPopup(indexOfWanted);
+    	}
+    	if (anyOpen == "true" && isOpen == "true"){
+        	/*TODO allow for (currently impossible) case where go from
+        	one point to another without passing through empty space
+        	currently no action in this case*/
+    	}
     }
-    if (anyOpen == "false" && isOpen == "true"){
-        isOpen = "false";
-        //alert("Going out");
-        //popped.close();
-        navigator.notification.beep(1);
-        document.getElementById('stuff').src="null.html";
-        //$('#stuff').attr('src', "null.html");
-    }
-    if (anyOpen == "false" && isOpen == "false"){
-        // no action
-    }
-    if (anyOpen == "true" && isOpen == "false"){
-        isOpen = "true";
-        OpenPopup(indexOfWanted);
-    }
-    if (anyOpen == "true" && isOpen == "true"){
-        /*TODO allow for (currently impossible) case where go from
-        one point to another without passing through empty space
-        currently no action in this case*/
-    }
-
 
 	
   }
