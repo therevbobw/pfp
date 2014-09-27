@@ -65,12 +65,14 @@ textlocs[12] = "text12.html";
 
 //var x=document.getElementById("demo");
 var tolerance = 20; //metres radius
+var tsq = tolerance*tolerance;
 var interval = 3000; //milliseconds
 var lastUpdateTime = 0;
 var thisTime = 0;
 var dx = 0;
 var dy = 0;
 var d = 0;
+var dsq = 0;
 var isOpen = "false";
 var anyOpen = "false";
 var indexOfWanted = 3;
@@ -139,8 +141,9 @@ function usePosition(position)
     	for (i = 0; i < nPlaces; i++) { 
       		dy = (myLatitude - lats[i+1])*111300;
       		dx = (myLongitude - longs[i+1])*111300*Math.cos(myLatitude*Math.PI/180);
-      		d = Math.sqrt(dx*dx+dy*dy);
-      		if (d < tolerance){
+      		//d = Math.sqrt(dx*dx+dy*dy);
+      		dsq = dx*dx+dy*dy;
+      		if (dsq < tsq){
         		anyOpen = "true";
         		indexOfWanted = i+1;
       		}
