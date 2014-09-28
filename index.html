@@ -66,7 +66,7 @@ textlocs[12] = "text12.html";
 //var x=document.getElementById("demo");
 var tolerance = 20; //metres radius
 var tsq = tolerance*tolerance;
-var interval = 3; //seconds
+var interval = 3000; //milliseconds
 var lastUpdateTime = 0;
 var thisTime = 0;
 var dx = 0;
@@ -81,9 +81,8 @@ var then = performance.now();
 var timegap = 0;
 var geo_options = {
   enableHighAccuracy: true, 
-  maximumAge        : 2000, 
-  timeout           : 2500,
-  frequency	    : 3000
+  maximumAge: 	      2000, 
+  timeout:            2500
 };
 var form0 = document.forms[0];
 form0['lat'].value = "lat";
