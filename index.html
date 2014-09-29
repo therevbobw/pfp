@@ -20,8 +20,7 @@ function MakeArray(n)
      this[i] = 0 }
    return this
 }
-function onDeviceReady() {
-// Now safe to use the PhoneGap API
+
 var nPlaces = 12;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
@@ -93,9 +92,11 @@ form0['lat'].value = "lat";
 form0['lon'].value = "lon";
 form0['mark'].value = "neither";
 //var interval01 = window.setInterval(getLocation, 3000);
-getLocation();
-//var interval01 = setInterval(getLocation, 3000);
+function onDeviceReady() {
+  // Now safe to use the PhoneGap API
+  getLocation();
 }
+//var interval01 = setInterval(getLocation, 3000);
 function geo_error() {
   alert("Sorry, no position available.\n"+error.message);
 }
