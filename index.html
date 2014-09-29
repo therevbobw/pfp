@@ -129,8 +129,8 @@ function usePosition(position)
   {
     //navigator.geolocation.clearWatch(watching);
     thisTime = performance.now();
-    if ((thisTime - lastUpdateTime) > interval)
-    {
+    //if ((thisTime - lastUpdateTime) > interval)
+    //{
     	lastUpdateTime = thisTime;
 	var myLatitude = position.coords.latitude;
 	var myLongitude = position.coords.longitude;
@@ -167,7 +167,7 @@ function usePosition(position)
         	one point to another without passing through empty space
         	currently no action in this case*/
     	}
-    }
+    //}
 
 	
   }
