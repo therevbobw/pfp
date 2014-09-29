@@ -97,10 +97,6 @@ function geo_error() {
 }
 function getLocation()
   {
-    then = now;
-    now = performance.now();
-    timegap = now-then;
-    form0['mark'].value = timegap;
     //form0['mark'].value = "in";
     if (navigator.geolocation)
     {
@@ -137,6 +133,10 @@ function usePosition(position)
 	var myLongitude = position.coords.longitude;
 	form0['lat'].value = myLatitude;
     	form0['lon'].value = myLongitude;
+        then = now;
+    	now = performance.now();
+    	timegap = now-then;
+    	form0['mark'].value = timegap;
     	anyOpen = "false";
     	for (i = 0; i < nPlaces; i++) { 
       		dy = (myLatitude - lats[i+1])*111300;
