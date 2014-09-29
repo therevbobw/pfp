@@ -12,6 +12,7 @@
 </form>
 <iframe id="stuff" src="null.html" width="100%" height="1024"><p>Sorry your browser does not support iframe</p></iframe>
 <script>
+document.addEventListener("deviceready", onDeviceReady, false);
 function MakeArray(n)
 {
    this.length = n;
@@ -19,6 +20,8 @@ function MakeArray(n)
      this[i] = 0 }
    return this
 }
+function onDeviceReady() {
+// Now safe to use the PhoneGap API
 var nPlaces = 12;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
@@ -92,6 +95,7 @@ form0['mark'].value = "neither";
 //var interval01 = window.setInterval(getLocation, 3000);
 getLocation();
 //var interval01 = setInterval(getLocation, 3000);
+}
 function geo_error() {
   alert("Sorry, no position available.\n"+error.message);
 }
