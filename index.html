@@ -70,7 +70,7 @@ var tolerance = 20; //metres radius
 var tsq = tolerance*tolerance;
 var interval = 3000; //milliseconds
 var angConv = Math.PI/180;
-var bongsrc = "hello.mp3";
+//var bongsrc = "hello.mp3";
 var lastUpdateTime = 0;
 var thisTime = 0;
 var dx = 0;
@@ -95,9 +95,9 @@ form0['mark'].value = "neither";
 //var interval01 = window.setInterval(getLocation, 3000);
 function onDeviceReady() {
   // Now safe to use the PhoneGap API
-  navigator.notification.alert("Starting", doLittle);
-  var bong = new Media(bongsrc);
-  bong.play;
+  //navigator.notification.alert("Starting", doLittle);
+  //var bong = new Media(bongsrc);
+  //bong.play;
   getLocation();
 }
 //var interval01 = setInterval(getLocation, 3000);
@@ -123,7 +123,7 @@ function OpenPopup(i)
          //navigator.notification.vibrate(2000);
          //navigator.notification.beep(1);
          document.getElementById('stuff').src = textlocs[i];
-         bong.play;
+         //bong.play;
          navigator.notification.alert("New prayer now", doLittle());
          //$('#stuff').attr('src', textlocs[i]);
 //    }
