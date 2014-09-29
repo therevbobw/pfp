@@ -94,9 +94,7 @@ form0['mark'].value = "neither";
 //var interval01 = window.setInterval(getLocation, 3000);
 function onDeviceReady() {
   // Now safe to use the PhoneGap API
-  navigator.notification.vibrate(2000);
-  navigator.notification.beep(1);
-  navigator.notification.alert("New prayer now", doLittle);
+  navigator.notification.alert("Starting", doLittle);
   getLocation();
 }
 //var interval01 = setInterval(getLocation, 3000);
@@ -122,7 +120,7 @@ function OpenPopup(i)
          //navigator.notification.vibrate(2000);
          //navigator.notification.beep(1);
          document.getElementById('stuff').src = textlocs[i];
-         //navigator.notification.alert("New prayer now", doLittle());
+         navigator.notification.alert("New prayer now", doLittle());
          //$('#stuff').attr('src', textlocs[i]);
 //    }
   } 
