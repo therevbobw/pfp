@@ -27,6 +27,8 @@
     <!-- Redundant on most devices... -->
     <gap:plugin name="org.apache.cordova.geolocation"/>
     
+    <gap:plugin name="org.apache.cordova.vibration"/>
+    
     <!-- <gap:plugin name="org.apache.cordova.media"/> -->
     
     <!--<plugin name="Notification" value="org.apache.cordova.Notification"/> -->
