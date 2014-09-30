@@ -85,8 +85,8 @@ var isOpen = "false";
 var anyOpen = "false";
 var indexOfWanted = 3;
 form0['mark'].value = "performance next";
-var now = performance.now();
-var then = performance.now();
+var now = Date.now();
+var then = Date.now();
 var timegap = 0;
 form0['mark'].value = "times initialised";
 var geo_options = {
@@ -142,7 +142,7 @@ function doLittle()
 function usePosition(position)
   {
     //navigator.geolocation.clearWatch(watching);
-    thisTime = performance.now();
+    thisTime = Date.now();
     if ((thisTime - lastUpdateTime) > interval)
     {
     	lastUpdateTime = thisTime;
@@ -151,7 +151,7 @@ function usePosition(position)
 	form0['lat'].value = myLatitude;
     	form0['lon'].value = myLongitude;
         then = now;
-    	now = performance.now();
+    	now = Date.now();
     	timegap = now-then;
     	form0['mark'].value = timegap;
     	anyOpen = "false";
