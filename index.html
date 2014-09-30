@@ -65,6 +65,9 @@ lats[12] = 53.479719;
 longs[12] = -1.920731;
 textlocs[12] = "text12.html";
 
+var form0 = document.forms[0];
+form0['mark'].value = "points loaded";
+
 //var x=document.getElementById("demo");
 var tolerance = 20; //metres radius
 var tsq = tolerance*tolerance;
@@ -77,18 +80,21 @@ var dx = 0;
 var dy = 0;
 var d = 0;
 var dsq = 0;
+var travelled = 0;
 var isOpen = "false";
 var anyOpen = "false";
 var indexOfWanted = 3;
+form0['mark'].value = "performance next";
 var now = performance.now();
 var then = performance.now();
 var timegap = 0;
+form0['mark'].value = "times initialised";
 var geo_options = {
   enableHighAccuracy: true, 
   maximumAge: 	      2000, 
   timeout:            2500
 };
-var form0 = document.forms[0];
+//var form0 = document.forms[0];
 form0['lat'].value = "lat";
 form0['lon'].value = "lon";
 form0['mark'].value = "neither";
