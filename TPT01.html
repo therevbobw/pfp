@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Transpennine Trail</p>
+<script src="phonegap.js"></script>
+<script src="myfun.js"></script>
+<!--<p id="demo">Click the button to get your coordinates:</p>
+<button onclick="getLocation()">Try It</button>-->
+<!--<h2>Waiting to get to a prayer place...</h2>-->
+<form>
+  Latitude: <input type="text" name="lat"><br>
+  Longitude: <input type="text" name="lon"><br>
+  <input type="text" name="mark">
+</form>
+<iframe id="stuff" src="null.html" width="100%" height="1024"><p>Sorry your browser does not support iframe</p></iframe>
+<script>
+document.addEventListener("deviceready", onDeviceReady, false);
+function MakeArray(n)
+{
+   this.length = n;
+   for (var i = 1; i <= n; i++) { 
+     this[i] = 0 }
+   return this
+}
+
+var nPlaces = 9;
+lats = new MakeArray(nPlaces);
+longs = new MakeArray(nPlaces);
+textlocs = new MakeArray(nPlaces);
+lats[1] = 53.464813;
+longs[1] = -1.959253;
+textlocs[1] = "textTPT01.html";
+lats[2] = 53.469769;
+longs[2] = -1.95181;
+textlocs[2] = "textTPT02.html";
+lats[3] = 53.460988;
+longs[3] = -1.965567;
+textlocs[3] = "textTPT03.html";
+lats[4] = 53.461547;
+longs[4] = -1.965921;
+textlocs[4] = "textTPT04.html";
+lats[5] = 53.472824;
+longs[5] = -1.946014;
+textlocs[5] = "textTPT05.html";
+lats[6] = 53.479138;
+longs[6] = -1.914879;
+textlocs[6] = "textTPT06.html";
+lats[7] = 53.473671;
+longs[7] = -1.941867;
+textlocs[7] = "textTPT07.html";
+lats[8] = 53.477097;
+longs[8] = -1.934559;
+textlocs[8] = "textTPT08.html";
+lats[9] = 53.479719;
+longs[9] = -1.920731;
+textlocs[9] = "textTPT09.html";
+
+var form0 = document.forms[0];
+form0['mark'].value = "points loaded";
+
+//var x=document.getElementById("demo");
+var tolerance = 20; //metres radius
+var tsq = tolerance*tolerance;
+var interval = 3000; //milliseconds
+var angConv = Math.PI/180;
+//var bongsrc = "hello.mp3";
+var lastUpdateTime = 0;
+var thisTime = 0;
+var dx = 0;
+var dy = 0;
+var d = 0;
+var dsq = 0;
+var travelled = 0;
+var isOpen = "false";
+var anyOpen = "false";
+var indexOfWanted = 3;
+form0['mark'].value = "performance next";
+var now = Date.now();
+var then = Date.now();
+var timegap = 0;
+form0['mark'].value = "times initialised";
+var geo_options = {
+  enableHighAccuracy: true, 
+  maximumAge: 	      2000, 
+  timeout:            2500
+};
+//var form0 = document.forms[0];
+form0['lat'].value = "lat";
+form0['lon'].value = "lon";
+form0['mark'].value = "neither";
+//var interval01 = window.setInterval(getLocation, 3000);
+
+</script>
+</body>
+</html>
