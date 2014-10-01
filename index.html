@@ -15,7 +15,20 @@
 <script>
 document.getElementById("choosing").style.display="none";
 document.addEventListener("deviceready", onDeviceReady, false);
-
+function MakeArray(n)
+{
+   this.length = n;
+   for (var i = 1; i <= n; i++) { 
+     this[i] = 0 }
+   return this
+}
+var numberOfWalkChoices = 3;
+var descriptions = new MakeArray(numberOfWalkChoices);
+description[1] = "<p>Just test data near the manse</p>";
+description[2] = "<p>A walk in Greenhead Park<br>in Huddersfield visiting various<br>" +
+                 "places of interest.</p>";
+description[3] = "<p>A walk along the Longdendale Trail<br>section of the Transpennine<br>" +
+                 "Trail from Hadfield Railway Station<br>to Torside Crossing.</p>";                 
 function onDeviceReady(){
   document.getElementById("choosing").style.display="block";
 }
@@ -27,7 +40,7 @@ function selectWalk(){
   window.location=url;
 }
 function showWalk(){
-  
+  document.getElementById("walkDescription").innerHTML = description[document.getElementById("select01").selectedIndex]
 }
 </script>
 </body>
