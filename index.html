@@ -17,7 +17,8 @@ function onDeviceReady(){
   document.getElementById("choosing").style.display="block";
 }
 function selectWalk(){
-  var walk = document.choosing.select01.options[document.choosing.select01.options.selectedIndex];
+  var index = document.getElementById("select01").selectedIndex;
+  var walk = document.getElementById("select01")[index].value;
   var url = walk+".html";
   alert(url);
   window.location=url;
