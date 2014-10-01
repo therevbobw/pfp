@@ -39,15 +39,15 @@ function selectWalk(){
   var index = document.getElementById("select01").selectedIndex;
   var walk = document.getElementById("select01")[index].value;
   var url = walk+".html";
-  alert(url);
+  //alert(url);
   window.location=url;
 }
 function showWalk(){
-  alert("entering showWalk");
+  //alert("entering showWalk");
   var indexFromOne = document.getElementById("select01").selectedIndex+1;
-  alert(indexFromOne);
+  //alert(indexFromOne);
   var temptext = descriptions[indexFromOne];
-  alert(temptext);
+  //alert(temptext);
   document.getElementById("walkDescription").innerHTML = descriptions[indexFromOne];
 }
 </script>
