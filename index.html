@@ -24,10 +24,10 @@ function MakeArray(n)
 }
 var numberOfWalkChoices = 3;
 var descriptions = new MakeArray(numberOfWalkChoices);
-description[1] = "<p>Just test data near the manse</p>";
-description[2] = "<p>A walk in Greenhead Park<br>in Huddersfield visiting various<br>" +
+descriptions[1] = "<p>Just test data near the manse</p>";
+descriptions[2] = "<p>A walk in Greenhead Park<br>in Huddersfield visiting various<br>" +
                  "places of interest.</p>";
-description[3] = "<p>A walk along the Longdendale Trail<br>section of the Transpennine<br>" +
+descriptions[3] = "<p>A walk along the Longdendale Trail<br>section of the Transpennine<br>" +
                  "Trail from Hadfield Railway Station<br>to Torside Crossing.</p>";                 
 function onDeviceReady(){
   document.getElementById("choosing").style.display="block";
@@ -43,9 +43,9 @@ function showWalk(){
   alert("entering showWalk");
   var indexFromOne = document.getElementById("select01").selectedIndex+1;
   alert(indexFromOne);
-  var temptext = description[indexFromOne];
+  var temptext = descriptions[indexFromOne];
   alert(temptext);
-  document.getElementById("walkDescription").innerHTML = description[document.getElementById("select01").selectedIndex];
+  document.getElementById("walkDescription").innerHTML = descriptions[indexFromOne];
 }
 </script>
 </body>
