@@ -41,7 +41,9 @@ function selectWalk(){
 }
 function showWalk(){
   alert("entering showWalk");
-  var temptext = description[document.getElementById("select01").selectedIndex+1];
+  var indexFromOne = document.getElementById("select01").selectedIndex+1;
+  alert(indexFromOne);
+  var temptext = description[indexFromOne];
   alert(temptext);
   document.getElementById("walkDescription").innerHTML = description[document.getElementById("select01").selectedIndex];
 }
