@@ -40,7 +40,8 @@ function selectWalk(){
   window.location=url;
 }
 function showWalk(){
-  var temptext = description[document.getElementById("select01").selectedIndex];
+  alert("entering showWalk");
+  var temptext = description[document.getElementById("select01").selectedIndex+1];
   alert(temptext);
   document.getElementById("walkDescription").innerHTML = description[document.getElementById("select01").selectedIndex];
 }
