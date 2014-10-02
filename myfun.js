@@ -88,9 +88,10 @@ function usePosition(position)
 
 	
   }
+//Thank you BillyB...
 function fixiFrame () {
    if ((android) && (androidVersion > 3)) {
-      iFrameContentHeight = document.getElementById('theiFrame').contentDocument.body.offsetHeight;
-      document.getElementById('theiFrame').style.height = iFrameContentHeight + 'px';
+      iFrameContentHeight = document.getElementById('stuff').contentDocument.body.offsetHeight;
+      document.getElementById('stuff').style.height = iFrameContentHeight + 'px';
    }
 }
