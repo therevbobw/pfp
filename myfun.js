@@ -26,8 +26,8 @@ function OpenPopup(i)
 //   {
          //alert("Going in "+i); 
          //popped = window.open(textlocs[i]);
-         navigator.notification.vibrate(800);
-         //navigator.notification.beep(1);
+         navigator.notification.vibrate(1200);
+         navigator.notification.beep(1);
          document.getElementById('stuff').src = textlocs[i];
          //bong.play;
          navigator.notification.alert("New prayer now", doLittle());
@@ -68,7 +68,7 @@ function usePosition(position)
         	isOpen = "false";
         	//alert("Going out");
         	//popped.close();
-        	//navigator.notification.beep(1);
+        	navigator.notification.beep(1);
         	document.getElementById('stuff').src="null.html";
         	//$('#stuff').attr('src', "null.html");
     	}
