@@ -1,5 +1,6 @@
-body { font-size: 130%; }
-div  { font-size: 100%; }
-input  { font-size: 100%; }
+body    { font-size: 130%; }
+div     { font-size: 100%; }
+input   { font-size: 100%; }
 button  { font-size: 100%; }
 select  { font-size: 100%; }
+iframe  { font-size: 100%; }
