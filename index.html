@@ -33,10 +33,8 @@ descriptions[2] = "<p>A walk in Greenhead Park in Huddersfield visiting various 
                  "places of interest.</p>";
 descriptions[3] = "<p>A walk along the Longdendale Trail section of the Transpennine " +
                  "Trail from Hadfield Railway Station to Torside Crossing.</p>";
-function onDeviceReady(){
-  document.getElementById("choosing").style.display="block";
-  var fileHandle01 = fopen("test01.txt", 0);
 window.alert("Hello");
+var fileHandle01 = fopen("test01.txt", 0);
 window.alert(fileHandle01);
 if(fileHandle01 != -1) // If the file has been successfully opened 
 { 
@@ -47,7 +45,9 @@ if(fileHandle01 != -1) // If the file has been successfully opened
 // Display the contents of the file     
     window.alert(str);
 }
-
+  
+function onDeviceReady(){
+  document.getElementById("choosing").style.display="block";
 }
 function selectWalk(){
   var index = document.getElementById("select01").selectedIndex;
