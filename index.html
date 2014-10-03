@@ -32,7 +32,18 @@ descriptions[1] = "<p>Just test data near the manse</p>";
 descriptions[2] = "<p>A walk in Greenhead Park in Huddersfield visiting various " +
                  "places of interest.</p>";
 descriptions[3] = "<p>A walk along the Longdendale Trail section of the Transpennine " +
-                 "Trail from Hadfield Railway Station to Torside Crossing.</p>";                 
+                 "Trail from Hadfield Railway Station to Torside Crossing.</p>";
+var fileHandle01 = fopen("test01.txt", 0);
+document.alert(fileHandle01);
+if(fileHandle01!=-1) // If the file has been successfully opened 
+{ 
+    length = flength(fileHandle01);         // Get the length of the file     
+    str = fread(fileHandle01, length);     // Read in the entire file 
+    fclose(fileHandle01);                    // Close the file 
+     
+// Display the contents of the file     
+    document.alert(str);
+}
 function onDeviceReady(){
   document.getElementById("choosing").style.display="block";
 }
