@@ -35,7 +35,7 @@ var intro =  "<h2>Not currently at a prayer place...</h2>" +
             "when you approach the spot.</p><hr><p>The first location is the entrance to Hadfield station.</p>";
 document.getElementById("stuff").innerHTML = intro;
 
-var nPlaces = 9;
+var nPlaces = 10;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
 texts = new MakeArray(nPlaces);
@@ -115,6 +115,15 @@ texts[9] = "<h2>A Gap in the Trees</h2>" +
             "<br>in the garden, for the cup of suffering<br>to be taken away.</p>" +
             "<p>God, lead us, we pray:<br>help us to know at least,<br>the next step.</p>";
 froms[9] =  "<p>Continue along the Trail.</p>";
+lats[10] =  53.467382;
+longs[10] = -1.955392;
+texts[10] = "<h2>The heart-shaped puddle</h2><p>Sometimes in wet weather there is a heart-shaped puddle " +
+            "near here.</p><hr><p class='title'>Any day</p><p>Any day may be the day" +
+            "<br>God calls you.<br>Any day it could happen<br>that God confirms<br>you are still called." +
+            "<br>Many days may pass<br>when you wonder<br>and wait<br>more or less patiently." +
+            "<br>You see the signs around you;<br>a burning bush,<br>a reflecting puddle," +
+            "<br>the broken bread.<br>Christ of the everyday,<br>Be with us any day." +
+            "May it be the possible that<br>Today is the day.</p><p class='author'>Janet</p>";
 var form0 = document.forms[0];
 form0['mark'].value = "points loaded";
 
