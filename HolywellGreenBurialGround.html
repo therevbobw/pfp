@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="general.css">
+</head>
+<body>
+<p><i>Transpennine Trail</i></p>
+<script src="phonegap.js"></script>
+<script src="myfun.js"></script>
+<!--<p id="demo">Click the button to get your coordinates:</p>
+<button onclick="getLocation()">Try It</button>-->
+<!--<h2>Waiting to get to a prayer place...</h2>-->
+<form>
+  <!-- replace hidden with text when needed for debugging -->
+  <input type="hidden" name="lat">
+  <input type="hidden" name="lon">
+  <input type="hidden" name="mark">
+</form>
+<!-- <iframe id="stuff" src="null.html" width="100%" height="720"><p>Sorry your browser does not support iframe</p></iframe> -->
+<div id="stuff"></div>
+<script>
+document.addEventListener("deviceready", onDeviceReady, false);
+function MakeArray(n)
+{
+   this.length = n;
+   for (var i = 1; i <= n; i++) { 
+     this[i] = 0 }
+   return this
+}
+
+var null =  "<h2>Not currently at a prayer place...</h2>" +
+            "<p>This is all at a testing stage.</p>" +
+            "<p>Please keep looking at the browser page. The prayer will come up on the screen " +
+            "when you approach the spot.</p>";
+document.getElementById("stuff").innerHTML = null;
+
+var nPlaces = 9;
+lats = new MakeArray(nPlaces);
+longs = new MakeArray(nPlaces);
+texts = new MakeArray(nPlaces);
+lats[1] = 53.464813;
+longs[1] = -1.959253;
+texts[1] =  "<h2>Icicle Bridge</h2>" +
+            "<p>Under this bridge, in the coldest weather, icicles form.</p>" +
+            "<p>Living God,<br>we thank you for the beauty of the cold,<br>even though we," +
+            "<br>and all life,<br>can hardly bear it.<br>Strengthen us, we pray<br>for adverse weather.</p>";
+lats[2] = 53.469769;
+longs[2] = -1.95181;
+texts[2] =  "<h2>The Prayer Bench</h2>" +
+            "<p>As the goods flow on the main road,<br>as the power flows<br>in the overhead lines," +
+            "<br>as the people, in ones and twos<br>walk their dogs<br>where trains once bore coal and people," +
+            "<br>where the geese fly,<br>under your benevolent sky,<br>we thank you God..</p>";
+lats[3] = 53.460988;
+longs[3] = -1.965567;
+texts[3] =  "<h2>Hadfield Station</h2>" +
+            "<p>We pray for each person<br>who uses this station;<br>for those who escape paying," +
+            "<br>for the people going to the City game,<br>for commuters, for walkers,<br>for shoppers," +
+            "<br>for old and young,<br>for good and bad:<br>they are all loved by you:" +
+            "<br>show us how to pray for them,<br>how to hope for all good things<br>to come to them.</p>" +
+            "<p>We thank you for all who work<br>on the railway,<br>and ask you to keep them safe.</p>";
+lats[4] = 53.461547;
+longs[4] = -1.965921;
+texts[4] =  "<h2>The Palatine</h2>" +
+            "<p>To some this is a place of memories,<br>more golden than an advert for Irish cider," +
+            "<br>friends, a piano playing, later singing.<br>To others it is just a building." +
+            "<br>God we know the power of alcohol.<br>We pray that you will protect" +
+            "<br>all who use this drug,<br>and their families,<br>and all who share the world with them.</p>";
+lats[5] = 53.472824;
+longs[5] = -1.946014;
+texts[5] =  "<h2>Gypsy Lane Bridge</h2>" +
+            "<p>God we carry with us<br>all of the past, its joys and its troubles." +
+            "<br>We carry its language - we can't help it.<br>And 'Gypsies' and 'pikeys' and hostility" +
+            "<br>are part of our story.<br>God free us from our hostility<br>to other human beings." +
+            "<br>Set us free to love again.</p>";
+lats[6] = 53.479138;
+longs[6] = -1.914879;
+texts[6] = "<h2>Torside Crossing</h2>" +
+            "<p>Here is the place where<br>power and vulnerability meet,<br>the motor road crosses the foot road." +
+            "<br>And when power and vulnerability meet<br>we pray for justice, fairness," +
+            "<br>and something more generous:<br>we pray for mercy.<br>May speeds on the road be slow:" +
+            "<br>may little children in pink cycle hats<br>peep safely round the railings" +
+            "<br>and cross the road in one piece.</p><p>We remember Jesus,<br>led like a lamb to the slaughter," +
+            "<br>man without power in that moment,<br>who knows what it is<br>to be vulnerable." +
+            "<br>God, today,<br>save all who are vulnerable.</p>";
+lats[7] = 53.473671;
+longs[7] = -1.941867;
+texts[7] =  "<h2>Another Bench</h2>" +
+            "<p><i>See the electrical power line and the transmission tower.</i></p>"
+            "<p>God make our prayers<br>not just like a candle flame,<br>flickering and yearning" +
+            "<br>for heaven;<br>but also like an electric light,<br>connected to a network,<br>with people far away.";
+lats[8] = 53.477097;
+longs[8] = -1.934559;
+texts[8] =  "<h2>Overlooking Rhodeswood Dam</h2>" +
+            "<p>We thank you for the work<br>of those who built these reservoirs" +
+            "<br>and run them and maintain them today.<br>We thank you for the work of all people," +
+            "<br>the fruits of whose labours<br>we take for granted.</p>";
+lats[9] = 53.479719;
+longs[9] = -1.920731;
+texts[9] = "<h2>A Gap in the Trees</h2>" +
+            "<p>Sometimes we see in fits and starts.<br>And, to be honest, God,<br>I don't like it." +
+            "<br>I wish it were always clear<br>where I was and what I had to do." +
+            "<br>But even Jesus didn't always know:<br>I remember his desperate prayer" +
+            "<br>in the garden, for the cup of suffering<br>to be taken away.</p>" +
+            "<p>God, lead us, we pray:<br>help us to know at least,<br>the next step.</p>";
+
+var form0 = document.forms[0];
+form0['mark'].value = "points loaded";
+
+//var x=document.getElementById("demo");
+var tolerance = 20; //metres radius
+var tsq = tolerance*tolerance;
+var interval = 3000; //milliseconds
+var angConv = Math.PI/180;
+//var bongsrc = "hello.mp3";
+var lastUpdateTime = 0;
+var thisTime = 0;
+var dx = 0;
+var dy = 0;
+var d = 0;
+var dsq = 0;
+var travelled = 0;
+var isOpen = "false";
+var anyOpen = "false";
+var indexOfWanted = 3;
+form0['mark'].value = "performance next";
+var now = Date.now();
+var then = Date.now();
+var timegap = 0;
+form0['mark'].value = "times initialised";
+var geo_options = {
+  enableHighAccuracy: true, 
+  maximumAge: 	      2000, 
+  timeout:            2500
+};
+//var form0 = document.forms[0];
+form0['lat'].value = "lat";
+form0['lon'].value = "lon";
+form0['mark'].value = "neither";
+//var interval01 = window.setInterval(getLocation, 3000);
+
+</script>
+</body>
+</html>
