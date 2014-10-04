@@ -28,7 +28,10 @@ function MakeArray(n)
    return this
 }
 
-var null = "";
+var null =  "<h2>Not currently at a prayer place...</h2>" +
+            "<p>This is all at a testing stage.</p>" +
+            "<p>Please keep looking at the browser page. The prayer will come up on the screen " +
+            "when you approach the spot.</p>";
 document.getElementById("stuff").innerHTML = null;
 var nPlaces = 2;
 lats = new MakeArray(nPlaces);
@@ -46,7 +49,7 @@ texts[1] =  "<h2>The Bench</h2>" +
             "<br>and ask your help to keep them safe.</p>";
 lats[2] = 53.648168;
 longs[2] = -1.796082;
-textlocs[2] = "textGreenhead02.html";
+texts[2] = "textGreenhead02.html";
 
 var form0 = document.forms[0];
 form0['mark'].value = "points loaded";
