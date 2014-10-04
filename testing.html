@@ -30,16 +30,27 @@ function MakeArray(n)
 var nPlaces = 3;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
-textlocs = new MakeArray(nPlaces);
+texts = new MakeArray(nPlaces);
 lats[1] = 53.648666;
 longs[1] = -1.799677;
-textlocs[1] = "texttesting01.html";
+//textlocs[1] = "textGreenhead01.html";
+texts[1] =  "<h2>The Bench</h2>" +
+            "<p>A place within the park, but looking beyond the park, to the street, houses and the hills.</p>" +
+            "<p>God we thank you<br>for little spaces of time<br>carved out from busy days;" +
+            "<br>spaces of quiet and of remembering.<br>We pray for travellers on the road," +
+            "<br>for their safety,<br>and for good in their encounters today.<br>We pray your peace" +
+            "<br>on every household here.<br>We thank you for the hills and sky," +
+            "<br>and ask your help to keep them safe.</p>";
 lats[2] = 53.648168;
 longs[2] = -1.796082;
-textlocs[2] = "texttesting02.html";
+texts[2] =  "<h2>The Water Fountain</h2>" +
+            "<p>Thank you God for water,<br>water that gushes abundantly,<br>water for life," +
+            "<br>water for power,<br>water to make the thirsty land bloom.<br>God save those who are" +
+            "<br>at the mercy of the sea,<br>in danger from floods.<br>We thank you for Jesus," +
+            "<br>who gives life and meaning<br>welling up for all.</p>";
 lats[3] = 53.648592;
 longs[3] = -1.801921;
-textlocs[3] = "texttesting03.html";
+texts[3] = "Just testing - a location near the manse.";
 
 var form0 = document.forms[0];
 form0['mark'].value = "points loaded";
