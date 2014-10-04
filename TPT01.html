@@ -16,7 +16,8 @@
   <input type="hidden" name="lon">
   <input type="hidden" name="mark">
 </form>
-<iframe id="stuff" src="null.html" width="100%" height="720"><p>Sorry your browser does not support iframe</p></iframe>
+<!-- <iframe id="stuff" src="null.html" width="100%" height="720"><p>Sorry your browser does not support iframe</p></iframe> -->
+<div id="stuff"></div>
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
 function MakeArray(n)
@@ -27,37 +28,54 @@ function MakeArray(n)
    return this
 }
 
+var null =  "<h2>Not currently at a prayer place...</h2>" +
+            "<p>This is all at a testing stage.</p>" +
+            "<p>Please keep looking at the browser page. The prayer will come up on the screen " +
+            "when you approach the spot.</p>";
+document.getElementById("stuff").innerHTML = null;
+
 var nPlaces = 9;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
-textlocs = new MakeArray(nPlaces);
+texts = new MakeArray(nPlaces);
 lats[1] = 53.464813;
 longs[1] = -1.959253;
-textlocs[1] = "textTPT01.html";
+texts[1] =  "<h2>Icicle Bridge</h2>" +
+            "<p>Under this bridge, in the coldest weather, icicles form.</p>" +
+            "<p>Living God,<br>we thank you for the beauty of the cold,<br>even though we," +
+            "<br>and all life,<br>can hardly bear it.<br>Strengthen us, we pray<br>for adverse weather.</p>";
 lats[2] = 53.469769;
 longs[2] = -1.95181;
-textlocs[2] = "textTPT02.html";
+texts[2] =  "<h2>The Prayer Bench</h2>" +
+            "<p>As the goods flow on the main road,<br>as the power flows<br>in the overhead lines," +
+            "<br>as the people, in ones and twos<br>walk their dogs<br>where trains once bore coal and people," +
+            "<br>where the geese fly,<br>under your benevolent sky,<br>we thank you God..</p>";
 lats[3] = 53.460988;
 longs[3] = -1.965567;
-textlocs[3] = "textTPT03.html";
+texts[3] =  "<h2>Hadfield Station</h2>" +
+            "<p>We pray for each person<br>who uses this station;<br>for those who escape paying," +
+            "<br>for the people going to the City game,<br>for commuters, for walkers,<br>for shoppers," +
+            "<br>for old and young,<br>for good and bad:<br>they are all loved by you:" +
+            "<br>show us how to pray for them,<br>how to hope for all good things<br>to come to them.</p>" +
+            "<p>We thank you for all who work<br>on the railway,<br>and ask you to keep them safe.</p>";
 lats[4] = 53.461547;
 longs[4] = -1.965921;
-textlocs[4] = "textTPT04.html";
+texts[4] = "textTPT04.html";
 lats[5] = 53.472824;
 longs[5] = -1.946014;
-textlocs[5] = "textTPT05.html";
+texts[5] = "textTPT05.html";
 lats[6] = 53.479138;
 longs[6] = -1.914879;
-textlocs[6] = "textTPT06.html";
+texts[6] = "textTPT06.html";
 lats[7] = 53.473671;
 longs[7] = -1.941867;
-textlocs[7] = "textTPT07.html";
+texts[7] = "textTPT07.html";
 lats[8] = 53.477097;
 longs[8] = -1.934559;
-textlocs[8] = "textTPT08.html";
+texts[8] = "textTPT08.html";
 lats[9] = 53.479719;
 longs[9] = -1.920731;
-textlocs[9] = "textTPT09.html";
+texts[9] = "textTPT09.html";
 
 var form0 = document.forms[0];
 form0['mark'].value = "points loaded";
