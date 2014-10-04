@@ -4,7 +4,7 @@
   <link rel="stylesheet" type="text/css" href="general.css">
 </head>
 <body>
-<p class="title"><i>Holywell Green Burial Ground</i></p>
+<p class="title">Holywell Green Burial Ground</p>
 <hr>
 <script src="phonegap.js"></script>
 <script src="myfun.js"></script>
@@ -32,19 +32,24 @@ function MakeArray(n)
 var null =  "<h2>Not currently at a prayer place...</h2>" +
             "<p>This is all at a testing stage.</p>" +
             "<p>Please keep looking at the browser page. The prayer will come up on the screen " +
-            "when you approach the spot.</p>";
+            "when you approach the spot.</p><hr><p>As you walk up the driveway, you will see some piles " +
+            "of compost, stems and chippings. This is the first prayer point</p>";
 document.getElementById("stuff").innerHTML = null;
 
 var nPlaces = 9;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
 texts = new MakeArray(nPlaces);
-lats[1] = 53.464813;
-longs[1] = -1.959253;
-texts[1] =  "<h2>Icicle Bridge</h2>" +
-            "<p>Under this bridge, in the coldest weather, icicles form.</p>" +
-            "<p>Living God,<br>we thank you for the beauty of the cold,<br>even though we," +
-            "<br>and all life,<br>can hardly bear it.<br>Strengthen us, we pray<br>for adverse weather.</p>";
+froms = new MakeArray(nPlaces);
+lats[1] = 53.676103;
+longs[1] = -1.868521;
+texts[1] =  "<h2>Compost piles</h2>" +
+            "<p>Here among the dead leaves and detritus<br>is the material for new life," +
+            "<br>just as the scrapyards<br>of Sheffield and Rotherham<br>are the beginning for steelmaking:" +
+            "<br>God form in us new life from our deaths,<br>new hope from our despair:" +
+            "<br>regenerate our souls and our cities.<br>Teach us the lesson of" +
+            "<br>the mouldering leaves<br>and of Jesus crucified and risen.</p>";
+froms[1] =  "<p>From here, please head along the back wall, past the Portaloos, to the memorial at the corner.</p>"            
 lats[2] = 53.469769;
 longs[2] = -1.95181;
 texts[2] =  "<h2>The Prayer Bench</h2>" +
