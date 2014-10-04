@@ -16,7 +16,8 @@
   <input type="hidden" name="lon">
   <input type="hidden" name="mark">
 </form>
-<iframe id="stuff" src="null.html" width="100%" height="720"><p>Sorry your browser does not support iframe</p></iframe>
+<!--<iframe id="stuff" src="null.html" width="100%" height="720"><p>Sorry your browser does not support iframe</p></iframe> -->
+<div id="stuff"></div>
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
 function MakeArray(n)
@@ -26,6 +27,12 @@ function MakeArray(n)
      this[i] = 0 }
    return this
 }
+
+var null =  "<h2>Not currently at a prayer place...</h2>" +
+            "<p>This is all at a testing stage.</p>" +
+            "<p>Please keep looking at the browser page. The prayer will come up on the screen " +
+            "when you approach the spot.</p>";
+document.getElementById("stuff").innerHTML = null;
 
 var nPlaces = 3;
 lats = new MakeArray(nPlaces);
