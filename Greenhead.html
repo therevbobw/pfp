@@ -16,7 +16,8 @@
   <input type="hidden" name="lon">
   <input type="hidden" name="mark">
 </form>
-<iframe width="100%" id="stuff" src="null.html" height="720"></iframe>
+<!--<iframe width="100%" id="stuff" src="null.html" height="720"></iframe> -->
+<div id="stuff"></div>
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
 function MakeArray(n)
@@ -27,13 +28,22 @@ function MakeArray(n)
    return this
 }
 
+var null = "";
+document.getElementById("stuff").innerHTML = null;
 var nPlaces = 2;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
-textlocs = new MakeArray(nPlaces);
+texts = new MakeArray(nPlaces);
 lats[1] = 53.648666;
 longs[1] = -1.799677;
-textlocs[1] = "textGreenhead01.html";
+//textlocs[1] = "textGreenhead01.html";
+texts[1] =  "<h2>The Bench</h2>" +
+            "<p>A place within the park, but looking beyond the park, to the street, houses and the hills.</p>" +
+            "<p>God we thank you<br>for little spaces of time<br>carved out from busy days;" +
+            "<br>spaces of quiet and of remembering.<br>We pray for travellers on the road," +
+            "<br>for their safety,<br>and for good in their encounters today.<br>We pray your peace" +
+            "<br>on every household here.<br>We thank you for the hills and sky," +
+            "<br>and ask your help to keep them safe.</p>";
 lats[2] = 53.648168;
 longs[2] = -1.796082;
 textlocs[2] = "textGreenhead02.html";
