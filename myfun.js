@@ -106,5 +106,21 @@ function showMenu(){
     );
 }
 function doMenuActions(buttonIndex){
-	alert(buttonIndex);
+	switch(buttonIndex) {
+	case 1:
+        	window.history.forward();
+        	break;
+	case 2:
+        	alert(froms[lastPoint]);
+        	break;
+    	case 3:
+    		if (lastPoint > 1){
+    			alert(froms[lastPoint-1]);
+    		}
+    		else {
+    			alert(intro);
+    		}
+    	default:
+        	default code block
+	}
 }
