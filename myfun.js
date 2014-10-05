@@ -102,7 +102,7 @@ function showMenu(){
         'Actions...',  // message
         doMenuActions,              // callback to invoke with index of button pressed
         'Prayers for Places control',            // title
-        'Undo back arrow,See directions to next place,See last directions again,more stuff, foo bar,and more again,what does it do?'          // buttonLabels
+        'Forward,Next place,This place'          // buttonLabels
     );
 }
 function doMenuActions(buttonIndex){
