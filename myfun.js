@@ -97,3 +97,14 @@ function fixiFrame () {
       document.getElementById('stuff').style.height = iFrameContentHeight + 'px';
    }
 }
+function showMenu(){
+    navigator.notification.confirm(
+        'Actions...',  // message
+        doMenuActions,              // callback to invoke with index of button pressed
+        'Prayers for Places control',            // title
+        'Undo Back Arrow,See directions to next place,See last directions again'          // buttonLabels
+    );
+}
+function doMenuActions(buttonIndex){
+	alert(buttonIndex);
+}
