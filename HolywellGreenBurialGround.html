@@ -20,7 +20,9 @@
 <!-- <iframe id="stuff" src="null.html" width="100%" height="720"><p>Sorry your browser does not support iframe</p></iframe> -->
 <div id="stuff"></div>
 <script>
+alert("enter script");
 document.addEventListener("deviceready", onDeviceReady, false);
+alert("first line done");
 function MakeArray(n)
 {
    this.length = n;
@@ -28,12 +30,13 @@ function MakeArray(n)
      this[i] = 0 }
    return this
 }
-
+alert("about to set intro");
 var intro =  "<h2>Not currently at a prayer place...</h2>" +
             "<p>This is all at a testing stage.</p>" +
             "<p>Please keep looking at the browser page. The prayer will come up on the screen " +
             "when you approach the spot.</p><hr><p>As you walk up the driveway, you will see some piles " +
             "of compost, stems and chippings. This is the first prayer point</p>";
+alert(intro);
 document.getElementById("stuff").innerHTML = intro;
 alert(intro);
 
