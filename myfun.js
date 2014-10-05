@@ -98,6 +98,7 @@ function fixiFrame () {
    }
 }
 function showMenu(){
+    //TODO check not called from index page - if it is, then only forward button should be displayed
     navigator.notification.confirm(
         'Actions...',  // message
         doMenuActions,              // callback to invoke with index of button pressed
