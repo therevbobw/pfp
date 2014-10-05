@@ -4,7 +4,7 @@ input   { font-size: 100%; }
 button  { font-size: 100%; }
 select  { font-size: 100%; }
 iframe  { font-size: 100%; }
-h2      { color: #006600;  }
-hr      { border-color: #00ccff; background-color: #00ccff; border: 0 none; height: 3px; }
+h2      { color: #006633;  }
+hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; height: 3px; }
 .title  { color: #006600; font-style:italic; }
 .author { color: #006600; font-style:italic; font-size: 80%;}
