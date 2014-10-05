@@ -98,13 +98,24 @@ function fixiFrame () {
    }
 }
 function showMenu(){
-    //TODO check not called from index page - if it is, then only forward button should be displayed
-    navigator.notification.confirm(
+    //check not called from index page - if it is, then only forward button should be displayed
+    if (nPlaces > 0) {
+      navigator.notification.confirm(
         'Actions...',  // message
         doMenuActions,              // callback to invoke with index of button pressed
         'Prayers for Places control',            // title
         'Forward,Next place,This place'          // buttonLabels
-    );
+      );
+    }
+    else {
+      navigator.notification.confirm(
+        'Actions...',  // message
+        doMenuActions,              // callback to invoke with index of button pressed
+        'Prayers for Places control',            // title
+        'Forward'          // buttonLabels
+      );
+      	
+    }
 }
 function doMenuActions(buttonIndex){
 	switch(buttonIndex) {
