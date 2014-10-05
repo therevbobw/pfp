@@ -120,7 +120,8 @@ function doMenuActions(buttonIndex){
     		else {
     			alert(intro);
     		}
+    		break;
     	default:
-        	default code block
+        	alert("whoops!");
 	}
 }
