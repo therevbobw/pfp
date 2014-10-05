@@ -112,7 +112,7 @@ function showMenu(){
         'Actions...',  // message
         doMenuActions,              // callback to invoke with index of button pressed
         'Prayers for Places control',            // title
-        'Forward'          // buttonLabels
+        'Forward,Cancel'          // buttonLabels
       );
       	
     }
@@ -123,7 +123,12 @@ function doMenuActions(buttonIndex){
         	window.history.forward();
         	break;
 	case 2:
-        	alert(froms[lastPoint]);
+        	if (nPlaces > 0) {
+        		alert(froms[lastPoint]);
+        	}
+        	else {
+        		alert('Cancelling');
+        	}
         	break;
     	case 3:
     		if (lastPoint > 1){
