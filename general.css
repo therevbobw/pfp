@@ -5,6 +5,6 @@ button  { font-size: 100%; }
 select  { font-size: 100%; }
 iframe  { font-size: 100%; }
 h2      { color: #006600;  }
-hr      { border-color: #0099ff; background-color: #0099ff;  }
+hr      { border-color: #0099ff; background-color: #0099ff; height: 5px; }
 .title  { color: #006600; font-style:italic; }
 .author { color: #006600; font-style:italic; font-size: 80%;}
