@@ -26,3 +26,4 @@ Get into menu...
 Names under all prayers.
 Initially hidden nested div style modal dialogue when menu button is pressed, content depending on
 page user is on when they press the button.
+?HG some biog info for CWGC graves?
