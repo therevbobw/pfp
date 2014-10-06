@@ -12,9 +12,15 @@ If user chooses *and* mobile data connection is present, include multimedia, e.g
    sounds like prayers being spoken
    images like same place at a different time of year (get t-o-y from date).
 Appearance
-   CSS
    Check with different devices
 Overall stuff
    Icon
    Title
    ?Window title?
+4/10/14
+More Janet's prayers
+Palatine - local business - cheer up. In general, cheer up.
+Get into menu...
+...glimpse of route from here
+...undo accidental press of back button.
+Names under all prayers.
