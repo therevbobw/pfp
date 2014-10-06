@@ -24,3 +24,5 @@ Get into menu...
 ...glimpse of route from here
 ...undo accidental press of back button.
 Names under all prayers.
+Initially hidden nested div style modal dialogue when menu button is pressed, content depending on
+page user is on when they press the button.
