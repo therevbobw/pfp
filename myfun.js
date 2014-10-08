@@ -97,7 +97,7 @@ function fixiFrame () {
       document.getElementById('stuff').style.height = iFrameContentHeight + 'px';
    }
 }
-function showMenu(){
+/*function showMenu(){
     //check not called from index page - if it is, then only forward button should be displayed
     if (nPlaces > 0) {
       navigator.notification.confirm(
@@ -116,6 +116,11 @@ function showMenu(){
       );
       	
     }
+}*/
+function showMenu(){
+	el = document.getElementById("modalSpace1");
+	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+
 }
 function doMenuActions(buttonIndex){
 	switch(buttonIndex) {
