@@ -3,9 +3,12 @@ div     { font-size: 100%; }
 input   { font-size: 100%; }
 button  { 
   font-size: 100%;
-  background: #66cccc;
+  background: #99ccff;
 }
-select  { font-size: 100%; }
+select  { 
+  font-size: 100%; 
+  background: #99ccff;
+}
 iframe  { font-size: 100%; }
 h2      { color: #006633;  }
 hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; height: 3px; }
