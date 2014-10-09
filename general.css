@@ -20,16 +20,20 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   background-image:url(blanking.png);
 }
 .dialog {
-  max-width:360px;
-  margin: 12px auto;
+  max-width:280px;
+  margin: 8px auto;
   background-color: #ffffff;
   /*border:1px solid #000;*/
   border-style: none;
-  padding:15px;
+  padding:8px;
   text-align:center;
 }
 ul {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
+}
+.notes {
+  font-style: italic;
+  color: #006666;
 }
