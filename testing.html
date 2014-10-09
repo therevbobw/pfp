@@ -34,7 +34,7 @@
 <!--<p id="demo">Click the button to get your coordinates:</p>
 <button onclick="getLocation()">Try It</button>-->
 <!--<h2>Waiting to get to a prayer place...</h2>-->
-<form>
+<form id="debuginfo">
   <!-- replace hidden with text when needed for debugging -->
   <input type="hidden" name="lat">
   <input type="hidden" name="lon">
@@ -58,7 +58,9 @@ var intro =  "<h2>Not currently at a prayer place...</h2>" +
             "<p>This is all at a testing stage.</p>" +
             "<p>Please keep looking at the browser page. The prayer will come up on the screen " +
             "when you approach the spot.</p>";
+alert("about to populate stuff");
 document.getElementById("stuff").innerHTML = intro;
+alert("populated stuff");
 
 var nPlaces = 3;
 lats = new MakeArray(nPlaces);
@@ -88,9 +90,11 @@ lats[3] = 53.648592;
 longs[3] = -1.801921;
 texts[3] = "Just testing - a location near the manse.";
 froms[3] =  "<p>Leg 3 text</p>";
-
-var form0 = document.forms[0];
+alert("setting form0");
+var form0 = document.getElementById("debuginfo");
+alert("set form0");
 form0['mark'].value = "points loaded";
+alert("first field of form0 is now populated");
 var tolerance = 20; //metres radius
 var tsq = tolerance*tolerance;
 var interval = 3000; //milliseconds
