@@ -157,11 +157,11 @@ function previousDirections(){
     		showMenu();
 }
 function nextDirections(){
-		if (nPlaces > 0) {
+		if (lastPoint > 0) {
         		alert(froms[lastPoint]);
         	}
         	else {
-        		alert('Cancelling');
+        		alert(intro);
         	}
         	showMenu();
 }
