@@ -27,7 +27,7 @@ function OpenPopup(i)
          //alert("Going in "+i); 
          //popped = window.open(textlocs[i]);
          navigator.notification.vibrate(1200);
-         navigator.notification.beep(1);
+         navigator.notification.beep(1,99); //shouldn't have second parameter
          document.getElementById('stuff').innerHTML = texts[i];
          lastPoint = i;
          //bong.play;
@@ -69,7 +69,7 @@ function usePosition(position)
         	isOpen = "false";
         	//alert("Going out");
         	//popped.close();
-        	navigator.notification.beep(1);
+        	navigator.notification.beep(1,10); //shouldn't have second parameter
         	navigator.notification.vibrate(1200);
         	document.getElementById('stuff').innerHTML = froms[lastPoint];
         	//$('#stuff').attr('src', "null.html");
