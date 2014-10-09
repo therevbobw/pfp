@@ -154,6 +154,7 @@ function previousDirections(){
     		else {
     			alert(intro);
     		}
+    		showMenu();
 }
 function nextDirections(){
 		if (nPlaces > 0) {
@@ -162,4 +163,9 @@ function nextDirections(){
         	else {
         		alert('Cancelling');
         	}
+        	showMenu();
+}
+function goForward(){
+	showMenu();
+	window.history.forward();
 }
