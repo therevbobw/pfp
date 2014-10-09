@@ -147,3 +147,19 @@ function doMenuActions(buttonIndex){
         	alert("whoops!");
 	}
 }
+function previousDirections(){
+	    	if (lastPoint > 1){
+    			alert(froms[lastPoint-1]);
+    		}
+    		else {
+    			alert(intro);
+    		}
+}
+function nextDirections(){
+		if (nPlaces > 0) {
+        		alert(froms[lastPoint]);
+        	}
+        	else {
+        		alert('Cancelling');
+        	}
+}
