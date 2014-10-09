@@ -8,6 +8,7 @@
 <script src="phonegap.js"></script>
 <script src="myfun.js"></script>
 <!--Including the above two lines moved from lower down -->
+<!-- Also remember to set form0 with getElementById! (see below) -->
 <div id="modalSpace1" class="modalSpace">
      <div id="dialog1" class="dialog">
           <form><ul>
@@ -45,7 +46,6 @@
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
 document.addEventListener("menubutton", showMenu, false);
-alert("entering script");
 function MakeArray(n)
 {
    this.length = n;
@@ -58,9 +58,7 @@ var intro =  "<h2>Not currently at a prayer place...</h2>" +
             "<p>This is all at a testing stage.</p>" +
             "<p>Please keep looking at the browser page. The prayer will come up on the screen " +
             "when you approach the spot.</p>";
-alert("about to populate stuff");
 document.getElementById("stuff").innerHTML = intro;
-alert("populated stuff");
 
 var nPlaces = 3;
 lats = new MakeArray(nPlaces);
@@ -90,11 +88,9 @@ lats[3] = 53.648592;
 longs[3] = -1.801921;
 texts[3] = "Just testing - a location near the manse.";
 froms[3] =  "<p>Leg 3 text</p>";
-alert("setting form0");
+// Remember to use the technique here to set form0!!!
 var form0 = document.getElementById("debuginfo");
-alert("set form0");
 form0['mark'].value = "points loaded";
-alert("first field of form0 is now populated");
 var tolerance = 20; //metres radius
 var tsq = tolerance*tolerance;
 var interval = 3000; //milliseconds
@@ -128,7 +124,6 @@ form0['lat'].value = "lat";
 form0['lon'].value = "lon";
 form0['mark'].value = "neither";
 //var interval01 = window.setInterval(getLocation, 3000);
-alert("finished initialising");
 </script>
 </body>
 </html>
