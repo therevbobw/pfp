@@ -1,6 +1,7 @@
 To Do, not necessarily in this order...
 
 Get focus, or issue notification, on transition.
+Why is sound so quiet!!
 New index file with menu of walks - different versions of old index file (renamed) for each walk.
 Start to build up a library of real walks.
 ?When user gets back focus, let him/her know of any missed transitions?
