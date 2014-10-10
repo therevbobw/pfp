@@ -1,3 +1,14 @@
+var generalInstructions = "<p><small>To start off, select the walk you are interested in. " +
+	"A brief description will appear. If this is the one you want, select it by tapping the button.<br>" +
+	"At the start, and between prayer locations, there will be instructions on how to get to the " +
+	"next place. At the prayer places, your device may vibrate or make a sound, adn there will appear " +
+	"maybe brief pieces of information, and then the " +
+	"texts of prayers.<br>For a couple of minutes after starting the app., the satellite positioning " +
+	"system will be settling down and results may be unreliable: this varies depending on your hardware.<br>" +
+	"At any time, pressing the menu button in the bottom right hand corner yields whichever of these options " +
+	"is appropriate;- 'Go forwards', to undo the effect of accidentally pressing the 'back' button, "
+	"see the directions to get you right to the place you are near, see the directions to get you to the next " +
+	"place, and show these instructions.</small></p>";
 function onDeviceReady() {
   // Now safe to use the PhoneGap API
   //navigator.notification.alert("Starting", doLittle);
@@ -122,6 +133,9 @@ function nextDirections(){
         		showMessage(intro);
         	}
         	//showMenu();
+}
+function showGeneralInstructions(){
+	showMessage(generalInstructions);
 }
 function goForward(){
 	hideMenu();
