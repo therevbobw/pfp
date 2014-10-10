@@ -181,11 +181,13 @@ function goForward(){
 }
 function closeMessage() {
 	//alert("closing...");
+	//should be redundant... hideMenu();
 	el = document.getElementById("messageSpace");
 	el.style.visibility = "hidden";
 	//alert("should be closed now!");
 }
 function showMessage(messageText) {
+	hideMenu();
 	el = document.getElementById("messageSpace");
 	el.style.visibility = "visible";
 	content = document.getElementById("messageContent");
