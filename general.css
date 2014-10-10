@@ -30,12 +30,12 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
 }
 .dialog {
   max-width: 560px;
-  width: 90%;
-  margin: 5% auto;
+  width: 93%;
+  margin: 1% auto;
   background-color: #ccffff;
   /*border:1px solid #000;*/
   border-style: none;
-  padding: 8px;
+  padding: 4px;
   text-align:center;
 }
 .messageSpace {
@@ -46,17 +46,17 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   width:100%;
   height:100%;
   text-align:center;
-  z-index: 1000;
+  z-index: 999;
   background-image:url(blanking.png);
 }
 .message {
   max-width: 560px;
-  width: 90%;
-  margin: 5% auto;
+  width: 93%;
+  margin: 1% auto;
   background-color: #ccffff;
   /*border:1px solid #000;*/
   border-style: none;
-  padding: 8px;
+  padding: 4px;
   text-align:center;
 }
 ul {
@@ -69,5 +69,5 @@ ul {
   color: #006666;
 }
 .detail {
-  font-size: 70%;
+  font-size: 65%;
 }
