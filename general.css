@@ -7,6 +7,10 @@ input   { font-size: 100%; }
 button  { 
   font-size: 100%;
   background: #66cccc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 0;
 }
 select  { 
   font-size: 100%; 
@@ -58,6 +62,16 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   border-style: none;
   padding: 4px;
   text-align:center;
+}
+.messageContent {
+  /*max-width: 560px;
+  width: 93%;
+  margin: 1% auto;*/
+  background-color: #ccffff;
+  border-style: none;
+  /*padding: 4px;*/
+  text-align:center;
+  overflow: auto;
 }
 ul {
     list-style-type: none;
