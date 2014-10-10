@@ -11,6 +11,8 @@ button  {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border: 0;
+  font-style: bold;
+  color: #0099cc;
 }
 select  { 
   font-size: 100%; 
