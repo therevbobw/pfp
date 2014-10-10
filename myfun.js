@@ -180,10 +180,10 @@ function goForward(){
 	window.history.forward();
 }
 function closeMessage() {
-	alert("closing...");
+	//alert("closing...");
 	el = document.getElementById("messageSpace");
 	el.style.visibility = "hidden";
-	alert("should be closed now!");
+	//alert("should be closed now!");
 }
 function showMessage(messageText) {
 	el = document.getElementById("messageSpace");
