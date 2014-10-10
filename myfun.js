@@ -1,4 +1,4 @@
-var generalInstructions = "<p><small>To start off, select the walk you are interested in. " +
+var generalInstructions = "<p><small class='detail'>To start off, select the walk you are interested in. " +
 	"A brief description will appear. If this is the one you want, select it by tapping the button.<br>" +
 	"At the start, and between prayer locations, there will be instructions on how to get to the " +
 	"next place. At the prayer places, your device may vibrate or make a sound, adn there will appear " +
