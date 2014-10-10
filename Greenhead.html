@@ -4,14 +4,51 @@
   <link rel="stylesheet" type="text/css" href="general.css">
 </head>
 <body>
-<p class="title">Greenhead Park</p>
-<hr>
+<!--New bit to be added to other pages starts here -->
 <script src="phonegap.js"></script>
 <script src="myfun.js"></script>
+<!--Including the above two lines moved from lower down -->
+<!-- Also remember to set form0 with getElementById! (see below) -->
+<div id="modalSpace1" class="modalSpace">
+     <div id="dialog1" class="dialog">
+          <form><ul>
+             <li>
+               <button type="button" name="forward" onclick="goForward()">Go forward</button>
+               <br><small class="notes">If you press the back button by accident, this corrects the mistake.
+               If there is nowhere to go forward to, no action is taken.</small>
+             </li>
+             <li>
+               <button type="button" name="previous" onclick="previousDirections()">Previous directions</button>
+               <br><small class="notes">Look again at the directions to the place you are now near to.</small>
+             </li>
+             <li>
+               <button type="button" name="next" onclick="nextDirections()">Next directions</button>
+               <br><small class="notes">Look at the directions which take you to the next place.</small>
+             </li>
+              <li>
+               <button type="button" name="general" onclick="showGeneralInstructions()">General instructions</button>
+               <br><small class="notes">Look at the general instructions for this app..</small>
+             </li>
+          </ul></form>
+     </div>
+</div>
+<div id="messageSpace" class="messageSpace">
+     <div id="message" class="message">
+          <div id="messageContent">
+          </div>
+          <form>
+            <button type="button" name="messageCloser" onclick="closeMessage()">Close</button>
+          </form>
+     </div>
+</div>
+
+<!--New bit to be added to other pages ends here -->
+<p class="title">Greenhead Park</p>
+<hr>
 <!--<p id="demo">Click the button to get your coordinates:</p>
 <button onclick="getLocation()">Try It</button>-->
 <!--<h2>Waiting to get to a prayer place...</h2>-->
-<form>
+<form id="debuginfo">
   <!-- replace hidden with text when needed for debugging -->
   <input type="hidden" name="lat">
   <input type="hidden" name="lon">
@@ -60,7 +97,7 @@ texts[2] =  "<h2>The Water Fountain</h2>" +
             "<br>who gives life and meaning<br>welling up for all.</p>";
 froms[2] =  "<p>All done! Now enjoy the park.</p>";            
 
-var form0 = document.forms[0];
+var form0 = document.getElementById("debuginfo");
 form0['mark'].value = "points loaded";
 
 //var x=document.getElementById("demo");

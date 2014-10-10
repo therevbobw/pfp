@@ -4,6 +4,37 @@
   <link rel="stylesheet" type="text/css" href="general.css">
 </head>
 <body>
+<!--New bit to be added to other pages starts here -->
+<script src="phonegap.js"></script>
+<script src="myfun.js"></script>
+<!--Including the above two lines moved from lower down -->
+<!-- Also remember to set form0 with getElementById! (see below) -->
+<div id="modalSpace1" class="modalSpace">
+     <div id="dialog1" class="dialog">
+          <form><ul>
+             <li>
+               <button type="button" name="forward" onclick="goForward()">Go forward</button>
+               <br><small class="notes">If you press the back button by accident, this corrects the mistake.
+               If there is nowhere to go forward to, no action is taken.</small>
+             </li>
+             <li>
+               <button type="button" name="general" onclick="showGeneralInstructions()">General instructions</button>
+               <br><small class="notes">Look at the general instructions for this app..</small>
+             </li>
+          </ul></form>
+     </div>
+</div>
+<div id="messageSpace" class="messageSpace">
+     <div id="message" class="message">
+          <div id="messageContent">
+          </div>
+          <form>
+            <button type="button" name="messageCloser" onclick="closeMessage()">Close</button>
+          </form>
+     </div>
+</div>
+
+<!--New bit to be added to other pages ends here -->
 <script src="phonegap.js"></script>
 <script src="myfun.js"></script>
 <form id="choosing" name="choosing" action="">
@@ -57,5 +88,5 @@ function showWalk(){
   document.getElementById("walkDescription").innerHTML = descriptions[indexFromOne];
 }
 </script>
-</body>
+</body>
 </html>
