@@ -90,33 +90,6 @@ function usePosition(position)
 
 	
   }
-//Thank you BillyB...
-function fixiFrame () {
-   if ((android) && (androidVersion > 3)) {
-      iFrameContentHeight = document.getElementById('stuff').contentDocument.body.offsetHeight;
-      document.getElementById('stuff').style.height = iFrameContentHeight + 'px';
-   }
-}
-/*function showMenu(){
-    //check not called from index page - if it is, then only forward button should be displayed
-    if (nPlaces > 0) {
-      navigator.notification.confirm(
-        'Actions...',  // message
-        doMenuActions,              // callback to invoke with index of button pressed
-        'Prayers for Places control',            // title
-        'Forward,Next place,This place'          // buttonLabels
-      );
-    }
-    else {
-      navigator.notification.confirm(
-        'Actions...',  // message
-        doMenuActions,              // callback to invoke with index of button pressed
-        'Prayers for Places control',            // title
-        'Forward,Cancel'          // buttonLabels
-      );
-      	
-    }
-}*/
 function toggleMenu(){
 	el = document.getElementById("modalSpace1");
 	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
@@ -131,31 +104,6 @@ function showMenu(){
 	el = document.getElementById("modalSpace1");
 	el.style.visibility = "visible";
 
-}
-function doMenuActions(buttonIndex){
-	switch(buttonIndex) {
-	case 1:
-        	window.history.forward();
-        	break;
-	case 2:
-        	if (nPlaces > 0) {
-        		alert(froms[lastPoint]);
-        	}
-        	else {
-        		alert('Cancelling');
-        	}
-        	break;
-    	case 3:
-    		if (lastPoint > 1){
-    			alert(froms[lastPoint-1]);
-    		}
-    		else {
-    			alert(intro);
-    		}
-    		break;
-    	default:
-        	alert("whoops!");
-	}
 }
 function previousDirections(){
 	    	if (lastPoint > 1){
