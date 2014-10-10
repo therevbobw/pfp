@@ -117,9 +117,19 @@ function fixiFrame () {
       	
     }
 }*/
-function showMenu(){
+function toggleMenu(){
 	el = document.getElementById("modalSpace1");
 	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+
+}
+function hideMenu(){
+	el = document.getElementById("modalSpace1");
+	el.style.visibility = "hidden";
+
+}
+function showMenu(){
+	el = document.getElementById("modalSpace1");
+	el.style.visibility = "visible";
 
 }
 function doMenuActions(buttonIndex){
@@ -149,23 +159,33 @@ function doMenuActions(buttonIndex){
 }
 function previousDirections(){
 	    	if (lastPoint > 1){
-    			alert(froms[lastPoint-1]);
+    			showMessage(froms[lastPoint-1]);
     		}
     		else {
-    			alert(intro);
+    			showMessage(intro);
     		}
-    		showMenu();
+    		//showMenu();
 }
 function nextDirections(){
 		if (lastPoint > 0) {
-        		alert(froms[lastPoint]);
+        		showMessage(froms[lastPoint]);
         	}
         	else {
-        		alert(intro);
+        		showMessage(intro);
         	}
-        	showMenu();
+        	//showMenu();
 }
 function goForward(){
-	showMenu();
+	hideMenu();
 	window.history.forward();
+}
+function closeMessage() {
+	el = document.getElementById("messageSpace");
+	el.style.visibility = "hidden";
+}
+function showMessage(messageText) {
+	el = document.getElementById("messageSpace");
+	el.style.visibility = "visible";
+	content = document.getElementById("messageContent");
+	content.innerHTML = messageText;
 }
