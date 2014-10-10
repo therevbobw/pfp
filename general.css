@@ -35,6 +35,27 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   padding: 8px;
   text-align:center;
 }
+.messageSpace {
+  visibility: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width:100%;
+  height:100%;
+  text-align:center;
+  z-index: 1000;
+  background-image:url(blanking.png);
+}
+.message {
+  max-width: 560px;
+  width: 90%;
+  margin: 5% auto;
+  background-color: #ffffff;
+  /*border:1px solid #000;*/
+  border-style: none;
+  padding: 8px;
+  text-align:center;
+}
 ul {
     list-style-type: none;
     padding: 0px;
