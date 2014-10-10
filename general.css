@@ -6,13 +6,13 @@ div     {
 input   { font-size: 100%; }
 button  { 
   font-size: 100%;
-  background: #66cccc;
+  background: #006699;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border: 0;
   font-style: bold;
-  color: #0099cc;
+  color: #ffffff;
 }
 select  { 
   font-size: 100%; 
