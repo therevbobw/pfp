@@ -11,7 +11,7 @@ button  {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border: 0;
-  font-style: bold;
+  font-weight: bold;
   color: #ffffff;
 }
 select  { 
