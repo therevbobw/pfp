@@ -7,6 +7,7 @@
 <!--New bit to be added to other pages starts here -->
 <script src="phonegap.js"></script>
 <script src="myfun.js"></script>
+<script>var walkName = "none";</script>
 <!--Including the above two lines moved from lower down -->
 <!-- Also remember to set form0 with getElementById! (see below) -->
 <div id="modalSpace1" class="modalSpace">
@@ -35,10 +36,21 @@
      </div>
 </div>
 
+<div id="previewSpace" class="previewSpace">
+     <div id="preview" class="preview">
+          <div id="previewContent">
+          </div>
+          <form>
+            <button type="button" name="previewDismiss" onclick="dismissPreview()">Not this one</button>
+            <button type="button" name="walkConfirm" onclick="confirmWalk()">Confirm</button>
+          </form>
+     </div>
+</div>
+
 <!--New bit to be added to other pages ends here -->
 <div class="centred">
 <form id="choosing" name="choosing" action="">
-  <p>
+  <!-- <p>
     <select id="select01" name="select01" onchange="showWalk()">
       <option value="testing" class="centred">Test data</option>
       <option value="Greenhead" class="centred">Greenhead Park</option>
@@ -48,11 +60,19 @@
   </p>
   <p>
     <button type="button" name="go" onclick="selectWalk()">Choose</button>
-  </p>
+  </p> -->
+  <button type="button" value="testing" class="walkChoice" id="testing"
+    onclick="previewWalk('testing')">Test data</button>
+  <button type="button" value="Greenhead" class="walkChoice" id="Greenhead"
+    onclick="previewWalk('Greenhead')">Greenhead Park</button>
+  <button type="button" value="TPT01" class="walkChoice" id="TPT01"
+    onclick="previewWalk('TPT01')">Longdendale Trail</button>
+  <button type="button" value="HolywellGreenBurialGround" class="walkChoice" id="HolywellGreenBurialGround"
+    onclick="previewWalk('HolywellGreenBurialGround')">Holywell Green Burial Ground</button>
 </form>
 </div>
-<div id="walkDescription" class="centred">
-</div>
+<!--<div id="walkDescription" class="centred">
+</div> -->
 <script>
 document.getElementById("choosing").style.display="none";
 document.addEventListener("deviceready", onDeviceReady, false);
