@@ -16,7 +16,13 @@ button  {
 }
 select  { 
   font-size: 100%; 
-  background: #66cccc;
+  background: #006699;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 0;
+  font-weight: bold;
+  color: #ffffff;
 }
 iframe  { font-size: 100%; }
 h2      { color: #006633;  }
@@ -74,6 +80,9 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   /*padding: 4px;*/
   text-align:center;
   overflow: auto;
+}
+.centred {
+  text-align: center;
 }
 ul {
     list-style-type: none;
