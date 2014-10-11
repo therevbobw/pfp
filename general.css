@@ -20,7 +20,8 @@ select  {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  border: 0;
+  border: 2px;
+  border-color: #006699;
   font-weight: bold;
   color: #006699;
   text-align: center;
