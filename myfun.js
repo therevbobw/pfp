@@ -112,9 +112,10 @@ function hideMenu(){
 
 }
 function showMenu(){
-	el = document.getElementById("modalSpace1");
-	el.style.visibility = "visible";
-
+	/*el = document.getElementById("modalSpace1");
+	el.style.visibility = "visible";*/
+	togglemenu();
+	// ...because someone might hit the menu again wanting to dismiss it
 }
 function previousDirections(){
 	    	if (lastPoint > 1){
