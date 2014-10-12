@@ -164,15 +164,15 @@ function showSelector(){
 function dismissPreview() {
 	el = document.getElementById("previewSpace");
 	el.style.visibility = "hidden";
-	showSelector();
+	//showSelector();
 }
 function previewWalk(index, title) {
 	walkIndex = index;
 	walkName = title;
-	alert(description[index]);
-	document.getElementById("previewContent").innerHTML = description[index];
+	//alert(descriptions[index]);
+	document.getElementById("previewContent").innerHTML = descriptions[index];
 	el = document.getElementById("previewSpace");
-	hideSelector();
+	//hideSelector();
 	el.style.visibility = "visible";
 }
 function confirmWalk() {
