@@ -156,10 +156,10 @@ function showMessage(messageText) {
 	content.innerHTML = messageText;
 }
 function hideSelector(){
-	document.getElementById("???").visibility = "hidden";
+	document.getElementById("selector").visibility = "hidden";
 }
 function showSelector(){
-	document.getElementById("???").visibility = "visible";
+	document.getElementById("selector").visibility = "visible";
 }
 function dismissPreview() {
 	el = document.getElementById("previewSpace");
