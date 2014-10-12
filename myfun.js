@@ -155,3 +155,15 @@ function showMessage(messageText) {
 	content = document.getElementById("messageContent");
 	content.innerHTML = messageText;
 }
+function dismissPreview() {
+	el = document.getElementById("previewSpace");
+	el.style.visibility = "hidden";
+}
+function previewWalk(index, title) {
+	document.getElementById("previewContent").innerHTML = description[index];
+	el = document.getElementById("previewSpace");
+	el.style.visibility = "visible";
+}
+function confirmWalk(index, title) {
+	
+}
