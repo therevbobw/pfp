@@ -137,6 +137,9 @@ function nextDirections(){
 function showGeneralInstructions(){
 	showMessage(generalInstructions);
 }
+function cancelMenu() {
+	hideMenu();
+}
 function goForward(){
 	hideMenu();
 	window.history.forward();
