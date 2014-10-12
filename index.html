@@ -77,6 +77,8 @@
     onclick="previewWalk(3,'TPT01')">Longdendale Trail</button>
   <button type="button" value="HolywellGreenBurialGround" class="walkChoice" id="HolywellGreenBurialGround"
     onclick="previewWalk(4,'HolywellGreenBurialGround')">Holywell Green Cemetery</button>
+  <button type="button" value="Selwyn" class="walkChoice" id="Selwyn"
+    onclick="previewWalk(5,'Selwyn')">Selwyn College</button>
 </form>
 </div>
 <!--<div id="walkDescription" class="centred">
@@ -92,7 +94,7 @@ function MakeArray(n)
      this[i] = 0 }
    return this
 }
-var numberOfWalkChoices = 4;
+var numberOfWalkChoices = 5;
 var descriptions = new MakeArray(numberOfWalkChoices);
 descriptions[1] = "<p>Just test data near the manse</p>";
 descriptions[2] = "<p>A walk in Greenhead Park in Huddersfield visiting various " +
@@ -100,7 +102,8 @@ descriptions[2] = "<p>A walk in Greenhead Park in Huddersfield visiting various 
 descriptions[3] = "<p>A walk along the Longdendale Trail section of the Transpennine " +
                  "Trail from Hadfield Railway Station to Torside Crossing.</p>";
 descriptions[4] = "<p>A visit to six places within the burial ground at Holywell Green, behind Stainland" +
-                  " and Holywell Green United Reformed Church.</p>"; 
+                  " and Holywell Green United Reformed Church.</p>";
+descriptions[5] = "<p>A short walk around Selwyn College in Cambridge and its neighbourhood.</p>";  
 function onDeviceReady(){
   document.getElementById("choosing").style.display="block";
 }

@@ -50,9 +50,8 @@
 </div>
 
 <!--New bit to be added to other pages ends here -->
-<p class="title">Test Data</p>
+<p class="title">Transpennine Trail</p>
 <hr>
-
 <!--<p id="demo">Click the button to get your coordinates:</p>
 <button onclick="getLocation()">Try It</button>-->
 <!--<h2>Waiting to get to a prayer place...</h2>-->
@@ -62,7 +61,7 @@
   <input type="hidden" name="lon">
   <input type="hidden" name="mark">
 </form>
-<!--<iframe id="stuff" src="null.html" width="100%" height="720"><p>Sorry your browser does not support iframe</p></iframe> -->
+<!-- <iframe id="stuff" src="null.html" width="100%" height="720"><p>Sorry your browser does not support iframe</p></iframe> -->
 <div id="stuff"></div>
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -78,45 +77,68 @@ function MakeArray(n)
 var intro =  "<h2>Not currently at a prayer place...</h2>" +
             "<p>This is all at a testing stage.</p>" +
             "<p>Please keep looking at the browser page. The prayer will come up on the screen " +
-            "when you approach the spot.</p>";
+            "when you approach the spot.</p><hr><p>The first location is the main entrance to the college.</p>";
 document.getElementById("stuff").innerHTML = intro;
 
-var nPlaces = 3;
+var nPlaces = 6;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
 texts = new MakeArray(nPlaces);
 froms = new MakeArray(nPlaces);
-lats[1] = 53.648666;
-longs[1] = -1.799677;
-//textlocs[1] = "textGreenhead01.html";
-texts[1] =  "<h2>The Bench</h2>" +
-            "<p>A place within the park, but looking beyond the park, to the street, houses and the hills.</p>" +
-            "<p>God we thank you<br>for little spaces of time<br>carved out from busy days;" +
-            "<br>spaces of quiet and of remembering.<br>We pray for travellers on the road," +
-            "<br>for their safety,<br>and for good in their encounters today.<br>We pray your peace" +
-            "<br>on every household here.<br>We thank you for the hills and sky," +
-            "<br>and ask your help to keep them safe.</p><p class='author'>Bob Warwicker</p>";
-froms[1] =  "<p>Leg 1 text</p>";
-lats[2] = 53.648168;
-longs[2] = -1.796082;
-texts[2] =  "<h2>The Water Fountain</h2>" +
-            "<p>Thank you God for water,<br>water that gushes abundantly,<br>water for life," +
-            "<br>water for power,<br>water to make the thirsty land bloom.<br>God save those who are" +
-            "<br>at the mercy of the sea,<br>in danger from floods.<br>We thank you for Jesus," +
-            "<br>who gives life and meaning<br>welling up for all.</p><p class='author'>Bob Warwicker</p>";
-froms[2] =  "<p>Leg 2 text</p>";            
-lats[3] = 53.648592;
-longs[3] = -1.801921;
-texts[3] = "Just testing - a location near the manse.";
-froms[3] =  "<p>Leg 3 text</p>";
-// Remember to use the technique here to set form0!!!
+lats[1] = 52.201024;
+longs[1] = 0.105618;
+texts[1] =  "<h2>Porters' Lodge</h2>" +
+            "<p>And use this place as somewhere to thank God for the work of everyone who works in this college, " +
+            "working day, evening and night, when the rest of this world is studying and when it is partying. " +
+            "Whenever it is, someone is at work.</p>";
+froms[1] =  "<p>Enter the college and follow the path to the right, and then around the corner.</p>";            
+lats[2] = 52.200747;
+longs[2] = 0.106005;
+texts[2] =  "<h2>Dining Hall</h2>" +
+            "<p>This is a good place to thank God for food, fruit of God's earth and of human labour by hand or by brain. " +
+            "People in many nations produce our food, from Kenya to Canada. And many different kinds of work are " +
+            "involved, agriculture, packing, transport, and unpaid work in kitchens in flats and houses. " +
+            "Thank God for all of it.</p>";
+froms[2] =  "<p>Continue on the path until you get to the chapel.</p>";            
+lats[3] = 52.200930;
+longs[3] = 0.106557;
+texts[3] =  "<h2>Chapel</h2>" +
+            "<p>Once again, thank God, this time for music. Pray for the grace to pray and worship God " +
+            "beyond church walls. Pray in support of the chaplain, whose job may be hard in ways " +
+            "we shall never know</p>";
+froms[3] =  "<p>Walk out into the garden and head for the main feature in the centre of the lawn. " +
+            "It consists of plants and stuff and has a path running through it.</p>"; 
+lats[4] = 52.201182;
+longs[4] = 0.107365;
+texts[4] =  "<h2>Garden</h2>" +
+            "<p>A garden is a place of beauty. But a garden is also the place where Jesus was arrested. " +
+            "This is a harsh world, now as then. Jesus was taken away to be executed. And still, people " +
+            "are unjustly punished, even killed. Pray for them. Pray for forgiveness, because of the hurt " +
+            "each of us contributes to the world.</p>";
+froms[4] =  "<p>Return to the main entrance, walk out and turn right along Grange Road. You will come to " +
+            "the rugby ground.</p>";             
+lats[5] = 52.202526;
+longs[5] = 0.105366;
+texts[5] =  "<h2>Rugby Ground</h2>" +
+            "<p>Thank God for the gift of sport, and the wonder of the human body. Pray that as many people " +
+            "as possible, with all levels of ability, and all kinds of disability, and at every age " +
+            "may share the joy of sport.</p>";
+froms[5] =  "<p>Move along the road a bit further, and look at the tower of the University Library.</p>";
+lats[6] = 52.204629;
+longs[6] = 0.105710;
+texts[6] = "<h2>University Library</h2>" +
+            "<p>This tower is visible for miles. It used to be said there was a locked upper room " +
+            "in the tower where the pornography library was. In any case, the whole thing makes " +
+            "a grand statement about knowledge. And quite right too. Give God thanks for knowledge, " +
+            "and the freedom to pursue it. Pray for people who do not have that freedom.</p>";
+froms[6] =  "<p>That is all at this stage. Return to the place you came from.</p>";
 var form0 = document.getElementById("debuginfo");
 form0['mark'].value = "points loaded";
-var tolerance = 20; //metres radius
+
+//var x=document.getElementById("demo");
+var tolerance = 15; //metres radius
 var tsq = tolerance*tolerance;
 var interval = 3000; //milliseconds
-
-
 var angConv = Math.PI/180;
 //var bongsrc = "hello.mp3";
 var lastUpdateTime = 0;
@@ -129,7 +151,7 @@ var travelled = 0;
 var isOpen = "false";
 var anyOpen = "false";
 var lastPoint = 1;
-var indexOfWanted = 1;
+var indexOfWanted = 3;
 form0['mark'].value = "performance next";
 var now = Date.now();
 var then = Date.now();
@@ -145,6 +167,7 @@ form0['lat'].value = "lat";
 form0['lon'].value = "lon";
 form0['mark'].value = "neither";
 //var interval01 = window.setInterval(getLocation, 3000);
+
 </script>
 </body>
 </html>
