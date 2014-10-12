@@ -160,10 +160,15 @@ function dismissPreview() {
 	el.style.visibility = "hidden";
 }
 function previewWalk(index, title) {
+	walkIndex = index;
+	walkName = title;
 	document.getElementById("previewContent").innerHTML = description[index];
 	el = document.getElementById("previewSpace");
 	el.style.visibility = "visible";
 }
-function confirmWalk(index, title) {
+function confirmWalk() {
+  var url = walkName + ".html";
+  //alert(url);
+  window.location=url;
 	
 }
