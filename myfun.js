@@ -155,15 +155,24 @@ function showMessage(messageText) {
 	content = document.getElementById("messageContent");
 	content.innerHTML = messageText;
 }
+function hideSelector(){
+	document.getElementById("???").visibility = "hidden";
+}
+function showSelector(){
+	document.getElementById("???").visibility = "visible";
+}
 function dismissPreview() {
 	el = document.getElementById("previewSpace");
 	el.style.visibility = "hidden";
+	showSelector();
 }
 function previewWalk(index, title) {
+	alert(index,title);
 	walkIndex = index;
 	walkName = title;
 	document.getElementById("previewContent").innerHTML = description[index];
 	el = document.getElementById("previewSpace");
+	hideSelector();
 	el.style.visibility = "visible";
 }
 function confirmWalk() {
