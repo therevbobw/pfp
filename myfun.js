@@ -167,7 +167,8 @@ function dismissPreview() {
 	showSelector();
 }
 function previewWalk(index, title) {
-	alert(index,title);
+	alert(title);
+	alert(index);
 	walkIndex = index;
 	walkName = title;
 	document.getElementById("previewContent").innerHTML = description[index];
