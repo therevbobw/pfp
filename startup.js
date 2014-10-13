@@ -29,9 +29,10 @@ myAccuracy = 999999;
   //also these may depend on type of journey. Consider revising if I do road/rail and include in
   //the 'by route' variables. Also later could include a 'settings' option also to specify km/miles TODO
 mileageUpdateDistance = 50; //metres
-mileageUpdateAccuracyRatio = 0.25;
+mileageUpdateAccuracyRatio = 0.3;
 mileageAccuracyThreshold = mileageUpdateDistance * mileageUpdateAccuracyRatio;
-matsq = mileageAccuracyThreshold * mileageAccuracyThreshold;
+//matsq = mileageAccuracyThreshold * mileageAccuracyThreshold;
+mudsq = mileageUpdateDistance * mileageUpdateDistance;
 metresToMiles = 0.000621371192;
 wantedConversion = metresToMiles;
 //alert('about to write form');
