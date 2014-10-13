@@ -126,19 +126,19 @@ function usePosition(position)
 	
   }
 function toggleMenu(){
-	el = document.getElementById("modalSpace1");
-	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	var el8 = document.getElementById("modalSpace1");
+	el8.style.visibility = (el8.style.visibility == "visible") ? "hidden" : "visible";
 
 }
 function hideMenu(){
-	el = document.getElementById("modalSpace1");
-	el.style.visibility = "hidden";
+	var el7 = document.getElementById("modalSpace1");
+	el7.style.visibility = "hidden";
 
 }
 function showMenu(){
 	// reinstate this until I have time to do it properly ... TODO
-	el = document.getElementById("modalSpace1");
-	el.style.visibility = "visible";
+	var el6 = document.getElementById("modalSpace1");
+	el6.style.visibility = "visible";
 	/*togglemenu();
 	// ...because someone might hit the menu again wanting to dismiss it*/
 }
@@ -173,14 +173,14 @@ function goForward(){
 function closeMessage() {
 	//alert("closing...");
 	//should be redundant... hideMenu();
-	el = document.getElementById("messageSpace");
-	el.style.visibility = "hidden";
+	var el5 = document.getElementById("messageSpace");
+	el5.style.visibility = "hidden";
 	//alert("should be closed now!");
 }
 function showMessage(messageText) {
 	hideMenu();
-	el = document.getElementById("messageSpace");
-	el.style.visibility = "visible";
+	var el4 = document.getElementById("messageSpace");
+	el4.style.visibility = "visible";
 	content = document.getElementById("messageContent");
 	content.innerHTML = messageText;
 }
@@ -191,8 +191,8 @@ function showSelector(){
 	document.getElementById("selector").visibility = "visible";
 }
 function dismissPreview() {
-	el = document.getElementById("previewSpace");
-	el.style.visibility = "hidden";
+	var el3 = document.getElementById("previewSpace");
+	el3.style.visibility = "hidden";
 	//showSelector();
 }
 function previewWalk(index, title) {
@@ -200,9 +200,9 @@ function previewWalk(index, title) {
 	walkName = title;
 	//alert(descriptions[index]);
 	document.getElementById("previewContent").innerHTML = descriptions[index];
-	el = document.getElementById("previewSpace");
+	var el2 = document.getElementById("previewSpace");
 	//hideSelector();
-	el.style.visibility = "visible";
+	el2.style.visibility = "visible";
 }
 function confirmWalk() {
   var url = walkName + ".html";
@@ -211,8 +211,8 @@ function confirmWalk() {
 }
 function toggleMileage() {
   hideMenu();	
-  var el = document.getElementById("counter");
-  var vy = el.innerHTML;
+  var counterSpace = document.getElementById("counter");
+  var vy = counterSpace.innerHTML;
   alert('vy is'+vy+'...');
   var lv = vy.length;
   alert(lv);
@@ -220,12 +220,12 @@ function toggleMileage() {
   if ( lv < 20 ) {
     var mileageText = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
     alert(mileageText);
-    el.innerHTML = mileageText;
+    counterSpace.innerHTML = mileageText;
   }
   else {
     alert('elseing');
-    el.innerHTML = "";
+    counterSpace.innerHTML = "";
   }
-  alert(el.innerHTML);
+  alert(counterSpace.innerHTML);
 }
 
