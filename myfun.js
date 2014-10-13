@@ -99,7 +99,7 @@ function usePosition(position)
     	}
         myAccuracy = position.coords.accuracy;
         // do nothing at all about mileage unless accuracy is good enough...
-        if ( my Accuracy < mileageAccuracyThreshold) {
+        if ( myAccuracy < mileageAccuracyThreshold) {
           if ( lastMileageLatitude > 99 ) {
             //first measurement...
             document.getElementById('displayMiles').value = "0";
