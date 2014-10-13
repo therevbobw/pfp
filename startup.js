@@ -19,7 +19,7 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
             '<form><button type="button" name="messageCloser" onclick="closeMessage()">Close</button></form>' +
             '</div></div>';
 document.write(text1);
-displayMileage = "no fix";
+displayMileage = "(no fix)";
 aggregateDistance = 0;
 lastMileageLatitude = 999;
 lastMileageLongitude = 999;
