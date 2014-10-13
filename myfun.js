@@ -60,7 +60,7 @@ function usePosition(position)
 	var myLatitude = position.coords.latitude;
 	var myLongitude = position.coords.longitude;
 	myAccuracy = position.coords.accuracy;
-	alert(myAccuracy);
+	//alert(myAccuracy);
 	form0['lat'].value = myLatitude;
     	form0['lon'].value = myLongitude;
         then = now;
