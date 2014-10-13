@@ -31,9 +31,7 @@ mileageAccuracyThreshold = mileageUpdateDistance * mileageUpdateAccuracyRatio;
 matsq = mileageAccuracyThreshold * mileageAccuracyThreshold;
 metresToMiles = 0.000621371192;
 wantedConversion = metresToMiles;
-alert('about to write form');
-var text2 = '<div id="counter" class="hideableFormSpace"><form>' +
-'<p>Distance so far: <input type="text" name="miles" id="displayMiles" value = "no fix"> miles</p>' +
-'</form><hr></div>';
+//alert('about to write form');
+var text2 = '<div id="counter"></div>';
 document.write(text2);
-alert('form written');
+//alert('form written');
