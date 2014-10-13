@@ -215,8 +215,10 @@ function toggleMileage() {
   var vy = el.innerHTML;
   alert('vy is'+vy+'...');
   //if ( vy == "" ) {
-  if (!vy || 0 === vy.length) {
-    el.innerHTML = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
+  if (!vy) {
+    var mileageText = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
+    alert(mileageText);
+    el.innerHTML = mileageText;
   }
   else {
     el.innerHTML = "";
