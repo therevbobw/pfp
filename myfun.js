@@ -115,7 +115,7 @@ function usePosition(position)
               aggregateDistance = aggregateDistance + distanceIncrement;
               aggregateMileage = aggregateDistance * wantedConversion;
               displayMileage = aggregateMileage.toFixed(2);
-              document.getElementById('displayMiles').value = displayMileage;
+              //document.getElementById('displayMiles').value = displayMileage;
               lastMileageLatitude = myLatitude;
               lastMileageLongitude = myLongitude;
             }
@@ -211,13 +211,13 @@ function confirmWalk() {
 }
 function toggleMileage() {
   hideMenu();	
-  el = document.getElementById("counter");
-  vy = el.style.visibility;
-  if ( vy == "hidden" ) {
-    el.style.visibility = "visible";
+  var el = document.getElementById("counter");
+  var vy = el.innerHTML;
+  if ( vy == "" ) {
+    el.innerHTML = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
   }
-  if ( vy == "visible" ) {
-    el.style.visibility = "hidden";
+  else {
+    el.innerHTML = "";
   }
 }
 
