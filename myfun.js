@@ -217,7 +217,7 @@ function toggleMileage() {
   var lv = vy.length;
   alert(lv);
   //if ( vy == "" ) {
-  if (!vy) {
+  if ( lv < 20 ) {
     var mileageText = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
     alert(mileageText);
     el.innerHTML = mileageText;
