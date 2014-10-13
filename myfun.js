@@ -210,6 +210,7 @@ function confirmWalk() {
   window.location=url;
 }
 function toggleMileage() {
+  hideMenu();	
   el = document.getElementById("counter");
   vy = el.style.visibility;
   if ( vy == "hidden" ) {
