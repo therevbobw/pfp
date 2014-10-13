@@ -214,6 +214,8 @@ function toggleMileage() {
   var el = document.getElementById("counter");
   var vy = el.innerHTML;
   alert('vy is'+vy+'...');
+  var lv = vy.length;
+  alert(lv);
   //if ( vy == "" ) {
   if (!vy) {
     var mileageText = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
@@ -221,6 +223,7 @@ function toggleMileage() {
     el.innerHTML = mileageText;
   }
   else {
+    alert('elseing');
     el.innerHTML = "";
   }
   alert(el.innerHTML);
