@@ -99,6 +99,7 @@ function usePosition(position)
         	one point to another without passing through empty space
         	currently no action in this case*/
     	}
+    	alert(myAccuracy+","+mileageAccuracyThreshold);
         // do nothing at all about mileage unless accuracy is good enough...
         if ( myAccuracy < mileageAccuracyThreshold) {
           if ( lastMileageLatitude > 99 ) {
