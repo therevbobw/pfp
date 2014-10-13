@@ -134,7 +134,7 @@ function usePosition(position)
           }
         }
         else {
-        	infoString = "<p>Not currently accurate enough - accuracy: " + myAccuracy.toFixed(2) + "m.</p><hr>";
+        	infoString = "<p>Not accurate enough - accuracy: " + myAccuracy.toFixed(2) + "m.</p><hr>";
         }
     }
     var counterSpace = document.getElementById("counter");
