@@ -114,7 +114,7 @@ function usePosition(position)
               distanceIncrement = Math.sqrt(dsq);
               aggregateDistance = aggregateDistance + distanceIncrement;
               aggregateMileage = aggregateDistance * wantedConversion;
-              displayMileage = aggreagateMileage.toFixed(2);
+              displayMileage = aggregateMileage.toFixed(2);
               document.getElementById('displayMiles').value = displayMileage;
               lastMileageLatitude = myLatitude;
               lastMileageLongitude = myLongitude;
