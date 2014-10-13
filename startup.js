@@ -1,4 +1,3 @@
-function startup(){
 // No \n because I don't care what it looks like. Using single quotes because double inside text
 var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="dialog">' +
             '<form><ul><li><button type="button" name="forward" onclick="goForward()">Go forward</button>' +
@@ -20,7 +19,6 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
             '<form><button type="button" name="messageCloser" onclick="closeMessage()">Close</button></form>' +
             '</div></div>';
 document.write(text1);
-//now these are defined inside a function I need to remove var
 aggregateDistance = 0;
 lastMileageLatitude = 999;
 lastMileageLongitude = 999;
@@ -37,4 +35,3 @@ var text2 = '<div id="counter" class="hideableFormSpace"><form>' +
 '<p>Distance so far: <input type="text" name="miles" id="displayMiles" value = "no fix"> miles</p>' +
 '</form><hr></div>';
 document.write(text2);
-}
