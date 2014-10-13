@@ -117,6 +117,10 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   text-align:center;
   overflow: auto;
 }
+.hideableFormSpace {
+  visibility: hidden;
+  text-align: center;
+}
 .centred {
   text-align: center;
 }

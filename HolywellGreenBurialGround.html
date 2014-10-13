@@ -9,46 +9,11 @@
 <script src="myfun.js"></script>
 <!--Including the above two lines moved from lower down -->
 <!-- Also remember to set form0 with getElementById! (see below) -->
-<div id="modalSpace1" class="modalSpace">
-     <div id="dialog1" class="dialog">
-          <form><ul>
-             <li>
-               <button type="button" name="forward" onclick="goForward()">Go forward</button>
-               <br><small class="notes">If you press the back button by accident, this corrects the mistake.
-               If there is nowhere to go forward to, no action is taken.</small>
-             </li>
-             <hr>
-             <li>
-               <button type="button" name="previous" onclick="previousDirections()">Previous directions</button>
-               <br><small class="notes">Look again at the directions to the place you are now near to.</small>
-             </li>
-             <hr>
-             <li>
-               <button type="button" name="next" onclick="nextDirections()">Next directions</button>
-               <br><small class="notes">Look at the directions which take you to the next place.</small>
-             </li>
-             <hr>
-             <li>
-               <button type="button" name="general" onclick="showGeneralInstructions()">General instructions</button>
-               <br><small class="notes">Look at the general instructions for this app..</small>
-             </li>
-             <hr>
-             <li>
-               <button type="button" name=""general"cancel" onclick="cancelMenu()">Cancel</button>
-             </li>
-          </ul></form>
-     </div>
+<div id="commonHtml1">
 </div>
-<div id="messageSpace" class="messageSpace">
-     <div id="message" class="message">
-          <div id="messageContent">
-          </div>
-          <form>
-            <button type="button" name="messageCloser" onclick="closeMessage()">Close</button>
-          </form>
-     </div>
-</div>
-
+<script>
+  document.getElementById('commonHtml1').innerHTML = "common1.html";
+</script>
 <!--New bit to be added to other pages ends here -->
 <p class="title">Holywell Green Burial Ground</p>
 <hr>

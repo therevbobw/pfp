@@ -9,46 +9,11 @@
 <script src="myfun.js"></script>
 <!--Including the above two lines moved from lower down -->
 <!-- Also remember to set form0 with getElementById! (see below) -->
-<div id="modalSpace1" class="modalSpace">
-     <div id="dialog1" class="dialog">
-          <form><ul>
-             <li>
-               <button type="button" name="forward" onclick="goForward()">Go forward</button>
-               <br><small class="notes">If you press the back button by accident, this corrects the mistake.
-               If there is nowhere to go forward to, no action is taken.</small>
-             </li>
-             <hr>
-             <li>
-               <button type="button" name="previous" onclick="previousDirections()">Previous directions</button>
-               <br><small class="notes">Look again at the directions to the place you are now near to.</small>
-             </li>
-             <hr>
-             <li>
-               <button type="button" name="next" onclick="nextDirections()">Next directions</button>
-               <br><small class="notes">Look at the directions which take you to the next place.</small>
-             </li>
-             <hr>
-             <li>
-               <button type="button" name="general" onclick="showGeneralInstructions()">General instructions</button>
-               <br><small class="notes">Look at the general instructions for this app..</small>
-             </li>
-             <hr>
-             <li>
-               <button type="button" name=""general"cancel" onclick="cancelMenu()">Cancel</button>
-             </li>
-          </ul></form>
-     </div>
+<div id="commonHtml1">
 </div>
-<div id="messageSpace" class="messageSpace">
-     <div id="message" class="message">
-          <div id="messageContent">
-          </div>
-          <form>
-            <button type="button" name="messageCloser" onclick="closeMessage()">Close</button>
-          </form>
-     </div>
-</div>
-
+<script>
+  document.getElementById('commonHtml1').innerHTML = "common1.html";
+</script>
 <!--New bit to be added to other pages ends here -->
 <p class="title">Transpennine Trail</p>
 <hr>
@@ -80,7 +45,7 @@ var intro =  "<h2>Not currently at a prayer place...</h2>" +
             "when you approach the spot.</p><hr><p>The first location is the entrance to Hadfield station.</p>";
 document.getElementById("stuff").innerHTML = intro;
 
-var nPlaces = 10;
+var nPlaces = 11;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
 texts = new MakeArray(nPlaces);
@@ -173,7 +138,11 @@ texts[10] = "<h2>The heart-shaped puddle</h2><p>Sometimes in wet weather there i
             "<br>You see the signs around you;<br>a burning bush,<br>a reflecting puddle," +
             "<br>the broken bread.<br>Christ of the everyday,<br>Be with us any day." +
             "<br>May it be possible that<br>Today is the day.</p><p class='author'>Janet Lees</p>";
-froms[10] =  "<p>Please continue along the trail until you get to a bench at an angle to the path.</p>";
+froms[10] = "<p>Please continue along the trail until you get to a bench at an angle to the path.</p>";
+lats[11] =  53.466005;
+longs[11] = -1.965113;
+texts[11] = "<h2>Just testing</h2><p>A nearby point for test purposes...</p>";
+froms[11] = "<p>Just go where you would have gone anyway</p>";
 var form0 = document.getElementById("debuginfo");
 form0['mark'].value = "points loaded";
 

@@ -97,8 +97,32 @@ function usePosition(position)
         	one point to another without passing through empty space
         	currently no action in this case*/
     	}
+        myAccuracy = position.coords.accuracy;
+        // do nothing at all about mileage unless accuracy is good enough...
+        if ( my Accuracy < mileageAccuracyThreshold) {
+          if ( lastMileageLatitude > 99 ) {
+            //first measurement...
+            document.getElementById('displayMiles').value = "0";
+            lastMileageLatitude = myLatitude;
+            lastMileageLongitude = myLongitude;
+          }
+          else {
+            dy = (myLatitude - lastMileageLatitude)*111300;
+            dx = (myLongitude - lastMileageLongitude)*111300*Math.cos(myLatitude*angConv);
+            dsq = dx*dx+dy*dy;
+            if ( dsq > matsq ){
+              distanceIncrement = Math.sqrt(dsq);
+              aggregateDistance = aggregateDistance + distanceIncrement;
+              aggregateMileage = aggregateDistance * wantedConversion;
+              displayMileage = aggreagateMileage.toFixed(2);
+              document.getElementById('displayMiles').value = displayMileage;
+              lastMileageLatitude = myLatitude;
+              lastMileageLongitude = myLongitude;
+            }
+          }
+        }
     }
-
+  
 	
   }
 function toggleMenu(){
@@ -184,5 +208,15 @@ function confirmWalk() {
   var url = walkName + ".html";
   //alert(url);
   window.location=url;
-	
 }
+function toggleMileage() {
+  el = document.getElementById("counter");
+  vy = el.style.visibility;
+  if ( vy == "hidden" ) {
+    el.style.visibility = "visible";
+  }
+  if ( vy == "visible" ) {
+    el.style.visibility = "hidden";
+  }
+}
+
