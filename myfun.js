@@ -119,7 +119,7 @@ function usePosition(position)
               //var counterArea = document.getElementById("counter");
               var counterText = document.getElementById("counter").innerHTML;
               var counterLength = counterText.length;
-              if ( counterLength > 20 ) then {
+              if ( counterLength > 20 ) {
               	//i.e. field is currently displayed
               	counterText = "<p class='mileage'>Distance so far: " + displayMileage + " miles</p><hr>";
               	document.getElementById("counter").innerHTML = counterText;
