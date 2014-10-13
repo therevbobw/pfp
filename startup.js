@@ -19,6 +19,7 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
             '<div id="messageContent"></div>' +
             '<form><button type="button" name="messageCloser" onclick="closeMessage()">Close</button></form>' +
             '</div></div>';
+document.write(text1);
 //now these are defined inside a function I need to remove var
 aggregateDistance = 0;
 lastMileageLatitude = 999;
