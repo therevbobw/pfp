@@ -119,7 +119,7 @@ function usePosition(position)
             dx = (myLongitude - lastMileageLongitude)*111300*Math.cos(myLatitude*angConv);
             dsq = dx*dx+dy*dy;
             //alert(dsq);
-            if ( dsq > matsq ){
+            if ( dsq > mudsq ){
               distanceIncrement = Math.sqrt(dsq);
               aggregateDistance = aggregateDistance + distanceIncrement;
               aggregateMileage = aggregateDistance * wantedConversion;
