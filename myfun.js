@@ -116,13 +116,13 @@ function usePosition(position)
               aggregateMileage = aggregateDistance * wantedConversion;
               displayMileage = aggregateMileage.toFixed(2);
               //document.getElementById('displayMiles').value = displayMileage;
-              var counterArea = document.getElementById("counter");
-              var counterText = counterArea.innerHTML;
+              //var counterArea = document.getElementById("counter");
+              var counterText = document.getElementById("counter").innerHTML;
               var counterLength = counterText.length;
               if ( counterLength > 20 ) then {
               	//i.e. field is currently displayed
               	counterText = "<p class='mileage'>Distance so far: " + displayMileage + " miles</p><hr>";
-              	counterArea.innerHTML = counterText;
+              	document.getElementById("counter").innerHTML = counterText;
               }
               lastMileageLatitude = myLatitude;
               lastMileageLongitude = myLongitude;
