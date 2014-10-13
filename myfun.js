@@ -213,20 +213,13 @@ function toggleMileage() {
   hideMenu();	
   var counterSpace = document.getElementById("counter");
   var vy = counterSpace.innerHTML;
-  alert('vy is'+vy+'...');
   var lv = vy.length;
-  alert(lv);
-  //if ( vy == "" ) {
   if ( lv < 20 ) {
-    alert('it is true');
     var mileageText = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
-    alert(mileageText);
     counterSpace.innerHTML = mileageText;
   }
   else {
-    alert('elseing');
     counterSpace.innerHTML = "";
   }
-  alert(counterSpace.innerHTML);
 }
 
