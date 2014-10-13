@@ -103,7 +103,9 @@ function usePosition(position)
           if ( lastMileageLatitude > 99 ) {
             //first measurement...
             //document.getElementById('displayMiles').value = "0";
-            showMiles(2,"0","",myAccuracy);
+            showMiles(2,"0",myAccuracy);
+            
+            
             lastMileageLatitude = myLatitude;
             lastMileageLongitude = myLongitude;
           }
@@ -118,7 +120,7 @@ function usePosition(position)
               //displayMileage = aggregateMileage.toFixed(2);
               //document.getElementById('displayMiles').value = displayMileage;
               //var counterArea = document.getElementById("counter");
-              showMiles(2,aggregateMileage,"",myAccuracy);
+              showMiles(2,aggregateMileage,myAccuracy);
               var counterText = document.getElementById("counter").innerHTML;
               var counterLength = counterText.length;
               if ( counterLength > 20 ) {
@@ -131,9 +133,19 @@ function usePosition(position)
             }
           }
         }
+        else {
+        	infoString = "<p>Not currently accurate enough - accuracy: " + myAccuracy.toFixed(2) + "m.</p><hr>";
+        }
     }
-  
-	
+    var counterSpace = document.getElementById("counter");
+    var vy = counterSpace.innerHTML;
+    var lv = vy.length;
+    if ( lv > 4 ) {
+    counterSpace.innerHTML = infoString;
+    //var mileageText = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
+    //counterSpace.innerHTML = mileageText;
+    
+    }
   }
 function toggleMenu(){
 	var el8 = document.getElementById("modalSpace1");
@@ -233,4 +245,9 @@ function toggleMileage() {
     counterSpace.innerHTML = "";
   }
 }
-
+function showMiles(dp,miles,accuracy) {
+	milesText = miles.toFixed(dp);
+	accuracyText = accuracy.toFixed(dp);
+	infoString = "<p class='mileage'>Distance so far: " + milesText + " miles. Current accuracy: " +
+	             accuracyText + "m.</p><hr>";
+}
