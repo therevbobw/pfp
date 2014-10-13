@@ -213,11 +213,13 @@ function toggleMileage() {
   hideMenu();	
   var el = document.getElementById("counter");
   var vy = el.innerHTML;
+  alert('vy is'+vy+'...');
   if ( vy == "" ) {
     el.innerHTML = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
   }
   else {
     el.innerHTML = "";
   }
+  alert(el.innerHTML);
 }
 
