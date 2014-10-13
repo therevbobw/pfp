@@ -59,6 +59,7 @@ function usePosition(position)
     	lastUpdateTime = thisTime;
 	var myLatitude = position.coords.latitude;
 	var myLongitude = position.coords.longitude;
+	myAccuracy = position.coords.accuracy;
 	form0['lat'].value = myLatitude;
     	form0['lon'].value = myLongitude;
         then = now;
@@ -97,7 +98,6 @@ function usePosition(position)
         	one point to another without passing through empty space
         	currently no action in this case*/
     	}
-        myAccuracy = position.coords.accuracy;
         // do nothing at all about mileage unless accuracy is good enough...
         if ( myAccuracy < mileageAccuracyThreshold) {
           if ( lastMileageLatitude > 99 ) {
