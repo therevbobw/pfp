@@ -102,7 +102,8 @@ function usePosition(position)
         if ( myAccuracy < mileageAccuracyThreshold) {
           if ( lastMileageLatitude > 99 ) {
             //first measurement...
-            document.getElementById('displayMiles').value = "0";
+            //document.getElementById('displayMiles').value = "0";
+            showMiles(2,"0","",myAccuracy);
             lastMileageLatitude = myLatitude;
             lastMileageLongitude = myLongitude;
           }
@@ -114,9 +115,10 @@ function usePosition(position)
               distanceIncrement = Math.sqrt(dsq);
               aggregateDistance = aggregateDistance + distanceIncrement;
               aggregateMileage = aggregateDistance * wantedConversion;
-              displayMileage = aggregateMileage.toFixed(2);
+              //displayMileage = aggregateMileage.toFixed(2);
               //document.getElementById('displayMiles').value = displayMileage;
               //var counterArea = document.getElementById("counter");
+              showMiles(2,aggregateMileage,"",myAccuracy);
               var counterText = document.getElementById("counter").innerHTML;
               var counterLength = counterText.length;
               if ( counterLength > 20 ) {
@@ -222,9 +224,10 @@ function toggleMileage() {
   var counterSpace = document.getElementById("counter");
   var vy = counterSpace.innerHTML;
   var lv = vy.length;
-  if ( lv < 20 ) {
-    var mileageText = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
-    counterSpace.innerHTML = mileageText;
+  if ( lv < 5 ) {
+    counterSpace.innerHTML = infoString;
+    //var mileageText = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
+    //counterSpace.innerHTML = mileageText;
   }
   else {
     counterSpace.innerHTML = "";
