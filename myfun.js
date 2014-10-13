@@ -102,19 +102,19 @@ function usePosition(position)
     	//alert(myAccuracy+","+mileageAccuracyThreshold);
         // do nothing at all about mileage unless accuracy is good enough...
         if ( myAccuracy < mileageAccuracyThreshold) {
-          alert("accurate enough");
+          //alert("accurate enough");
           if ( lastMileageLatitude > 99 ) {
             //first measurement...
             //document.getElementById('displayMiles').value = "0";
-            alert("first time");
-            showMiles(2,"0",myAccuracy);
+            //alert("first time");
+            showMiles(2,0,myAccuracy);
             
             
             lastMileageLatitude = myLatitude;
             lastMileageLongitude = myLongitude;
           }
           else {
-            alert("subsequent");
+            //alert("subsequent");
             dy = (myLatitude - lastMileageLatitude)*111300;
             dx = (myLongitude - lastMileageLongitude)*111300*Math.cos(myLatitude*angConv);
             dsq = dx*dx+dy*dy;
@@ -143,7 +143,7 @@ function usePosition(position)
         	infoString = "<p>Not accurate enough - accuracy: " + myAccuracy.toFixed(2) + "m.</p><hr>";
         }
     }
-    alert("ready to display infoString");
+    //alert("ready to display infoString");
     var counterSpace = document.getElementById("counter");
     var vy = counterSpace.innerHTML;
     var lv = vy.length;
