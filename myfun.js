@@ -258,3 +258,10 @@ function showMiles(dp,miles,accuracy) {
 	infoString = "<p class='mileage'>Distance so far: " + milesText + " miles. Current accuracy: " +
 	             accuracyText + "m.</p><hr>";
 }
+function checkBack(){
+	var backQuestion = "Are you sure? Leaving this page will make your device lose its place in the walk.";
+	navigator.notification.confirm(backQuestion, backAction, "Checking...", "Confirm,Cancel");
+}
+function backAction() {
+	window.history.back;
+}
