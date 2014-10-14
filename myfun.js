@@ -262,6 +262,8 @@ function checkBack(){
 	var backQuestion = "Are you sure? Leaving this page will make your device lose its place in the walk.";
 	navigator.notification.confirm(backQuestion, backAction, "Checking...", "Confirm,Cancel");
 }
-function backAction() {
-	window.history.back;
+function backAction(var buttonIndex) {
+	if ( buttonIndex == 1 ){
+		window.history.back;	
+	}
 }
