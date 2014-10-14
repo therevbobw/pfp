@@ -10,6 +10,8 @@ var generalInstructions = "<p><small class='detail'>To start off, select the wal
 	"see the directions to get you right to the place you are near, see the directions to get you to the next " +
 	"place, and show these instructions.</small></p>";
 function onDeviceReady() {
+  dr = document.referrer;
+  alert(dr);
   // Now safe to use the PhoneGap API
   //navigator.notification.alert("Starting", doLittle);
   //var bong = new Media(bongsrc);
@@ -85,6 +87,8 @@ function usePosition(position)
         	navigator.notification.beep(1); //shouldn't have second parameter
         	navigator.notification.vibrate(1200);
         	document.getElementById('stuff').innerHTML = froms[lastPoint];
+        	dr = document.referrer;
+        	alert(dr);
         	//$('#stuff').attr('src', "null.html");
     	}
     	if (anyOpen == "false" && isOpen == "false"){
