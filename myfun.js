@@ -264,6 +264,6 @@ function checkBack(){
 }
 function backAction(buttonIndex) {
 	if ( buttonIndex == 1 ){
-		window.history.back;	
+		window.history.back();	
 	}
 }
