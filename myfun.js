@@ -264,6 +264,7 @@ function checkBack(){
 }
 function backAction(buttonIndex) {
 	if ( buttonIndex == 1 ){
+		document.removeEventListener("backbutton", checkBack);
 		window.history.back();	
 	}
 }
