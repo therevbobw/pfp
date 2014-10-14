@@ -18,6 +18,7 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
             '<div id="messageContent"></div>' +
             '<form><button type="button" name="messageCloser" onclick="closeMessage()">Close</button></form>' +
             '</div></div>';
+document.addEventListener("backbutton", checkBack, false);
 document.write(text1);
 displayMileage = "(no fix)";
 infoString = "<p class='mileage'>No fix yet</p><hr>";
