@@ -262,7 +262,7 @@ function checkBack(){
 	var backQuestion = "Are you sure? Leaving this page will make your device lose its place in the walk.";
 	navigator.notification.confirm(backQuestion, backAction, "Checking...", "Confirm,Cancel");
 }
-function backAction(var buttonIndex) {
+function backAction(buttonIndex) {
 	if ( buttonIndex == 1 ){
 		window.history.back;	
 	}
