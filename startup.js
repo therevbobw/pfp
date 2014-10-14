@@ -1,8 +1,9 @@
 // No \n because I don't care what it looks like. Using single quotes because double inside text
 var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="dialog">' +
-            '<form><ul><li><button type="button" name="forward" onclick="goForward()">Go forward</button>' +
+            '<form><ul>' +
+            /*'<li><button type="button" name="forward" onclick="goForward()">Go forward</button>' +
             '<br><small class="notes">If you press the back button by accident, this corrects the mistake. ' +
-            'If there is nowhere to go forward to, no action is taken.</small></li><hr>' +
+            'If there is nowhere to go forward to, no action is taken.</small></li><hr>' +*/
             '<li><button type="button" name="previous" onclick="previousDirections()">' +
             'Previous directions</button><br><small class="notes">Look again at the directions ' +
             'to the place you are now near to.</small></li><hr>' +
