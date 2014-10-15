@@ -290,7 +290,7 @@ function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 	"<span class='bigNumber'>" + milesText + "</span><br>miles</p><p>Average speed:<br><b>" +
 	omText + "</b> mph.<p>Current speed:<br><b>" + cmText + "</b> mph.</p><p>Approximate " +
 	"kilocalories burned:<br><b>" + calText + "</b></p>";
-	document.getElementById("walkComputer").innerHtml = wcString;
+	document.getElementById("walkComputer").innerHTML = wcString;
 }
 function checkBack(){
 	var backQuestion = "Are you sure? Leaving this page will make your device lose its place in the walk.";
