@@ -253,8 +253,9 @@ function toggleMileage() {
   var counterSpace = document.getElementById("counter");
   var vy = counterSpace.innerHTML;
   var lv = vy.length;
+  var visi = document.getElementById("walkComputer").style.visibility;
  //alert ("about to do ifs");
- alert (el20.style.visibility);
+  alert (visi);
   if ( lv < 5 && el20.style.visibility == "hidden" ) {
   	//alert ("yes to 1");
     counterSpace.innerHTML = infoString;
