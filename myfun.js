@@ -277,7 +277,7 @@ function showMiles(dp,miles,accuracy,cMean,oMean) {
 		accuracyColor = "#ff9900";
 	}
 	infoString = "<span style='background-color: " + accuracyColor +"; color: " + accuracyColor +
-	"'>-----</span><b>" + milesText + "</b> miles at " + omText + "mph, currently " + cmText + "mph<hr>";
+	"'>-----</span><b>" + milesText + "</b> miles at " + omText + " mph, now " + cmText + " mph<hr>";
 }
 function checkBack(){
 	var backQuestion = "Are you sure? Leaving this page will make your device lose its place in the walk.";
