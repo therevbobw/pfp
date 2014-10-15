@@ -55,7 +55,7 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   padding: 4px;
   text-align:center;
 }
-.messageSpace {
+.messageSpace1 {
   visibility: hidden;
   position: absolute;
   left: 0px;
@@ -66,7 +66,7 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   z-index: 999;
   background-image:url(blanking.png);
 }
-.message {
+.message1 {
   max-width: 560px;
   width: 93%;
   margin: 1% auto;
@@ -76,7 +76,7 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   padding: 4px;
   text-align:center;
 }
-.messageContent {
+.messageContent1 {
   /*max-width: 560px;
   width: 93%;
   margin: 1% auto;*/
@@ -86,7 +86,7 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   text-align:center;
   overflow: auto;
 }
-.walkComputer {
+.walkComputerStyle {
   visibility: hidden;
   position: absolute;
   left: 0px;
