@@ -147,7 +147,7 @@ function usePosition(position)
         }
         else {
         	//infoString = "<p>Not accurate enough - accuracy: " + myAccuracy.toFixed(2) + "m.</p><hr>";
-        	showMiles(2,aggregateMileage,myAccuracy);
+        	showMiles(2,aggregateMileage,myAccuracy, currentMean, overallMean);
         }
     }
     //alert("ready to display infoString");
@@ -259,9 +259,11 @@ function toggleMileage() {
     counterSpace.innerHTML = "";
   }
 }
-function showMiles(dp,miles,accuracy) {
-	milesText = miles.toFixed(dp);
-	accuracyText = accuracy.toFixed(dp);
+function showMiles(dp,miles,accuracy,cMean,oMean) {
+	var milesText = miles.toFixed(dp);
+	var accuracyText = accuracy.toFixed(dp);
+	var omText = oMean.toFixed(dp);
+	var cmText = cMean.toFixed(1);
 	var accuracyRatio = accuracy / mileageAccuracyThreshold;
 	var accuracyColour = "#0000ff";
 	if ( accuracyRatio >= 1 ){
@@ -274,8 +276,8 @@ function showMiles(dp,miles,accuracy) {
 	if (accuracyRatio > 0.4 && accuracyRatio < 1 ) {
 		accuracyColor = "#ff9900";
 	}
-	infoString = "<b>" + milesText + "</b> miles so far <span style='background-color: " + accuracyColor +
-	"; color: " + accuracyColor +"'>-----</span><hr>";
+	infoString = "<span style='background-color: " + accuracyColor +"; color: " + accuracyColor +
+	"'>-----</span><b>" + milesText + "</b> miles at " + omText + "mph, currently " + cmText + "mph<hr>";
 }
 function checkBack(){
 	var backQuestion = "Are you sure? Leaving this page will make your device lose its place in the walk.";
