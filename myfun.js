@@ -254,6 +254,9 @@ function toggleMileage() {
   var el20s = el20.style;
   var tmp2 = "S is " + el20s.toString();
   alert(tmp2);
+  var el20sv = el20s.visibility.toString();
+  var tmp3 = "V is " + el20sv;
+  alert(tmp3);
   //alert ("el20");
   var counterSpace = document.getElementById("counter");
   var vy = counterSpace.innerHTML;
