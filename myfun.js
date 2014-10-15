@@ -250,13 +250,13 @@ function toggleMileage() {
   hideMenu();
   var el20 = document.getElementById("walkComputer");
   var tmp = "It is " + String(el20);
-  alert(tmp);
+  //alert(t/mp);
   var el20s = el20.style;
   var tmp2 = "S is " + el20s.toString();
-  alert(tmp2);
+  //alert(tmp2);
   var el20sv = el20s.visibility.toString();
   var tmp3 = "V is " + el20sv;
-  alert(tmp3);
+  //alert(tmp3);
   //alert ("el20");
   var counterSpace = document.getElementById("counter");
   var vy = counterSpace.innerHTML;
@@ -315,6 +315,7 @@ function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 	"<span class='bigNumber'>" + milesText + "</span><br>miles</p><p>Average speed:<br><b>" +
 	omText + "</b> mph.<p>Current speed:<br><b>" + cmText + "</b> mph.</p><p>Approximate " +
 	"kilocalories burned:<br><b>" + calText + "</b></p>";
+	alert(wcString);
 	document.getElementById("walkComputer").innerHTML = wcString;
 }
 function checkBack(){
