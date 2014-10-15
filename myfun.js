@@ -249,6 +249,8 @@ function confirmWalk() {
 function toggleMileage() {
   hideMenu();
   var el20 = document.getElementById("walkComputer");
+  var tmp = "It is " + String(el20);
+  alert(tmp);
   //alert ("el20");
   var counterSpace = document.getElementById("counter");
   var vy = counterSpace.innerHTML;
