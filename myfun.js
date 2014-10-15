@@ -261,7 +261,7 @@ function showMiles(dp,miles,accuracy) {
 	if ( accuracyRatio >= 1 ){
 		accuracyColor = "#ff0000";
 	}
-	if ( accuracyRatio <= 0.4 ) {
+	if ( accuracyRatio <= 0.5 ) {
 		accuracyColor = "#00ff00";
 	
 	}
