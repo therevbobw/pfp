@@ -311,10 +311,10 @@ function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 	infoString = "<span style='background-color: " + accuracyColor +"; color: " + accuracyColor +
 	"'>-----</span><b>&nbsp;" + milesText + "</b>&nbsp;miles at&nbsp;" + omText +
 	"&nbsp;mph, now&nbsp;" + cmText + "&nbsp;mph, " + calText + "&nbsp;kcal&nbsp;burnt.<hr>";
-	var wcString = "<p>Accuracy:<br><b>" + accuracyText + "</b></p><p>Distance:<br>" +
-	"<span class='bigNumber'>" + milesText + "</span><br>miles</p><p>Average speed:<br><b>" +
-	omText + "</b> mph.<p>Current speed:<br><b>" + cmText + "</b> mph.</p><p>Approximate " +
-	"kilocalories burned:<br><b>" + calText + "</b></p>";
+	var wcString = "<p>Accuracy: <b>" + accuracyText + "</b></p><p>Distance: " +
+	"<span class='bigNumber'>" + milesText + "</span> miles</p><p>Average speed: <b>" +
+	omText + "</b> mph.</p><p>Current speed: <b>" + cmText + "</b> mph.</p><p>Approximate " +
+	"kilocalories burned: <b>" + calText + "</b></p>";
 	//alert(wcString);
 	document.getElementById("walkComputer").innerHTML = wcString;
 }
