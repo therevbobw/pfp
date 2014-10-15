@@ -266,7 +266,7 @@ function toggleMileage() {
   }
   var visi = document.getElementById("walkComputerSpace").style.visibility;
  //alert ("about to do ifs");
-  alert (visi);
+  //alert (visi);
   if ( lv < 5 && visi == "hidden" ) {
   	//alert ("yes to 1");
     counterSpace.innerHTML = infoString;
@@ -315,7 +315,7 @@ function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 	"<span class='bigNumber'>" + milesText + "</span><br>miles</p><p>Average speed:<br><b>" +
 	omText + "</b> mph.<p>Current speed:<br><b>" + cmText + "</b> mph.</p><p>Approximate " +
 	"kilocalories burned:<br><b>" + calText + "</b></p>";
-	alert(wcString);
+	//alert(wcString);
 	document.getElementById("walkComputer").innerHTML = wcString;
 }
 function checkBack(){
