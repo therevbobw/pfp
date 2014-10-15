@@ -248,7 +248,7 @@ function confirmWalk() {
 }
 function toggleMileage() {
   hideMenu();
-  var el20 = document.getElementById("walkComputer");
+  var el20 = document.getElementById("walkComputerSpace");
   var tmp = "It is " + String(el20);
   //alert(tmp);
   var el20s = el20.style;
@@ -261,10 +261,10 @@ function toggleMileage() {
   var counterSpace = document.getElementById("counter");
   var vy = counterSpace.innerHTML;
   var lv = vy.length;
-  if ( document.getElementById("walkComputer").style.visibility != "visible" ) {
-  	document.getElementById("walkComputer").style.visibility = "hidden";
+  if ( document.getElementById("walkComputerSpace").style.visibility != "visible" ) {
+  	document.getElementById("walkComputerSpace").style.visibility = "hidden";
   }
-  var visi = document.getElementById("walkComputer").style.visibility;
+  var visi = document.getElementById("walkComputerSpace").style.visibility;
  //alert ("about to do ifs");
   alert (visi);
   if ( lv < 5 && visi == "hidden" ) {
@@ -276,12 +276,12 @@ function toggleMileage() {
   else {
     if ( lv >= 5 && visi == "hidden" ) {
       //alert ("yes to 2");
-      document.getElementById("walkComputer").style.visibility = "visible";
+      document.getElementById("walkComputerSpace").style.visibility = "visible";
     }
     else {
       if ( visi == "visible" ) {
         //alert ("yes to 3");
-        document.getElementById("walkComputer").style.visibility = "hidden";
+        document.getElementById("walkComputerSpace").style.visibility = "hidden";
        	counterSpace.innerHTML = "";
       }
       else {
