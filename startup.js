@@ -18,7 +18,8 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
             '<div id="messageSpace" class="messageSpace"><div id="message" class="message">' +
             '<div id="messageContent"></div>' +
             '<form><button type="button" name="messageCloser" onclick="closeMessage()">Close</button></form>' +
-            '</div></div>';
+            '</div></div>' +
+            '<div id="walkComputer" class="walkComputer"></div>';
 document.addEventListener("backbutton", checkBack, false);
 document.write(text1);
 displayMileage = "(no fix)";
