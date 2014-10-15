@@ -267,21 +267,21 @@ function toggleMileage() {
   var visi = document.getElementById("walkComputer").style.visibility;
  //alert ("about to do ifs");
   alert (visi);
-  if ( lv < 5 && el20.style.visibility == "hidden" ) {
+  if ( lv < 5 && visi == "hidden" ) {
   	//alert ("yes to 1");
     counterSpace.innerHTML = infoString;
     //var mileageText = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
     //counterSpace.innerHTML = mileageText;
   }
   else {
-    if ( lv >= 5 && el20.style.visibility == "hidden" ) {
+    if ( lv >= 5 && visi == "hidden" ) {
       //alert ("yes to 2");
-      el20.style.visibility = "visible";
+      document.getElementById("walkComputer").style.visibility = "visible";
     }
     else {
-      if (el20.style.visibility == "visible" ) {
+      if ( visi == "visible" ) {
         //alert ("yes to 3");
-        el20.style.visibility = "hidden";
+        document.getElementById("walkComputer").style.visibility = "hidden";
        	counterSpace.innerHTML = "";
       }
       else {
