@@ -126,8 +126,8 @@ function usePosition(position)
               aggregateMileage = aggregateDistance * wantedConversion;
               timeIncrement = hrpms*(currentTime - lastTime);
               aggregateTime = hrpms*(currentTime - originalTime);
-              currentMean = distanceIncrement / timeIncrement;
-              overallMean = aggregateTime / aggregateDistance;
+              currentMean = wantedConversion * distanceIncrement / timeIncrement;
+              overallMean = aggregateMileage / aggregateTime;
               //displayMileage = aggregateMileage.toFixed(2);
               //document.getElementById('displayMiles').value = displayMileage;
               //var counterArea = document.getElementById("counter");
