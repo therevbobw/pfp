@@ -19,7 +19,7 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
             '<div id="messageContent"></div>' +
             '<form><button type="button" name="messageCloser" onclick="closeMessage()">Close</button></form>' +
             '</div></div>\n' +
-            '<div id="walkComputer" class="walkComputer"></div>\n';
+            '<div id="walkComputer" class="walkComputerStyle"></div>\n';
 document.addEventListener("backbutton", checkBack, false);
 document.write(text1);
 /*alert("vis " + document.getElementById("walkComputer").style.visibility);
