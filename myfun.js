@@ -249,18 +249,23 @@ function confirmWalk() {
 function toggleMileage() {
   hideMenu();
   var el20 = document.getElementById("walkComputer");
+  alert ("el20");
   var counterSpace = document.getElementById("counter");
   var vy = counterSpace.innerHTML;
   var lv = vy.length;
+  alert ("about to do ifs");
   if ( lv < 5 && el20.visibility == "hidden" ) {
+  	alert ("yes to 1");
     counterSpace.innerHTML = infoString;
     //var mileageText = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
     //counterSpace.innerHTML = mileageText;
   }
   if ( lv >= 5 && el20.visibility == "hidden" ) {
+  	alert ("yes to 2");
   	el20.visibility = "visible";
   }
   if (el20.visibility == "visible" ) {
+  	alert ("yes to 3");
   	el20.visibility = "hidden";
     	counterSpace.innerHTML = "";
   }
