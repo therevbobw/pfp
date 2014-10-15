@@ -269,7 +269,7 @@ function showMiles(dp,miles,accuracy) {
 		accuracyColor = "#ffff00";
 	}
 	infoString = "<b>" + milesText + "</b> miles so far <span style='background-color: " + accuracyColor +
-	"'>-</span><hr>";
+	"; color: " + accuracyColor +"'>-----</span><hr>";
 }
 function checkBack(){
 	var backQuestion = "Are you sure? Leaving this page will make your device lose its place in the walk.";
