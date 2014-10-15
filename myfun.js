@@ -247,22 +247,27 @@ function confirmWalk() {
   window.location=url;
 }
 function toggleMileage() {
-  hideMenu();	
+  hideMenu();
+  var el20 = document.getElementById("walkComputer");
   var counterSpace = document.getElementById("counter");
   var vy = counterSpace.innerHTML;
   var lv = vy.length;
-  if ( lv < 5 ) {
+  if ( lv < 5 && el20.visibility == "hidden" ) {
     counterSpace.innerHTML = infoString;
     //var mileageText = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
     //counterSpace.innerHTML = mileageText;
   }
-  else {
-    counterSpace.innerHTML = "";
+  if ( lv >= 5 && el20.visibility == "hidden" ) {
+  	el20.visibility = "visible";
+  }
+  if (el20.visibility == "visible" ) {
+  	el20.visibility = "hidden";
+    	counterSpace.innerHTML = "";
   }
 }
 function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 	var milesText = miles.toFixed(dp);
-	var accuracyText = accuracy.toFixed(dp);
+	var accuracyText = accuracy.toFixed(1);
 	var omText = oMean.toFixed(dp);
 	var cmText = cMean.toFixed(1);
 	var calText = cal.toFixed(0);
@@ -281,6 +286,11 @@ function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 	infoString = "<span style='background-color: " + accuracyColor +"; color: " + accuracyColor +
 	"'>-----</span><b>&nbsp;" + milesText + "</b>&nbsp;miles at&nbsp;" + omText +
 	"&nbsp;mph, now&nbsp;" + cmText + "&nbsp;mph, " + calText + "&nbsp;kcal&nbsp;burnt.<hr>";
+	var wcString = "<p>Accuracy:<br><b>" + accuracyText + "</b></p><p>Distance:<br>" +
+	"<span class='bigNumber'>" + milesText + "</span><br>miles</p><p>Average speed:<br><b>" +
+	omText + "</b> mph.<p>Current speed:<br><b>" + cmText + "</b> mph.</p><p>Approximate " +
+	"kilocalories burned:<br><b>" + calText + "</b></p>";
+	document.getElementById("walkComputer").innerHtml = wcString;
 }
 function checkBack(){
 	var backQuestion = "Are you sure? Leaving this page will make your device lose its place in the walk.";
