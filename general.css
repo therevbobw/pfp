@@ -97,6 +97,16 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   z-index: 997;
   font-size: 140%;
 }
+.walkComputerStuff {
+  max-width: 560px;
+  width: 100%;
+  margin: 0% auto;
+  background-color: #ffffff;
+  /*border:1px solid #000;*/
+  border-style: none;
+  padding: 0;
+  text-align:center;
+}
 .bigNumber {
   font-size: 400%;
   font-weight: bold;
