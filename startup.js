@@ -19,7 +19,8 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
             '<div id="messageContent" class="messageContent1"></div>' +
             '<form><button type="button" name="messageCloser" onclick="closeMessage()">Close</button></form>' +
             '</div></div>\n' +
-            '<div id="walkComputer" class="walkComputerStyle"></div>\n';
+            '<div id="walkComputerSpace" class="walkComputerStyle"><div id="walkComputer" ' +
+            'class="walkComputerStuff"></div></div>\n';
             //alert(text1);
 document.addEventListener("backbutton", checkBack, false);
 document.write(text1);
