@@ -101,7 +101,7 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   font-size: 400%;
   font-weight: bold;
 }
-.previewSpace {
+.previewSpace1 {
   visibility: hidden;
   position: absolute;
   left: 0px;
@@ -112,7 +112,7 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   z-index: 998;
   background-image:url(blanking.png);
 }
-.preview {
+.preview1 {
   max-width: 560px;
   width: 93%;
   margin: 1% auto;
@@ -122,7 +122,7 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   padding: 4px;
   text-align:center;
 }
-.previewContent {
+.previewContent1 {
   /*max-width: 560px;
   width: 93%;
   margin: 1% auto;*/
