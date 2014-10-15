@@ -294,6 +294,10 @@ function backAction(buttonIndex) {
 }
 function kcalCalc(distance, speed) {
 	//Weight 75kg / 167lbs / 12st, speed variation made up for no good reason - unity at 3mph
+	// There should be some kind of speed variation as a longer stride means you have to
+	// lift your body higher, going roughly as square of stride length. Faster speeds I guess
+	// mean a combination of longer and higher frequency strides. There is a 'sweet spot' as
+	// the leg swings at pendulum feqeuncy, I guess, but I haven't looked into this.
 	var kc =  distance * 50 * (40+speed*speed) / 49;
 	return kc;
 }
