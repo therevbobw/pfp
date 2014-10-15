@@ -107,7 +107,7 @@ function usePosition(position)
             //first measurement...
             //document.getElementById('displayMiles').value = "0";
             //alert("first time");
-            showMiles(2,0,myAccuracy);
+            showMiles(2,0,myAccuracy,0,0);
             originalTime = Date.now();
             lastTime = originalTime;
             lastMileageLatitude = myLatitude;
