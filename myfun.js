@@ -292,6 +292,8 @@ function backAction(buttonIndex) {
 		window.history.back();	
 	}
 }
-function kcalCalc(speed, distance) {
-	return 0;
+function kcalCalc(distance, speed) {
+	//Weight 75kg / 167lbs, speed variation made up for no good reason - unity at 3mph
+	var kc =  distance * 50 * (40+speed*speed) / 49;
+	return kc;
 }
