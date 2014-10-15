@@ -14,12 +14,12 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
 	    '<li><button type="button" name="mileage" onclick="toggleMileage()">Toggle mileage counter</button>' +
             '<br><small class="notes">Show or hide the mileage counter.</small></li><hr>' +
             '<li><button type="button" name="cancel" onclick="cancelMenu()">Cancel</button></li>' +
-            '</ul></form></div></div>' +
+            '</ul></form></div></div>\n' +
             '<div id="messageSpace" class="messageSpace"><div id="message" class="message">' +
             '<div id="messageContent"></div>' +
             '<form><button type="button" name="messageCloser" onclick="closeMessage()">Close</button></form>' +
-            '</div></div>' +
-            '<div id="walkComputer" class="walkComputer"></div>';
+            '</div></div>\n' +
+            '<div id="walkComputer" class="walkComputer"></div>\n';
 document.addEventListener("backbutton", checkBack, false);
 document.write(text1);
 /*alert("vis " + document.getElementById("walkComputer").style.visibility);
