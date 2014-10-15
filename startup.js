@@ -24,7 +24,7 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
             //alert(text1);
 document.addEventListener("backbutton", checkBack, false);
 document.write(text1);
-//document.getElementById("walkComputer").innerHTML = "<p>blablablabla</p>";
+document.getElementById("walkComputer").innerHTML = "<p>No fix yet</p>";
 //alert("init " + document.getElementById("walkComputerSpace").style.visibility);
 //alert("init2 " + document.getElementById("messageSpace").style.visibility);
 /*alert("vis " + document.getElementById("walkComputer").style.visibility);
