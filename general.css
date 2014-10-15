@@ -96,6 +96,7 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   text-align:center;
   z-index: 997;
   font-size: 140%;
+  background-color: #ffffff;
 }
 .walkComputerStuff {
   max-width: 560px;
