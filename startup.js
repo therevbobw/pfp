@@ -33,6 +33,7 @@ timeIncrement = 0;
 aggregateTime = 0;
 overallMean = 0;
 currentMean = 0;
+kcal = 0;
 myAccuracy = 999999;
   //play the next one by ear - too much and you cut off corners - too little and you get 'noise'
   //also these may depend on type of journey. Consider revising if I do road/rail and include in
