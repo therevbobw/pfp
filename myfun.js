@@ -126,10 +126,12 @@ function usePosition(position)
               aggregateMileage = aggregateDistance * wantedConversion;
               timeIncrement = hrpms*(currentTime - lastTime);
               aggregateTime = hrpms*(currentTime - originalTime);
+              currentMean = distanceIncrement / timeIncrement;
+              overallMean = aggregateTime / aggregateDistance;
               //displayMileage = aggregateMileage.toFixed(2);
               //document.getElementById('displayMiles').value = displayMileage;
               //var counterArea = document.getElementById("counter");
-              showMiles(2,aggregateMileage,myAccuracy);
+              showMiles(2,aggregateMileage,myAccuracy, currentMean, overallMean);
               /*var counterText = document.getElementById("counter").innerHTML;
               var counterLength = counterText.length;
               if ( counterLength > 20 ) {
