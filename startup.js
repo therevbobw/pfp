@@ -37,6 +37,7 @@ mileageAccuracyThreshold = mileageUpdateDistance * mileageUpdateAccuracyRatio;
 mudsq = mileageUpdateDistance * mileageUpdateDistance;
 metresToMiles = 0.000621371192;
 wantedConversion = metresToMiles;
+hrpms = 1.0 / 3600000;
 //alert('about to write form');
 var text2 = '<div id="counter" class="mileage"></div>';
 document.write(text2);
