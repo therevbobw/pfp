@@ -260,14 +260,21 @@ function toggleMileage() {
     //var mileageText = "<p class='mileage'>Distance so far: " + displayMileage + " miles.</p><hr>";
     //counterSpace.innerHTML = mileageText;
   }
-  if ( lv >= 5 && el20.style.visibility == "hidden" ) {
-  	//alert ("yes to 2");
-  	el20.style.visibility = "visible";
-  }
-  if (el20.style.visibility == "visible" ) {
-  	//alert ("yes to 3");
-  	el20.style.visibility = "hidden";
-    	counterSpace.innerHTML = "";
+  else {
+    if ( lv >= 5 && el20.style.visibility == "hidden" ) {
+      //alert ("yes to 2");
+      el20.style.visibility = "visible";
+    }
+    else {
+      if (el20.style.visibility == "visible" ) {
+        //alert ("yes to 3");
+        el20.style.visibility = "hidden";
+       	counterSpace.innerHTML = "";
+      }
+      else {
+      	alert ("case not found");
+      }
+    }
   }
 }
 function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
