@@ -298,6 +298,9 @@ function kcalCalc(distance, speed) {
 	// lift your body higher, going roughly as square of stride length. Faster speeds I guess
 	// mean a combination of longer and higher frequency strides. There is a 'sweet spot' as
 	// the leg swings at pendulum feqeuncy, I guess, but I haven't looked into this.
+	// FWIW I imagine both walking and running energy use are continuous functions of speed,
+	// and people if they have any sense switch gait at the speed where the two functions
+	// cross over.
 	var kc =  distance * 50 * (40+speed*speed) / 49;
 	return kc;
 }
