@@ -22,7 +22,7 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
 document.addEventListener("backbutton", checkBack, false);
 document.write(text1);
 displayMileage = "(no fix)";
-infoString = "<p class='mileage'>No fix yet</p><hr>";
+infoString = "No fix yet<hr>";
 aggregateDistance = 0;
 lastMileageLatitude = 999;
 lastMileageLongitude = 999;
@@ -38,6 +38,6 @@ mudsq = mileageUpdateDistance * mileageUpdateDistance;
 metresToMiles = 0.000621371192;
 wantedConversion = metresToMiles;
 //alert('about to write form');
-var text2 = '<div id="counter"></div>';
+var text2 = '<div id="counter" class="mileage"></div>';
 document.write(text2);
 //alert('form written');
