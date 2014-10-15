@@ -140,7 +140,8 @@ function usePosition(position)
           }
         }
         else {
-        	infoString = "<p>Not accurate enough - accuracy: " + myAccuracy.toFixed(2) + "m.</p><hr>";
+        	//infoString = "<p>Not accurate enough - accuracy: " + myAccuracy.toFixed(2) + "m.</p><hr>";
+        	showMiles(2,aggregateMileage,myAccuracy);
         }
     }
     //alert("ready to display infoString");
@@ -255,8 +256,20 @@ function toggleMileage() {
 function showMiles(dp,miles,accuracy) {
 	milesText = miles.toFixed(dp);
 	accuracyText = accuracy.toFixed(dp);
-	infoString = "<p class='mileage'>Distance so far: " + milesText + " miles. Current accuracy: " +
-	             accuracyText + "m.</p><hr>";
+	var accuracyRatio = accuracy / mileageAccuracyThreshold;
+	var accuracyColour = "#0000ff";
+	if ( accuracyRatio >= 1 ){
+		accuracyColor = "#ff0000";
+	}
+	if ( accuracyRatio <= 0.4 ) {
+		accuracyColor = "#00ff00";
+	
+	}
+	if (accuracyRatio > 0.4 && accuracyRatio < 1 ) {
+		accuracyColor = "#ffff00";
+	}
+	infoString = "Miles so far: " + milesText + " <span style='background-color: " + accuracyColor +
+	"'> </span><hr>";
 }
 function checkBack(){
 	var backQuestion = "Are you sure? Leaving this page will make your device lose its place in the walk.";
