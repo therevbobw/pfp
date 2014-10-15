@@ -107,7 +107,7 @@ function usePosition(position)
             //first measurement...
             //document.getElementById('displayMiles').value = "0";
             //alert("first time");
-            showMiles(2,0,myAccuracy,0,0);
+            showMiles(2,0,myAccuracy,0,0,0);
             originalTime = Date.now();
             lastTime = originalTime;
             lastMileageLatitude = myLatitude;
@@ -128,10 +128,11 @@ function usePosition(position)
               aggregateTime = hrpms*(currentTime - originalTime);
               currentMean = wantedConversion * distanceIncrement / timeIncrement;
               overallMean = aggregateMileage / aggregateTime;
+              kcal = kcalCalc(aggregateMileage, overallMean);
               //displayMileage = aggregateMileage.toFixed(2);
               //document.getElementById('displayMiles').value = displayMileage;
               //var counterArea = document.getElementById("counter");
-              showMiles(2,aggregateMileage,myAccuracy, currentMean, overallMean);
+              showMiles(2,aggregateMileage,myAccuracy, currentMean, overallMean,kcal);
               /*var counterText = document.getElementById("counter").innerHTML;
               var counterLength = counterText.length;
               if ( counterLength > 20 ) {
@@ -147,7 +148,7 @@ function usePosition(position)
         }
         else {
         	//infoString = "<p>Not accurate enough - accuracy: " + myAccuracy.toFixed(2) + "m.</p><hr>";
-        	showMiles(2,aggregateMileage,myAccuracy, currentMean, overallMean);
+        	showMiles(2,aggregateMileage,myAccuracy, currentMean, overallMean,kcal);
         }
     }
     //alert("ready to display infoString");
@@ -259,11 +260,12 @@ function toggleMileage() {
     counterSpace.innerHTML = "";
   }
 }
-function showMiles(dp,miles,accuracy,cMean,oMean) {
+function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 	var milesText = miles.toFixed(dp);
 	var accuracyText = accuracy.toFixed(dp);
 	var omText = oMean.toFixed(dp);
 	var cmText = cMean.toFixed(1);
+	var calText = cal.toFixed(0);
 	var accuracyRatio = accuracy / mileageAccuracyThreshold;
 	var accuracyColour = "#0000ff";
 	if ( accuracyRatio >= 1 ){
@@ -277,7 +279,8 @@ function showMiles(dp,miles,accuracy,cMean,oMean) {
 		accuracyColor = "#ff9900";
 	}
 	infoString = "<span style='background-color: " + accuracyColor +"; color: " + accuracyColor +
-	"'>-----</span><b>" + milesText + "</b> miles at " + omText + " mph, now " + cmText + " mph<hr>";
+	"'>-----</span><b>&nbsp;" + milesText + "</b>&nbsp;miles at&nbsp;" + omText +
+	"&nbsp;mph, now&nbsp;" + cmText + "&nbsp;mph, " + calText + "&nbsp;kcal&nbsp;burnt.<hr>";
 }
 function checkBack(){
 	var backQuestion = "Are you sure? Leaving this page will make your device lose its place in the walk.";
@@ -288,4 +291,7 @@ function backAction(buttonIndex) {
 		document.removeEventListener("backbutton", checkBack);
 		window.history.back();	
 	}
+}
+function kcalCalc(speed, distance) {
+	return 0;
 }
