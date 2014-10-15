@@ -31,7 +31,7 @@ select  {
 }
 iframe  { font-size: 100%; }
 h2      { color: #006633;  }
-hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; height: 3px; }
+hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; height: 2px; }
 .title  { color: #006600; font-style:italic; }
 .author { color: #006600; font-style:italic; font-size: 80%;}
 .modalSpace {
