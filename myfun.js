@@ -266,7 +266,7 @@ function showMiles(dp,miles,accuracy) {
 	
 	}
 	if (accuracyRatio > 0.4 && accuracyRatio < 1 ) {
-		accuracyColor = "#ffcc00";
+		accuracyColor = "#ff9900";
 	}
 	infoString = "<b>" + milesText + "</b> miles so far <span style='background-color: " + accuracyColor +
 	"; color: " + accuracyColor +"'>-----</span><hr>";
