@@ -250,7 +250,7 @@ function toggleMileage() {
   hideMenu();
   var el20 = document.getElementById("walkComputer");
   var tmp = "It is " + String(el20);
-  //alert(t/mp);
+  //alert(tmp);
   var el20s = el20.style;
   var tmp2 = "S is " + el20s.toString();
   //alert(tmp2);
