@@ -311,8 +311,8 @@ function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 	infoString = "<span style='background-color: " + accuracyColor +"; color: " + accuracyColor +
 	"'>-----</span><b>&nbsp;" + milesText + "</b>&nbsp;miles at&nbsp;" + omText +
 	"&nbsp;mph, now&nbsp;" + cmText + "&nbsp;mph, " + calText + "&nbsp;kcal&nbsp;burnt.<hr>";
-	var wcString = "<p>Accuracy: <b>" + accuracyText + "</b><br><hr>Distance:<br>" +
-	"<span class='bigNumber'>" + milesText + "</span><br>miles<hr><br>>Average speed: <b>" +
+	var wcString = "<p>Accuracy: <b>" + accuracyText + "</b><hr>Distance:<br>" +
+	"<span class='bigNumber'>" + milesText + "</span><br>miles<hr>Average speed: <b>" +
 	omText + "</b> mph.<br>Current speed: <b>" + cmText + "</b> mph.<br>Approximate " +
 	"kilocalories burned: <b>" + calText + "</b></p>";
 	//alert(wcString);
