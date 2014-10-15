@@ -16,7 +16,7 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
             '<li><button type="button" name="cancel" onclick="cancelMenu()">Cancel</button></li>' +
             '</ul></form></div></div>\n' +
             '<div id="messageSpace" class="messageSpace1"><div id="message" class="message1">' +
-            '<div id="messageContent"></div>' +
+            '<div id="messageContent" class="messageContent1"></div>' +
             '<form><button type="button" name="messageCloser" onclick="closeMessage()">Close</button></form>' +
             '</div></div>\n' +
             '<div id="walkComputer" class="walkComputerStyle"></div>\n';
