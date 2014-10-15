@@ -23,6 +23,8 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
 document.addEventListener("backbutton", checkBack, false);
 document.write(text1);
 alert("vis " + document.getElementById("walkComputer").style.visibility);
+alert("ms " + document.getElementById("messageSpace").style.visibility);
+alert("ms1 " + document.getElementById("modalSpace1").style.visibility);
 displayMileage = "(no fix)";
 infoString = "No fix yet<hr>";
 aggregateDistance = 0;
