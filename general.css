@@ -87,7 +87,7 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   overflow: auto;
 }
 .walkComputer {
-  visibility: hidden;
+  /*visibility: hidden;*/
   position: absolute;
   left: 0px;
   top: 0px;
