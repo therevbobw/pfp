@@ -253,6 +253,7 @@ function toggleMileage() {
   alert(tmp);
   var el20s = el20.style;
   var tmp2 = "S is " + String(el20s);
+  alert(tmp2);
   //alert ("el20");
   var counterSpace = document.getElementById("counter");
   var vy = counterSpace.innerHTML;
