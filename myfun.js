@@ -268,8 +268,8 @@ function showMiles(dp,miles,accuracy) {
 	if (accuracyRatio > 0.4 && accuracyRatio < 1 ) {
 		accuracyColor = "#ffff00";
 	}
-	infoString = "Miles so far: " + milesText + " <span style='background-color: " + accuracyColor +
-	"'> </span><hr>";
+	infoString = "<b>" + milesText + "</b> miles so far <span style='background-color: " + accuracyColor +
+	"'>-</span><hr>";
 }
 function checkBack(){
 	var backQuestion = "Are you sure? Leaving this page will make your device lose its place in the walk.";
