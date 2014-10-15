@@ -86,6 +86,16 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   text-align:center;
   overflow: auto;
 }
+.walkComputer {
+  visibility: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width:100%;
+  height:100%;
+  text-align:center;
+  z-index: 997;
+}
 .previewSpace {
   visibility: hidden;
   position: absolute;
@@ -94,7 +104,7 @@ hr      { border-color: #00cccc; background-color: #00cccc; border: 0 none; heig
   width:100%;
   height:100%;
   text-align:center;
-  z-index: 999;
+  z-index: 998;
   background-image:url(blanking.png);
 }
 .preview {
