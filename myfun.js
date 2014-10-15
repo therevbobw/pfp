@@ -108,8 +108,8 @@ function usePosition(position)
             //document.getElementById('displayMiles').value = "0";
             //alert("first time");
             showMiles(2,0,myAccuracy);
-            
-            
+            originalTime = Date.now();
+            lastTime = originalTime;
             lastMileageLatitude = myLatitude;
             lastMileageLongitude = myLongitude;
           }
@@ -120,9 +120,12 @@ function usePosition(position)
             dsq = dx*dx+dy*dy;
             //alert(dsq);
             if ( dsq > mudsq ){
+              currentTime = Date.now();
               distanceIncrement = Math.sqrt(dsq);
               aggregateDistance = aggregateDistance + distanceIncrement;
               aggregateMileage = aggregateDistance * wantedConversion;
+              timeIncrement = hrpms*(currentTime - lastTime);
+              aggregateTime = hrpms*(currentTime - originalTime);
               //displayMileage = aggregateMileage.toFixed(2);
               //document.getElementById('displayMiles').value = displayMileage;
               //var counterArea = document.getElementById("counter");
@@ -136,6 +139,7 @@ function usePosition(position)
               }*/
               lastMileageLatitude = myLatitude;
               lastMileageLongitude = myLongitude;
+              lastTime = currentTime;
             }
           }
         }
