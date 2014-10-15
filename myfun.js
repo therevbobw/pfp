@@ -254,6 +254,7 @@ function toggleMileage() {
   var vy = counterSpace.innerHTML;
   var lv = vy.length;
  //alert ("about to do ifs");
+ alert (el20.style.visibility);
   if ( lv < 5 && el20.style.visibility == "hidden" ) {
   	//alert ("yes to 1");
     counterSpace.innerHTML = infoString;
