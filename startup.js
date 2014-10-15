@@ -15,7 +15,7 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
             '<br><small class="notes">Show or hide the mileage counter.</small></li><hr>' +
             '<li><button type="button" name="cancel" onclick="cancelMenu()">Cancel</button></li>' +
             '</ul></form></div></div>\n' +
-            '<div id="messageSpace" class="messageSpace"><div id="message" class="message">' +
+            '<div id="messageSpace" class="messageSpace1"><div id="message" class="message1">' +
             '<div id="messageContent"></div>' +
             '<form><button type="button" name="messageCloser" onclick="closeMessage()">Close</button></form>' +
             '</div></div>\n' +
