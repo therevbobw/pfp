@@ -36,34 +36,96 @@ function MakeArray(n)
 }
 
 var intro =  "<h2>Not currently at a prayer place...</h2>" +
-            "<p>This is all at a testing stage.</p>" +
-            "<p>Please keep looking at the browser page. The prayer will come up on the screen " +
-            "when you approach the spot.</p>";
+            "<p>This is at a testing stage. " +
+            "Please keep looking at the browser page. The prayer will come up on the screen " +
+            "when you approach the spot. Your device will vibrate if it can, and will " +
+            "make a sound (not necessarily loud) if enabled.</p><p>Please make your way to " +
+            "the park gate near Gledholt roundabout opposite the Junction pub. Enter by the " +
+            "gate and walk down the broad path.</p>";
 document.getElementById("stuff").innerHTML = intro;
 var nPlaces = 2;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
 texts = new MakeArray(nPlaces);
 froms = new MakeArray(nPlaces);
-lats[1] = 53.648666;
-longs[1] = -1.799677;
+lats[3] = 53.648666;
+longs[3] = -1.799677;
 //textlocs[1] = "textGreenhead01.html";
-texts[1] =  "<h2>The Bench</h2>" +
+texts[3] =  "<h2>The Bench</h2>" +
             "<p>A place within the park, but looking beyond the park, to the street, houses and the hills.</p>" +
             "<p>God we thank you<br>for little spaces of time<br>carved out from busy days;" +
             "<br>spaces of quiet and of remembering.<br>We pray for travellers on the road," +
             "<br>for their safety,<br>and for good in their encounters today.<br>We pray your peace" +
             "<br>on every household here.<br>We thank you for the hills and sky," +
             "<br>and ask your help to keep them safe.</p><p class='author'>Bob Warwicker</p>";
-froms[1] =  "<p>Now make your way to the drinking fountain.</p>";
-lats[2] = 53.648168;
-longs[2] = -1.796082;
-texts[2] =  "<h2>The Water Fountain</h2>" +
+froms[3] =  "<p>Go to the end of this path and turn left. You pass one play area to your left. " +
+            " There is another on your right, just over the crest of the hill. This is the " +
+            "next place.</p>";
+lats[5] = 53.648168;
+longs[5] = -1.796082;
+texts[5] =  "<h2>The Water Fountain</h2>" +
             "<p>Thank you God for water,<br>water that gushes abundantly,<br>water for life," +
             "<br>water for power,<br>water to make the thirsty land bloom.<br>God save those who are" +
             "<br>at the mercy of the sea,<br>in danger from floods.<br>We thank you for Jesus," +
             "<br>who gives life and meaning<br>welling up for all.</p><p class='author'>Bob Warwicker</p>";
-froms[2] =  "<p>All done! Now enjoy the park.</p>";            
+froms[5] =  "<p>Continue on the path, and turn sharp right on the straight path up to the war " +
+            "memorial. If you are able, climb the steps to the memorial.</p>";
+lats[1] =   53.650516;
+longs[1] =  -1.800661;
+texts[1] =  "<h2>The Skateboard Area</h2>" +
+            "<p>God of life, we pray for<br>happiness and health among young people.<br>" +
+            "Let them be happy in their friends<br>and in their dealings with<br>the " +
+            "rest of us.<br>May old and young be a blessing<br>to one another.</p>" +
+            "<p class='author'>Bob Warwicker</p>";
+froms[1] =  "<p>Continue downhill on this broad path until you reach the cafe.</p>";
+lats[2] =   53.649311;
+longs[2] =  -1.799792;
+texts[2] =  "<h2>The Cafe</h2>" +
+            "<p>We thank you God<br>for the pleasure of food<br>and the happiness of friendship.<br>" +
+            "Bless all who come here,<br>whether for a hot drink<br>or for a full breakfast.<br>" +
+            "Bless all who come " +
+            "here,<br>whether for animated chat<br>or to cradle a cup silently.</p><p class='author'>" +
+            "Bob Warwicker</p>";
+froms[2] =  "<p>Continue on this path, and, if able, go right down the bank to the first (higher)" +
+            " bowling green. If not able, remain on the path. Go to, or near, the only bench on " +
+            "this edge of the green.</p>";
+lats[4] =   53.648357;
+longs[4] =  -1.797072;
+texts[4] =  "<h2>The Playground</h2>" +
+            "<p>God we confess our sorrow<br>that the world is such a place<br>that anyone who hangs " +
+            "around here<br>is regarded with suspicion.<br>God save us from our broken-ness<br>" +
+            "and let these children<br>be happy and free and surrounded<br>by love.</p><p class=" +
+            "'author'>Bob Warwicker</p>";
+froms[4] =  "<p>Continue on this path to the drinking fountain.</p>";
+lats[6] =   53.647640;
+longs[6] =  -1.797504;
+texts[6] =  "<h2>The War Memorial</h2>" +
+            "<p><i>Spend a moment in silence, remembering those who have died in war...</i></p>" +
+            "<p>What is there to say, God?<br>We mourn the loss of so many people,<br>so many " +
+            "heartbroken parents,<br>despairing wives and husbands,<br>children and friends.<br>" +
+            "It has not gone away, and<br>it feels as if it never will.<br>God give us peace.<br>" +
+            "God, give peace to the world.</p><p><i>Turn the other way, looking down the path, " +
+            "past the hills of Kilner Bank, between the football ground and the Rawthorpe estate, " +
+            "to the hills in the countryside beyond..." +
+            "</i></p><p>God, we pray for town and country in this borough;-<br>" +
+            "God bless Huddersfield.<br>" +
+            "Guide its people and keep them safe.<br>" +
+            "Where there is stress, bring healing.<br>" +
+            "Where there is enmity, bring peace.<br>" +
+            "Where jobs are in danger, bring security.<br>" +
+            "Where people work too hard, bring rest.<br>" +
+            "Let your faith fill this town,<br>" +
+            "Let your hope inspire this town,<br>" +
+            "Let your love enfold this town.<br>" +
+            "God bless Huddersfield.<p>" +
+            "<p class='author'>Bob Warwicker</p>";
+froms[6] =  
+
+
+
+
+
+
 
 var form0 = document.getElementById("debuginfo");
 form0['mark'].value = "points loaded";
