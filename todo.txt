@@ -49,3 +49,6 @@ X Cut out altitude accuracy, which doesn't work - seems to be similar to lat/lon
 Get rid of redundant code.
 Why do you have to press the toggle counter button twice to get to full screen stats?
 X 'troggle'
+Respond to crapness of some GPS equipment
+Why is HUDL altitude ~20m low?
+Truncate altitude
