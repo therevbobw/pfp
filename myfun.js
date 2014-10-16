@@ -60,6 +60,8 @@ function usePosition(position)
 	var myLatitude = position.coords.latitude;
 	var myLongitude = position.coords.longitude;
 	myAccuracy = position.coords.accuracy;
+	myAltitude = position.coords.altitude;
+	myAA = position.coords.altitudeAccuracy;
 	//alert(myAccuracy);
 	form0['lat'].value = myLatitude;
     	form0['lon'].value = myLongitude;
@@ -314,7 +316,8 @@ function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 	var wcString = "<p>Accuracy: <b>" + accuracyText + "</b><hr>Distance:<br>" +
 	"<span class='bigNumber'>" + milesText + "</span><br>miles<hr>Average speed: <b>" +
 	omText + "</b> mph.<br>Current speed: <b>" + cmText + "</b> mph.<br>Approximate " +
-	"kilocalories burned: <b>" + calText + "</b></p>";
+	"kilocalories burned: <b>" + calText + "</b><br>Altitude: " + myAltitude + " ...at accuracy of " +
+	myAA + "</p>";
 	//alert(wcString);
 	document.getElementById("walkComputer").innerHTML = wcString;
 }
