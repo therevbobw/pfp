@@ -2,12 +2,12 @@ To Do, not necessarily in this order...
 
 Get focus, or issue notification, on transition.
 Why is sound so quiet!!
-New index file with menu of walks - different versions of old index file (renamed) for each walk.
+X New index file with menu of walks - different versions of old index file (renamed) for each walk.
 Start to build up a library of real walks.
 ?When user gets back focus, let him/her know of any missed transitions?
 More than one prayer for each spot, randomly chosen, maybe weighted according to history.
    (requires history be stored somehow).
-Include walk instructions, based on geolocation data.
+x Include walk instructions, based on geolocation data.
 If user chooses *and* mobile data connection is present, include multimedia, e.g....
    sounds like geese
    sounds like prayers being spoken
@@ -15,18 +15,18 @@ If user chooses *and* mobile data connection is present, include multimedia, e.g
 Appearance
    Check with different devices
 Overall stuff
-   Icon
-   Title
+X   Icon
+X   Title
    ?Window title?
 4/10/14
 More Janet's prayers
 Palatine - local business - cheer up. In general, cheer up.
-Get into menu...
-...glimpse of route from here
-...undo accidental press of back button.
-Names under all prayers.
-Initially hidden nested div style modal dialogue when menu button is pressed, content depending on
-page user is on when they press the button.
+X Get into menu...
+X ...glimpse of route from here
+X ...undo accidental press of back button.
+X Names under all prayers.
+x Initially hidden nested div style modal dialogue when menu button is pressed, content depending on
+  page user is on when they press the button.
 ?HG some biog info for CWGC graves?
 16/10/14
 Why is sound so quiet?
@@ -45,4 +45,5 @@ Get into stylesheets that fork according to screen size (@mode) - whole sheet or
  start and have everything else as % (? or em?)?
 ?More definite way to exit walk than back button?
 Remove redundant files.
-Cut out alltitude accuracy, which doesn't work - seems to be similar to lat/lon accuracy.
+X Cut out altitude accuracy, which doesn't work - seems to be similar to lat/lon accuracy.
+Get rid of redundant code.
