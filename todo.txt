@@ -44,5 +44,5 @@ Review appearance, shorten message a little maybe.
 Get into stylesheets that fork according to screen size (@mode) - whole sheet or just define size at
  start and have everything else as % (? or em?)?
 ?More definite way to exit walk than back button?
-
-
+Remove redundant files.
+Cut out alltitude accuracy, which doesn't work - seems to be similar to lat/lon accuracy.
