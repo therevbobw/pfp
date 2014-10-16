@@ -43,14 +43,15 @@ Tidy up walk alone mode - start straight into whole page stats display, and remo
 Review appearance, shorten message a little maybe.
 Get into stylesheets that fork according to screen size (@mode) - whole sheet or just define size at
  start and have everything else as % (? or em?)?
- ...although seems OK on HUDL as things are.
+ ...although seems OK on HUDL as things are. Maybe not that different number of dots from MOTO, smaller dpi
 ?More definite way to exit walk than back button?
 Remove redundant files.
 X Cut out altitude accuracy, which doesn't work - seems to be similar to lat/lon accuracy.
 Get rid of redundant code.
 Why do you have to press the toggle counter button twice to get to full screen stats?
 X 'troggle'
-Respond to crapness of some GPS equipment
+Respond to crapness of some GPS equipment by altering criteria
 Why is HUDL altitude ~20m low?
 X Truncate altitude
 Walk monitor - pause option and/or auto pause
+Accuracy colours somewhere in full screen
