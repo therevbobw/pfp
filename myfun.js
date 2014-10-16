@@ -299,6 +299,7 @@ function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 	var omText = oMean.toFixed(dp);
 	var cmText = cMean.toFixed(1);
 	var calText = cal.toFixed(0);
+	var altiText = myAltitude.toFixed(0);
 	var accuracyRatio = accuracy / mileageAccuracyThreshold;
 	var accuracyColour = "#0000ff";
 	if ( accuracyRatio >= 1 ){
@@ -317,7 +318,7 @@ function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 	var wcString = "<p>Accuracy: <b>" + accuracyText + "</b><hr>Distance:<br>" +
 	"<span class='bigNumber'>" + milesText + "</span><br>miles<hr>Average speed: <b>" +
 	omText + "</b> mph.<br>Current speed: <b>" + cmText + "</b> mph.<br>Approximate " +
-	"kilocalories burned: <b>" + calText + "</b><br>Altitude: <b>" + myAltitude + "</b></p>";
+	"kilocalories burned: <b>" + calText + "</b><br>Altitude: <b>" + altiText + "</b></p>";
 	//alert(wcString);
 	document.getElementById("walkComputer").innerHTML = wcString;
 }
