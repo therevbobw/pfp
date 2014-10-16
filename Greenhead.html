@@ -39,11 +39,13 @@ var intro =  "<h2>Not currently at a prayer place...</h2>" +
             "<p>This is at a testing stage. " +
             "Please keep looking at the browser page. The prayer will come up on the screen " +
             "when you approach the spot. Your device will vibrate if it can, and will " +
-            "make a sound (not necessarily loud) if enabled.</p><p>Please make your way to " +
+            "make a sound (not necessarily loud) if enabled. The menu button in the corner enables " +
+            "you to consult current and next directions and has other useful options.</p>" +
+            "<p>Please make your way to " +
             "the park gate near Gledholt roundabout opposite the Junction pub. Enter by the " +
             "gate and walk down the broad path.</p>";
 document.getElementById("stuff").innerHTML = intro;
-var nPlaces = 11;
+var nPlaces = 12;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
 texts = new MakeArray(nPlaces);
@@ -58,9 +60,11 @@ texts[3] =  "<h2>The Bench</h2>" +
             "<br>for their safety,<br>and for good in their encounters today.<br>We pray your peace" +
             "<br>on every household here.<br>We thank you for the hills and sky," +
             "<br>and ask your help to keep them safe.</p><p class='author'>Bob Warwicker</p>";
-froms[3] =  "<p>Go to the end of this path and turn right. Just before the gate, turn left up a steep " +
+froms[3] =  "<p>Go to the end of this path and turn right and cross the path near the gate to go up a steep " +
             "slope. Turn sharp left at the steps - you are on the middle level of the War Memorial. " +
-            "Work your way round to the front. To get to the top, use the steps, or wheel around to " +
+            "Work your way round to the front. Go to the foot of the steps upwards. " +
+            "If you want to get to the top, use the steps, " +
+            "or wheel around to " +
             "the next side where there is a path to take you.</p>";
 lats[6] = 53.648168;
 longs[6] = -1.796082;
@@ -98,8 +102,8 @@ texts[5] =  "<h2>The Playground</h2>" +
             "and let these children<br>be happy and free and surrounded<br>by love.</p><p class=" +
             "'author'>Bob Warwicker</p>";
 froms[5] =  "<p>Continue on this path to the drinking fountain.</p>";
-lats[4] =   53.647677;
-longs[4] =  -1.797276;
+lats[4] =   53.647647;
+longs[4] =  -1.797469;
 texts[4] =  "<h2>The War Memorial</h2>" +
             "<p><i>Spend a moment in silence, remembering those who have died in war...</i></p>" +
             "<p>What is there to say, God?<br>We mourn the loss of so many people,<br>so many " +
@@ -122,7 +126,9 @@ texts[4] =  "<h2>The War Memorial</h2>" +
             "<p class='author'>Bob Warwicker</p>";
 froms[4] =  "<p>Return the way you came. At the gate, turn right and pass a playground on your " +
             "left. Over the crest of the hill there is another playground on the right. " +
-            "Stop here.</p>";
+            "Stop here. Short cut for those walking: go back round one corner, " +
+            "go down the steps to the right, turn " +
+            "right on the path and continue until level with the playground to your right.</p>";
 lats[7] =   53.647944;
 longs[7] =  -1.794121;
 texts[7] =  "<h2>The Paddling Pool</h2>" +
@@ -130,7 +136,8 @@ texts[7] =  "<h2>The Paddling Pool</h2>" +
             "gift of water.<br>And with equal generosity,<br>you give us strength and skill,<br>" +
             "and these too are sometimes unwanted.<br>God may no worker be unwanted,<br>unused, " +
             "unrewarded<br>in your good world.</p><p class='author'>Bob Warwicker</p>";
-froms[7] =  "<p>Make your way down towards the entrance to the conservatory.</p>";
+froms[7] =  "<p>Make your way down towards the entrance to the conservatory. On wheels you can "
+            "get to the top of the steps.</p>";
 lats[8] =   53.648170;
 longs[8] =  -1.792806;
 texts[8] =  "<h2>The Conservatory and Cafe</h2>" +
@@ -141,7 +148,10 @@ texts[8] =  "<h2>The Conservatory and Cafe</h2>" +
             "<p class='author'>Bob Warwicker</p>";
 froms[8] =  "<p>Head towards the nearby park gate, crossing the main path and bearing slightly left " +
             "so you are heading towards the fountain (which may not be working). " +
-            "As the path curevs left, fork right until you join another path. At this point, the " +
+            "(If on wheels, either go to the main gate via the end of the paddling pool, or go out " +
+            "through the car park and back in through the main gate. At the gate, facing up the main " +
+            "drive, turn right then follow the remaining instructions.) " +
+            "As the path curves left, fork right until you join another path. At this point, the " +
             "Boer War memorial is directly behind you, and the Italian fountain is to the left. " +
             " Just beyond the gates which you passed is a multicultural area of Huddersfield.</p>";
 lats[9] =   53.648685;
