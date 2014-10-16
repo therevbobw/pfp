@@ -47,3 +47,5 @@ Get into stylesheets that fork according to screen size (@mode) - whole sheet or
 Remove redundant files.
 X Cut out altitude accuracy, which doesn't work - seems to be similar to lat/lon accuracy.
 Get rid of redundant code.
+Why do you have to press the toggle counter button twice to get to full screen stats?
+'troggle'
