@@ -11,7 +11,7 @@ var text1 = '<div id="modalSpace1" class="modalSpace"><div id="dialog1" class="d
             '<br><small class="notes">Look at the directions which take you to the next place.</small></li><hr>' +
             '<li><button type="button" name="general" onclick="showGeneralInstructions()">General instructions' +
             '</button><br><small class="notes">Look at the general instructions for this app..</small></li><hr>' +
-	    '<li><button type="button" name="mileage" onclick="toggleMileage()">Toggle mileage counter</button>' +
+	    '<li><button type="button" name="mileage" onclick="toggleMileage()">Troggle mileage counter</button>' +
             '<br><small class="notes">Show or hide the mileage counter.</small></li><hr>' +
             '<li><button type="button" name="cancel" onclick="cancelMenu()">Cancel</button></li>' +
             '</ul></form></div></div>\n' +
