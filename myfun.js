@@ -60,8 +60,9 @@ function usePosition(position)
 	var myLatitude = position.coords.latitude;
 	var myLongitude = position.coords.longitude;
 	myAccuracy = position.coords.accuracy;
-	myAltitude = position.coords.altitude;
-	myAA = position.coords.altitudeAccuracy;
+	//temporary correction until I do this properly. Alright-ish for around here.
+	myAltitude = position.coords.altitude - 52;
+	//myAA = position.coords.altitudeAccuracy;
 	//alert(myAccuracy);
 	form0['lat'].value = myLatitude;
     	form0['lon'].value = myLongitude;
@@ -307,7 +308,7 @@ function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 		accuracyColor = "#00ff00";
 	
 	}
-	if (accuracyRatio > 0.4 && accuracyRatio < 1 ) {
+	if (accuracyRatio > 0.5 && accuracyRatio < 1 ) {
 		accuracyColor = "#ff9900";
 	}
 	infoString = "<span style='background-color: " + accuracyColor +"; color: " + accuracyColor +
@@ -316,8 +317,7 @@ function showMiles(dp,miles,accuracy,cMean,oMean,cal) {
 	var wcString = "<p>Accuracy: <b>" + accuracyText + "</b><hr>Distance:<br>" +
 	"<span class='bigNumber'>" + milesText + "</span><br>miles<hr>Average speed: <b>" +
 	omText + "</b> mph.<br>Current speed: <b>" + cmText + "</b> mph.<br>Approximate " +
-	"kilocalories burned: <b>" + calText + "</b><br>Altitude: " + myAltitude + " ...at accuracy of " +
-	myAA + "</p>";
+	"kilocalories burned: <b>" + calText + "</b><br>Altitude: <b>" + myAltitude + "</b></p>";
 	//alert(wcString);
 	document.getElementById("walkComputer").innerHTML = wcString;
 }
