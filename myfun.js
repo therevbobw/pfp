@@ -61,7 +61,7 @@ function usePosition(position)
 	var myLongitude = position.coords.longitude;
 	myAccuracy = position.coords.accuracy;
 	//temporary correction until I do this properly. Alright-ish for around here.
-	myAltitude = position.coords.altitude - 52;
+	myAltitude = position.coords.altitude - 50;
 	//myAA = position.coords.altitudeAccuracy;
 	//alert(myAccuracy);
 	form0['lat'].value = myLatitude;
