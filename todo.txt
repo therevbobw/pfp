@@ -28,3 +28,21 @@ Names under all prayers.
 Initially hidden nested div style modal dialogue when menu button is pressed, content depending on
 page user is on when they press the button.
 ?HG some biog info for CWGC graves?
+16/10/14
+Why is sound so quiet?
+Altitude spheroid -> geoid correction. Each time prog starts with internet, get altitude from lat/long
+ off google api (is this possible?) and save local height correction. Hope the user doesn't cross
+ continents without contacting internet. Need to sense internet status, and learn about persistent 
+ storage. So might as well then introduce settings menu with tweaks and preferences. Meanwhile, say
+ accurate in UK only and knock 50m off calculated altitudes.
+More prayers!
+Try some walks local to potential testers. Like canal walk in Sale, and walk around Silcoates grounds
+for instance.
+Tidy up walk alone mode - start straight into whole page stats display, and remove prayer points and
+ irrelevant menu items (or give  the <li> id= and display them none).
+Review appearance, shorten message a little maybe.
+Get into stylesheets that fork according to screen size (@mode) - whole sheet or just define size at
+ start and have everything else as % (? or em?)?
+?More definite way to exit walk than back button?
+
+
