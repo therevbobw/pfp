@@ -43,6 +43,7 @@ Tidy up walk alone mode - start straight into whole page stats display, and remo
 Review appearance, shorten message a little maybe.
 Get into stylesheets that fork according to screen size (@mode) - whole sheet or just define size at
  start and have everything else as % (? or em?)?
+ ...although seems OK on HUDL as things are.
 ?More definite way to exit walk than back button?
 Remove redundant files.
 X Cut out altitude accuracy, which doesn't work - seems to be similar to lat/lon accuracy.
@@ -51,4 +52,5 @@ Why do you have to press the toggle counter button twice to get to full screen s
 X 'troggle'
 Respond to crapness of some GPS equipment
 Why is HUDL altitude ~20m low?
-Truncate altitude
+X Truncate altitude
+Walk monitor - pause option and/or auto pause
