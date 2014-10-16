@@ -45,7 +45,7 @@ currentMean = 0;
 kcal = 0;
 myAccuracy = 999999;
 myAltitude = -999999;
-myAA = 999999;
+//myAA = 999999;
   //play the next one by ear - too much and you cut off corners - too little and you get 'noise'
   //also these may depend on type of journey. Consider revising if I do road/rail and include in
   //the 'by route' variables. Also later could include a 'settings' option also to specify km/miles TODO
