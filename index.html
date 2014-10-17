@@ -79,6 +79,8 @@
     onclick="previewWalk(4,'HolywellGreenBurialGround')">Holywell Green Cemetery</button>
   <button type="button" value="Selwyn" class="walkChoice" id="Selwyn"
     onclick="previewWalk(5,'Selwyn')">Selwyn College</button>
+  <button type="button" value="walkonly" class="walkChoice" id="walkonly"
+    onclick="previewWalk(6,'walkonly')">Log walk only</button>
 </form>
 </div>
 <!--<div id="walkDescription" class="centred">
@@ -104,6 +106,7 @@ descriptions[3] = "<p>A walk along the Longdendale Trail section of the Transpen
 descriptions[4] = "<p>A visit to six places within the burial ground at Holywell Green, behind Stainland" +
                   " and Holywell Green United Reformed Church.</p>";
 descriptions[5] = "<p>A short walk around Selwyn College in Cambridge and its neighbourhood.</p>";  
+descriptions[6] = "<p>This gives a readout of distance etc. as you take any walk of your own devising.</p>";  
 function onDeviceReady(){
   document.getElementById("choosing").style.display="block";
 }
