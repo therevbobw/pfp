@@ -71,3 +71,7 @@ hrpms = 1.0 / 3600000;
 var text2 = '<div id="counter" class="mileage"></div>';
 document.write(text2);
 //alert('form written');
+if (isWalkonly) {
+	toggleMileage();
+	toggleMileage();
+}
