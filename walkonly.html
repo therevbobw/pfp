@@ -10,6 +10,10 @@
 <!--Including the above two lines moved from lower down -->
 <!-- Also remember to set form0 with getElementById! (see below) -->
 <script src="startup.js"></script>
+document.getElementById("pB").style.display = "none";
+document.getElementById("nB").style.display = "none";
+document.getElementById("sB").style.display = "none";
+document.getElementById("tB").style.display = "none";
 <!--New bit to be added to other pages ends here -->
 <p class="title">Test Data</p>
 <hr>
@@ -27,7 +31,6 @@
 <div id="stuff"></div>
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
-document.getElementById("toggleButton").style.display = "none";
 document.addEventListener("menubutton", showMenu, false);
 function MakeArray(n)
 {
