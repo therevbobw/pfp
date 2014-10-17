@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="general.css">
+</head>
+<body>
+<!--New bit to be added to other pages starts here -->
+<script src="phonegap.js"></script>
+<script src="myfun.js"></script>
+<!--Including the above two lines moved from lower down -->
+<!-- Also remember to set form0 with getElementById! (see below) -->
+<script src="startup.js"></script>
+<!--New bit to be added to other pages ends here -->
+<p class="title">Test Data</p>
+<hr>
+
+<!--<p id="demo">Click the button to get your coordinates:</p>
+<button onclick="getLocation()">Try It</button>-->
+<!--<h2>Waiting to get to a prayer place...</h2>-->
+<form id="debuginfo">
+  <!-- replace hidden with text when needed for debugging -->
+  <input type="hidden" name="lat">
+  <input type="hidden" name="lon">
+  <input type="hidden" name="mark">
+</form>
+<!--<iframe id="stuff" src="null.html" width="100%" height="720"><p>Sorry your browser does not support iframe</p></iframe> -->
+<div id="stuff"></div>
+<script>
+document.addEventListener("deviceready", onDeviceReady, false);
+document.getElementById("toggleButton").style.display = "none";
+document.addEventListener("menubutton", showMenu, false);
+function MakeArray(n)
+{
+   this.length = n;
+   for (var i = 1; i <= n; i++) { 
+     this[i] = 0; }
+   return this
+}
+
+var intro = "<p>This is all at a testing stage.</p>";
+document.getElementById("stuff").innerHTML = intro;
+
+var nPlaces = 1;
+lats = new MakeArray(nPlaces);
+longs = new MakeArray(nPlaces);
+texts = new MakeArray(nPlaces);
+froms = new MakeArray(nPlaces);
+lats[1] = 91;
+longs[1] = 181;
+//textlocs[1] = "textGreenhead01.html";
+texts[1] =  "Just a nonsense place to keep prog happy";
+froms[1] =  "as above";
+// Remember to use the technique here to set form0!!!
+var form0 = document.getElementById("debuginfo");
+form0['mark'].value = "points loaded";
+var tolerance = 20; //metres radius
+var tsq = tolerance*tolerance;
+var interval = 3000; //milliseconds
+
+
+var angConv = Math.PI/180;
+//var bongsrc = "hello.mp3";
+var lastUpdateTime = 0;
+var thisTime = 0;
+var dx = 0;
+var dy = 0;
+var d = 0;
+var dsq = 0;
+var travelled = 0;
+var isOpen = "false";
+var anyOpen = "false";
+var lastPoint = 1;
+var indexOfWanted = 1;
+form0['mark'].value = "performance next";
+var now = Date.now();
+var then = Date.now();
+var timegap = 0;
+form0['mark'].value = "times initialised";
+var geo_options = {
+  enableHighAccuracy: true, 
+  maximumAge: 	      2000, 
+  timeout:            2500
+};
+//var form0 = document.forms[0];
+form0['lat'].value = "lat";
+form0['lon'].value = "lon";
+form0['mark'].value = "neither";
+//var interval01 = window.setInterval(getLocation, 3000);
+</script>
+</body>
+</html>
