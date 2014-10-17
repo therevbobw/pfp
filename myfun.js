@@ -125,9 +125,27 @@ function usePosition(position)
 		}*/
     	}
     	if (anyOpen == "true" && isOpen == "true"){
+    		if ( indexOfWanted != thisVisited ){
+    			//just copied from case above isOpen = ... is redundant
+    			timeIn = Date.now();
+        		thisVisited = indexOfWanted;
+        		OpenPopup(indexOfWanted);
+        		if ( (timeIn - lastTimeIn) > chatterTime){
+        			lastTimeIn = timeIn;
+        			repeated = false;
+        			var iovLength = indexesOfVisited.length;
+        			for ( var localCounter = 0; localCounter < iovLength; localCounter++ ) {
+        				repeated = ( repeated || ( thisVisited == indexesOfVisited[localCounter] ) );
+        			}
+        			//repeated = ( indexesOfVisited.indexOf(thisVisited) > -1 );
+        			if (!repeated) {
+        				indexesOfVisited.push(thisVisited);
+        			}
+        		}	
+    		}
         	/*TODO allow for (currently impossible) case where go from
         	one point to another without passing through empty space
-        	currently no action in this case*/
+        	currently no action in this case. Need to check this works now*/
     	}
     	//alert(myAccuracy+","+mileageAccuracyThreshold);
         // do nothing at all about mileage unless accuracy is good enough...
