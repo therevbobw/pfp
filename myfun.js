@@ -109,13 +109,19 @@ function usePosition(position)
         	OpenPopup(indexOfWanted);
         	if ( (timeIn - lastTimeIn) > chatterTime){
         		lastTimeIn = timeIn;
-        		repeated = ( indexesOfVisited.indexOf(thisVisited) > -1 );
+        		repeated = false;
+        		var iovLength = indexesOfVisited.length;
+        		for ( var localCounter = 0; localCounter < iovLength; localCounter++ ) {
+        			repeated = ( repeated || ( thisVisited == indexesOfVisited[localCounter] ) );
+        		}
+        		//repeated = ( indexesOfVisited.indexOf(thisVisited) > -1 );
         		if (!repeated) {
         			indexesOfVisited.push(thisVisited);
         		}
         	}
-		for ( var j in indexesOfVisited) {
-			alert(j);
+        	var ll2 = indexesOfVisited.length;
+		for ( var j = 0; j < ll2; j++) {
+			alert(indexesOfVisited[j]);
 		}
     	}
     	if (anyOpen == "true" && isOpen == "true"){
