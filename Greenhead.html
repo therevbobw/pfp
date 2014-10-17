@@ -45,7 +45,7 @@ var intro =  "<h2>Not currently at a prayer place...</h2>" +
             "the park gate near Gledholt roundabout opposite the Junction pub. Enter by the " +
             "gate and walk down the broad path.</p>";
 document.getElementById("stuff").innerHTML = intro;
-var nPlaces = 13;
+var nPlaces = 14;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
 texts = new MakeArray(nPlaces);
@@ -239,8 +239,15 @@ froms[13] = "<p>The prayer trail is over. From here you can continue to wander a
             "to the gates you came in by. Either leave by this" +
             " gate and follow the road to the left, or turn left here, then sharp right " +
             "onto the path by which you came in.</p>";
-
-
+lats[14] =  53.650758;
+longs[14] = -1.801144;
+texts[14] = "<h2>At a Pelican Crossing</h2>" +
+            "<p>As we stand at the crossing and see the ‘green man’ beckoning:<br>" +
+            "We remember we will walk with Jesus,<br>" +
+            "To be truthful like Jesus,<br>" +
+            "To live like Jesus,<br>" +
+            "With his help.</p><p class='author'>Janet Lees</p>";
+froms[14] = "<p>If you haven't started yet, continue to the park gates.</p>"
 
 var form0 = document.getElementById("debuginfo");
 form0['mark'].value = "points loaded";
