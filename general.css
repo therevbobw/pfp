@@ -165,3 +165,6 @@ ul {
 .mileage {
   font-size: 90%;
 }
+.indented {
+  margin-left: 4em;
+}
