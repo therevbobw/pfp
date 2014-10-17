@@ -33,6 +33,9 @@ alert("ms1 " + document.getElementById("modalSpace1").style.visibility);*/
 displayMileage = "(no fix)";
 infoString = "No fix yet<hr>";
 //furthestPoint = 0;
+thisVisited = 0;
+lastVisited = 0;
+indexesOfVisited = 0;
 aggregateDistance = 0;
 lastMileageLatitude = 999;
 lastMileageLongitude = 999;
