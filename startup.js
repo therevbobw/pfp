@@ -32,6 +32,7 @@ alert("ms " + document.getElementById("messageSpace").style.visibility);
 alert("ms1 " + document.getElementById("modalSpace1").style.visibility);*/
 displayMileage = "(no fix)";
 infoString = "No fix yet<hr>";
+isWalkonly = ( document.URL.indexOf("walkonly") > -1 );
 //furthestPoint = 0;
 currentTime = Date.now();
 thisVisited = 0;
