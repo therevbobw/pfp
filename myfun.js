@@ -114,7 +114,9 @@ function usePosition(position)
         			indexesOfVisited.push(thisVisited);
         		}
         	}
-
+		for ( var j in indexesOfVisited) {
+			alert(j);
+		}
     	}
     	if (anyOpen == "true" && isOpen == "true"){
         	/*TODO allow for (currently impossible) case where go from
