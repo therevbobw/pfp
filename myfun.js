@@ -82,20 +82,39 @@ function usePosition(position)
       		}
     	}
     	if (anyOpen == "false" && isOpen == "true"){
+    		//going out
         	isOpen = "false";
         	//alert("Going out");
         	//popped.close();
         	navigator.notification.beep(1); //shouldn't have second parameter
         	navigator.notification.vibrate(1200);
-        	document.getElementById('stuff').innerHTML = froms[lastPoint];
+        	if (repeated) {
+               		document.getElementById('stuff').innerHTML = froms[bestPoint];	
+        	}
+        	else {
+        		document.getElementById('stuff').innerHTML = froms[lastPoint];
+        		bestPoint = lastPoint;
+        	}
+        	
         	//$('#stuff').attr('src', "null.html");
     	}
     	if (anyOpen == "false" && isOpen == "false"){
-        	// no action
+        	// no action - remaining out
     	}
     	if (anyOpen == "true" && isOpen == "false"){
+    		// going in
         	isOpen = "true";
+        	timeIn = Date.now();
+        	thisVisited = indexOfWanted;
         	OpenPopup(indexOfWanted);
+        	if ( (timeIn - lastTimeIn) > chatterTime){
+        		lastTimeIn = timeIn;
+        		repeated = ( indexesOfVisited.indexOf(thisVisited) > -1 );
+        		if (!repeated) {
+        			indexesOfVisited.push(thisVisited);
+        		}
+        	}
+
     	}
     	if (anyOpen == "true" && isOpen == "true"){
         	/*TODO allow for (currently impossible) case where go from
