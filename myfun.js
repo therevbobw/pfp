@@ -119,10 +119,10 @@ function usePosition(position)
         			indexesOfVisited.push(thisVisited);
         		}
         	}
-        	var ll2 = indexesOfVisited.length;
+        	/*var ll2 = indexesOfVisited.length;
 		for ( var j = 0; j < ll2; j++) {
 			alert(indexesOfVisited[j]);
-		}
+		}*/
     	}
     	if (anyOpen == "true" && isOpen == "true"){
         	/*TODO allow for (currently impossible) case where go from
