@@ -389,3 +389,16 @@ function kcalCalc(distance, speed) {
 	var kc =  distance * 50 * (40+speed*speed) / 49;
 	return kc;
 }
+function burn(distance, speed, altDiff) {
+	//currently unused
+	/*TODO will have to find a way to feed it for chunks of ten minutes or so (except for 
+	current / final chunk) because altitude jumps around - preferably do some averaging
+	of altitude samples - also need speed over this kind of distance - then add the burns
+	up for the journey's aggregate.*/
+	//This is all made up - no physical basis
+	// basic walking 40 * 50 / 49 kcal per mile
+	// speed v*v (mph) *50 / 49 kcpmi
+	// ascent 0.01 per kg per m or 0.75 per metre (1kg, 1m is 9.81J work)
+	// 2.34 cal - so the assumption is that we are 23% efficient
+	// how to combine these? How much do you get back descending?
+}
