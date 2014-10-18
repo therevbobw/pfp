@@ -401,4 +401,5 @@ function burn(distance, speed, altDiff) {
 	// ascent 0.01 per kg per m or 0.75 per metre (1kg, 1m is 9.81J work)
 	// 2.34 cal - so the assumption is that we are 23% efficient
 	// how to combine these? How much do you get back descending?
+	
 }
