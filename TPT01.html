@@ -41,7 +41,7 @@ var intro =  "<h2>Not currently at a prayer place...</h2>" +
             "when you approach the spot.</p><hr><p>The first location is the entrance to Hadfield station.</p>";
 document.getElementById("stuff").innerHTML = intro;
 
-var nPlaces = 16;
+var nPlaces = 17;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
 texts = new MakeArray(nPlaces);
@@ -187,6 +187,14 @@ texts[16] = "<h2>Microgeneration</h2>" +
 	    "<p>We thank you God<br>for the gift of energy.<br>Help us gather it carefully<br>and use " +
 	    "it wisely.</p><p class='author'>Bob Warwicker</p>";
 froms[16] = "<p>Walk along the narrow road, continuing past the house and logs / sculptures.</p>";
+lats[17] =  53.476857;
+longs[17] = -1.948470;
+texts[17] = "<h2>In the beech wood</h2>" +
+	    "<p>Straighten us out, Jesus.<br>Help us to face the world with our heads up:<br>" +
+	    "to face the past and all that tries to break us;<br>to face the present and all " +
+	    "that puts us under pressure;<br>to face the future so that we might bend like supple saplings<br>" +
+	    "rather than be felled like broken beeches.</p><p class='author'>Janet Lees</p>";
+froms[17] = "<p>Continue along the narrow road, until the next dam (Valehouse).</p>";
 
 var form0 = document.getElementById("debuginfo");
 form0['mark'].value = "points loaded";
