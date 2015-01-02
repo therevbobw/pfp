@@ -41,7 +41,7 @@ var intro =  "<h2>Not currently at a prayer place...</h2>" +
             "when you approach the spot.</p><hr><p>The first location is the entrance to Hadfield station.</p>";
 document.getElementById("stuff").innerHTML = intro;
 
-var nPlaces = 12;
+var nPlaces = 14;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
 texts = new MakeArray(nPlaces);
@@ -100,7 +100,9 @@ texts[6] = "<h2>Torside Crossing</h2>" +
             "<br>man without power in that moment,<br>who knows what it is<br>to be vulnerable." +
             "<br>God, today,<br>save all who are vulnerable.</p><p class='author'>Bob Warwicker</p>";
 froms[6] =  "<p>This is the end of the prayer trail. Make your way back along the Trail, or by paths on the " +
-            "other sides of the reservoirs.</p>";
+            "other sides of the reservoirs. To do this, turn sharp left before the road, going downhill on a " +
+            "track to the dam. Walk along the top of the dam, between Torside and Rhodeswood reservoirs. "
+            "The track curves left past a house and right again, where you find a gate.</p>";
 lats[7] = 53.473671;
 longs[7] = -1.941867;
 texts[7] =  "<h2>Another Bench</h2>" +
@@ -144,9 +146,34 @@ longs[12] = -1.943189;
 texts[12] = "<h2>At the gate...<br>'When tempted'</h2>" +
 	    "<p>When tempted to be gatekeeper<br>maybe we should remember<br>that Jesus is the gate:<br>" +
 	    "he will swing wide open<br>and welcome everyone,<br>with or without or help,<br>" +
-	    "for we cannot hinder him.</p>";
+	    "for we cannot hinder him.</p><p class='author'>Janet Lees</p>";
 froms[12] = "<p>Continue on your way along the Trail to the next point, or pass through this gate " +
 	    "to find a way back via the reservoirs.</p>";
+lats[13] =  53.483304;
+longs[13] = -1.920204;
+texts[13] = "<h2>The Gate (ii)</h2>" +
+	    "<p>We remember Jesus the gate<br>" +
+	    "For those looking for the way ahead;<br>" +
+	    "For those who think the gate is closed to them;<br>" +
+	    "For prisoners and those kept locked away;<br>" +
+	    "For those who want to come in here but don’t know how;<br>" +
+	    "For ourselves that we might respond to Jesus as the gate<br>" +
+	    "And be ready to open up and welcome others in his name.</p>" +	
+            "<p>When this gate or that seems closed to me, show me your open gate and the way I should take.</p>" +
+            "<p class='author'>Janet Lees</p>";
+froms[13] = "<p>Walk westwards on either path - the lower is 'official' " +
+	    "and the upper is the old construction railway. Half way along the reservoir they rejoin. " +
+	    "Take the right fork from here.</p>";
+lats[14] =  53.483045;
+longs[14] = -1.930273;
+texts[14] = "<h2>The Hills</h2>" +
+	    "<p>From here, as from many other places, the hills are visible.</p>" +
+	    "Wild hills, mild hills<br>classrooms without walls;<br>as the clouds gather<br>" +
+	    "and the curlew calls<br>we wait for the sun to sink<br>below our horizon<br>" +
+            "and recall today’s lessons<br>from the hillside teacher.</p>" +
+            "<p class='author'>Janet Lees</p>";
+froms[14] = "<p>Take the upper route (path), not the lower (track). There is a seat on a bump just " +
+            "before you are level with the next dam (Rhodeswood)</p>";
 
 var form0 = document.getElementById("debuginfo");
 form0['mark'].value = "points loaded";
