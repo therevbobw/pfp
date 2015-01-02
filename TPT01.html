@@ -41,7 +41,7 @@ var intro =  "<h2>Not currently at a prayer place...</h2>" +
             "when you approach the spot.</p><hr><p>The first location is the entrance to Hadfield station.</p>";
 document.getElementById("stuff").innerHTML = intro;
 
-var nPlaces = 17;
+var nPlaces = 20;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
 texts = new MakeArray(nPlaces);
@@ -139,8 +139,22 @@ texts[10] = "<h2>The heart-shaped puddle</h2><p>Sometimes in wet weather there i
 froms[10] = "<p>Please continue along the trail until you get to a bench at an angle to the path.</p>";
 lats[11] =  53.466005;
 longs[11] = -1.965113;
-texts[11] = "<h2>Just testing</h2><p>A nearby point for test purposes...</p>";
-froms[11] = "<p>Just go where you would have gone anyway</p>";
+texts[11] = "<h2>The playground of possibilities</h2><p><i>There is a playground a short distance to your " +
+	    "left.</i></p><p>Leave the outhouse of despair,<br>the barren barns damp with disuse,<br>" +
+	    "the convoluted corridors of conceit,<br>where low lighting hides the true colours.<br>" +
+	    "Leave all the gaping tombs<br>and come outside<br>to the playground of possibilities.<br>" +
+	    "Roll in the mud if you must,<br>swing from the trees if you will,<br>slide, slip and saunter,<br>" +
+	    "twirl, twist and waddle,<br>bounce, boing and be<br>unrestrained in embracing<br>" +
+	    "the recreational potential<br>of humanity.<br>Do not acquiesce, accept or agree<br>" +
+	    "to be tamed into the tram lines<br>of timidity.<br>See the rainbow colours of life<br>" +
+	    "reflected in a puddle.<br>Hear the symphonic cacophony of sound<br>echo round the park.<br>" +
+	    "Admire the skipping squirrel<br>and seek to emulate her glide and verve.<br>" +
+	    "You were made for this;<br>the spitting image of your cosmic forebear,<br>" +
+	    "it is written in every cell,<br>and this is the playground of possibilities<br>" +
+	    "so come and play today!</p><p class='author'>Janet Lees</p>";
+froms[11] = "<p>Keep walking up the path, then briefly on the grass and mud, until you reach " +
+	    "the Trail. Turn right to return to the start of the walk - it's only a couple of " +
+	    "hundred yards.</p>";
 lats[12] =  53.473483;
 longs[12] = -1.943189;
 texts[12] = "<h2>At the gate...<br>'When tempted'</h2>" +
@@ -169,7 +183,7 @@ texts[14] = "<h2>The Hills</h2>" +
 	    "<p>From here, as from many other places, the hills are visible.</p>" +
 	    "Wild hills, mild hills<br>classrooms without walls;<br>as the clouds gather<br>" +
 	    "and the curlew calls<br>we wait for the sun to sink<br>below our horizon<br>" +
-            "and recall today’s lessons<br>from the hillside teacher.</p>" +
+            "and recall today's lessons<br>from the hillside teacher.</p>" +
             "<p class='author'>Janet Lees</p>";
 froms[14] = "<p>Continue on the track. There is a seat on a bump just " +
             "before you are level with the next dam (Rhodeswood)</p>";
@@ -187,14 +201,43 @@ texts[16] = "<h2>Microgeneration</h2>" +
 	    "<p>We thank you God<br>for the gift of energy.<br>Help us gather it carefully<br>and use " +
 	    "it wisely.</p><p class='author'>Bob Warwicker</p>";
 froms[16] = "<p>Walk along the narrow road, continuing past the house and logs / sculptures.</p>";
-lats[17] =  53.476857;
-longs[17] = -1.948470;
+lats[17] =  53.476946;
+longs[17] = -1.948606;
 texts[17] = "<h2>In the beech wood</h2>" +
 	    "<p>Straighten us out, Jesus.<br>Help us to face the world with our heads up:<br>" +
 	    "to face the past and all that tries to break us;<br>to face the present and all " +
 	    "that puts us under pressure;<br>to face the future so that we might bend like supple saplings<br>" +
 	    "rather than be felled like broken beeches.</p><p class='author'>Janet Lees</p>";
-froms[17] = "<p>Continue along the narrow road, until the next dam (Valehouse).</p>";
+froms[17] = "<p>Continue along the narrow road, until the next dam (Valehouse). Walk across this dam.</p>";
+lats[18] =  53.472866;
+longs[18] = -1.953743;
+texts[18] = "<h2>Media Mania ... on the dam</h2>" +
+	    "<p>It’s a long time since we saw anyone walk on water.<br>" +
+	    "Today’s heroes can't do it;<br>celebrity lifestyle splashed across the tabloids;<br>" +
+	    "documentary exposes, and world exclusives<br>sold for more than silver.<br>" +
+	    "If it happened today, would the media just report<br>'Jesus of Nazareth cannot swim'?</p>" +
+	    "<p class='author'>Janet Lees</p>";
+froms[18] = "<p>Cross the dam and turn right onto a path next to Bottoms reservoir.</p>";
+lats[19] =  53.46815;
+longs[19] = -1.957664;
+texts[19] = "<h2>Wild Geese</h2>" +
+	    "<p><i>Wild geese are often on the reservoir or in the fields to your left.</i></p>" +
+	    "<p>Wild Spirit,<br>do not let us be tamed<br>to a life made only<br>of straight lines.<br>" +
+	    "May we also travel<br>like the geese,<br>sharing the load<br>enjoying the lift,<br>" +
+	    "calling encouragement:<br>just flying.</p>" +
+	    "<p class='author'>Janet Lees</p>";
+froms[19] = "<p>Turn right, to keep next to the reservoir. A few hundred yards along the wall to your " +
+	    "left is a stone staricase - use it to cross the wall and climb up through the wood. " +
+	    "You emerge onto the road at a stone memorial set into the wall.</p>";
+lats[20] =  53.467458;
+longs[20] = -1.964764;
+texts[20] = "<h2>Memorial</h2>" +
+	    "<p>Loving God, we feel<br>the sorrow it causes<br>when someone dies on the road.<br>" +
+	    "May all who mourn be comforted.<br>May all who use the roads be safe.</p>" +
+	    "<p class='author'>Bob Warwicker</p>";
+froms[20] = "<p>Walk down the road opposite where the path came in. Take the footpath to your left " +
+	    "after 100-150m (it is next to the undertakers') After a minute or so, you will see a " +
+	    "playground away to your left.</p>";
 
 var form0 = document.getElementById("debuginfo");
 form0['mark'].value = "points loaded";
