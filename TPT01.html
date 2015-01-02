@@ -41,7 +41,7 @@ var intro =  "<h2>Not currently at a prayer place...</h2>" +
             "when you approach the spot.</p><hr><p>The first location is the entrance to Hadfield station.</p>";
 document.getElementById("stuff").innerHTML = intro;
 
-var nPlaces = 14;
+var nPlaces = 16;
 lats = new MakeArray(nPlaces);
 longs = new MakeArray(nPlaces);
 texts = new MakeArray(nPlaces);
@@ -162,8 +162,7 @@ texts[13] = "<h2>The Gate (ii)</h2>" +
             "<p>When this gate or that seems closed to me, show me your open gate and the way I should take.</p>" +
             "<p class='author'>Janet Lees</p>";
 froms[13] = "<p>Walk westwards on either path - the lower is 'official' " +
-	    "and the upper is the old construction railway. Half way along the reservoir they rejoin. " +
-	    "Take the right fork from here.</p>";
+	    "and the upper is the old construction railway. Half way along the reservoir they rejoin.</p>";
 lats[14] =  53.483045;
 longs[14] = -1.930273;
 texts[14] = "<h2>The Hills</h2>" +
@@ -172,8 +171,22 @@ texts[14] = "<h2>The Hills</h2>" +
 	    "and the curlew calls<br>we wait for the sun to sink<br>below our horizon<br>" +
             "and recall today’s lessons<br>from the hillside teacher.</p>" +
             "<p class='author'>Janet Lees</p>";
-froms[14] = "<p>Take the upper route (path), not the lower (track). There is a seat on a bump just " +
+froms[14] = "<p>Continue on the track. There is a seat on a bump just " +
             "before you are level with the next dam (Rhodeswood)</p>";
+lats[15] =  53.481373;
+longs[15] = -1.934772;
+texts[15] = "<h2>A seat</h2>" +
+	    "<p>No prayer here, just sit and watch the water move - " +
+	    "'A wind from God swept over the face of the waters'</p>";
+froms[15] = "<p>Turn left on the road, turn right just after the little bridge and follow the zigzags" +
+            "or the steps to reservoir level</p>";
+lats[16] =  53.479339;
+longs[16] = -1.937921;
+texts[16] = "<h2>Microgeneration</h2>" +
+	    "<p>Here the water company has made use of the surging energy of water flowing downhill.</p>" +
+	    "<p></p>";
+froms[16] = "<p>Turn left on the road, turn right just after the little bridge and follow the zigzags" +
+            "or the steps to reservoir level</p>";
 
 var form0 = document.getElementById("debuginfo");
 form0['mark'].value = "points loaded";
